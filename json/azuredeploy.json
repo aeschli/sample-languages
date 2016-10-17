@@ -1,0 +1,231 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "type": "string",
+      "metadata": {
+        "description": "Admin username"
+      }
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Admin password"
+      }
+      },
+    "virtualNetworkResourceGroup": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the resource group of the existing VNET in which to place the VMs."
+      }
+    },
+    "vnetName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the VNet in which to place the VM."
+      }
+    },
+    "BEsubnetNameForVnet": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the back end subnet in the VNet."
+      }
+    },
+    "storageAccountName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the storage account to create."
+      }
+    },
+    "storageAccountType": {
+      "type": "string",
+      "metadata": {
+        "description": "The type of storage account in which the VHDs will be placed."
+      }
+    },
+    "BEvirtualMachineNames": { 
+      "type": "array"
+    },
+    "BEavailabilitySetName": { 
+      "type": "string"
+    },
+    "BEsubnetIPPrefix": { 
+      "type": "string"
+    },
+    "BEnicStartingAddress": { 
+      "type": "int"
+    },
+    "dataDiskSizeInGB": { 
+      "type": "string",
+      "defaultValue": "1023"
+    },
+    "imagePublisher": {
+      "type": "string",
+      "defaultValue": "MicrosoftWindowsServer",
+      "metadata": {
+        "description": "Image Publisher"
+      }
+    },
+    "imageOffer": {
+      "type": "string",
+      "defaultValue": "WindowsServer",
+      "metadata": {
+        "description": "Image Offer"
+      }
+    },
+    "imageSKU": {
+      "type": "string",
+      "defaultValue": "2012-R2-Datacenter",
+      "metadata": {
+        "description": "Image SKU"
+      }
+    },
+    "vmSize": {
+      "type": "string",
+      "defaultValue": "Standard_DS1_v2",
+      "allowedValues": [
+        "Standard_DS1_v2",
+        "Standard_DS2_v2",
+        "Standard_DS3_v2",
+        "Standard_DS4_v2",
+        "Standard_DS5_v2"
+      ],
+      "metadata": {
+        "description": "VM Size"
+      }
+    },
+    "onPremDNSServers": { 
+      "type": "array"
+    }
+  },
+  "variables": {
+    "vnetID": "[resourceId(parameters('virtualNetworkResourceGroup'),'Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
+    "BEsubnetRef": "[concat(variables('vnetID'),'/subnets/',parameters('BEsubnetNameForVnet'))]"
+  },
+  "resources": [
+
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "name": "[parameters('storageAccountName')]",
+      "apiVersion": "2015-05-01-preview",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "accountType": "[parameters('storageAccountType')]"
+      }
+    },
+
+    
+    {
+      "type": "Microsoft.Compute/availabilitySets",
+      "name": "[parameters('BEavailabilitySetName')]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "properties": {}
+    },
+    
+    
+    {
+      "apiVersion": "2015-06-15",
+      "type": "Microsoft.Network/networkInterfaces",
+      "name": "[concat(parameters('BEvirtualMachineNames')[copyIndex()],'-nic')]",
+      "location": "[resourceGroup().location]",
+      "copy": {
+        "name": "BEnicLoop",
+        "count": "[length(parameters('BEvirtualMachineNames'))]"
+      },
+      "dependsOn": [
+      ],
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "privateIPAllocationMethod": "Static",
+              "privateIPAddress": "[concat(parameters('BEsubnetIPPrefix'),copyIndex(parameters('BEnicStartingAddress')))]",
+              "subnet": {
+                "id": "[variables('BEsubnetRef')]"
+              }
+            }
+          }
+        ],
+        "dnsSettings": {
+          "dnsServers": "[parameters('onPremDNSServers')]",
+          
+        }
+      }
+    },
+    
+
+    {
+      "apiVersion": "2015-06-15",
+      "type": "Microsoft.Compute/virtualMachines",
+      "name": "[concat(parameters('BEvirtualMachineNames')[copyIndex()])]",
+      "copy": {
+        "name": "BEvirtualMachineLoop",
+        "count": "[length(parameters('BEvirtualMachineNames'))]"
+      },
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[concat('Microsoft.Storage/storageAccounts/', parameters('storageAccountName'))]",
+        "[concat('Microsoft.Network/networkInterfaces/', parameters('BEvirtualMachineNames')[copyIndex()], '-nic')]",
+        "[concat('Microsoft.Compute/availabilitySets/', parameters('BEavailabilitySetName'))]"
+      ],
+      "properties": {
+        "availabilitySet": {
+          "id": "[resourceId('Microsoft.Compute/availabilitySets',parameters('BEavailabilitySetName'))]"
+        },
+        "hardwareProfile": {
+          "vmSize": "[parameters('vmSize')]"
+        },
+        "osProfile": {
+          "computerName": "[parameters('BEvirtualMachineNames')[copyIndex()]]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "[parameters('imagePublisher')]",
+            "offer": "[parameters('imageOffer')]",
+            "sku": "[parameters('imageSKU')]",
+            "version": "latest"
+          },
+          "osDisk": {
+              "name": "[concat(parameters('BEvirtualMachineNames')[copyIndex()],'-OS')]",
+              "createOption": "FromImage",
+              "vhd": {
+                  "uri": "[concat('https', '://', parameters('storageAccountName'), '.blob.core.windows.net', concat('/vhds/', parameters('BEvirtualMachineNames')[copyIndex()],'-OS','.vhd'))]"
+              },
+              "caching": "ReadWrite"
+          },
+          "dataDisks": [
+              {
+                  "name": "[concat(parameters('BEvirtualMachineNames')[copyIndex()],'-DATA-0')]",
+                  "diskSizeGB": "[parameters('dataDiskSizeInGB')]",
+                  "lun": 0,
+                  "vhd": {
+                      "uri": "[concat('https', '://', parameters('storageAccountName'), '.blob.core.windows.net', concat('/vhds/', parameters('BEvirtualMachineNames')[copyIndex()],'-DATA-0','.vhd'))]"
+                      },
+                  "createOption": "Empty"
+              }
+          ]
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces',concat(parameters('BEvirtualMachineNames')[copyIndex()], '-nic'))]"
+            }
+          ]
+        },
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+             "enabled": "true",
+             "storageUri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net')]"
+          }
+        }
+      }
+    }
+
+
+  ]
+}

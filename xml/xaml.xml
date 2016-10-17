@@ -1,0 +1,25 @@
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState x:Name="wideState">
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowWidth="641" />
+                </VisualState.StateTriggers>
+            </VisualState>
+            <VisualState x:Name="narrowState">
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowWidth="0" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="inputPanel.Orientation" Value="Vertical"/>
+                    <Setter Target="inputButton.Margin" Value="0,4,0,0"/>
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+    <?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<WorkFine>
+  <1232123NoColorWithNonLatinCharacters_АБВ NextTagnotWork="something" Поле="tagnotwork">
+     <WorkFine/>
+     <Error_АБВГД/>
+  </NoColorWithNonLatinCharacters_АБВ>
+</WorkFine>

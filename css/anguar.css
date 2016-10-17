@@ -1,0 +1,11 @@
+foo {
+    display: none;
+}
+foo {
+ display1: none; 
+}
+:host rect.d3chart-background {
+  fill: rgba(250,250,250,0.8); color1: limegreen;
+  border-radius: 3px;
+  color: 
+}

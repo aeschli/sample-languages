@@ -1,0 +1,4 @@
+{
+    "$schema": "./foo3.schema.json",
+    "theme": "green"
+}

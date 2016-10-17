@@ -1,0 +1,57 @@
+index 4f6f6e7..8f7b248 100644 (file)
+--- a/src/backend/commands/vacuumlazy.c
++++ b/src/backend/commands/vacuumlazy.c
+@@ -157,7 +157,7 @@ static void lazy_record_dead_tuple(LVRelStats *vacrelstats,
+ static bool lazy_tid_reaped(ItemPointer itemptr, void *state);
+ static int vac_cmp_itemptr(const void *left, const void *right);
+ static bool heap_page_is_all_visible(Relation rel, Buffer buf,
+-                        TransactionId *visibility_cutoff_xid);
++                        TransactionId *visibility_cutoff_xid, bool *all_frozen);
+
+
+ /*
+@@ -295,7 +295,7 @@ lazy_vacuum_rel(Relation onerel, int options, VacuumParams *params,
+        new_rel_tuples = vacrelstats->old_rel_tuples;
+    }
+
+-   new_rel_allvisible = visibilitymap_count(onerel);
++   visibilitymap_count(onerel, &new_rel_allvisible, NULL);
+    if (new_rel_allvisible > new_rel_pages)
+        new_rel_allvisible = new_rel_pages;
+
+@@ -496,7 +496,7 @@ lazy_scan_heap(Relation onerel, LVRelStats *vacrelstats,
+     * maintain next_not_all_visible_block anyway, so as to set up the
+     * all_visible_according_to_vm flag correctly for each page.
+     *
+-    * Note: The value returned by visibilitymap_test could be slightly
++    * Note: The value returned by visibilitymap_get_status could be slightly
+     * out-of-date, since we make this test before reading the corresponding
+     * heap page or locking the buffer.  This is OK.  If we mistakenly think
+     * that the page is all-visible when in fact the flag's just been cleared,
+@@ -518,7 +518,7 @@ lazy_scan_heap(Relation onerel, LVRelStats *vacrelstats,
+         next_not_all_visible_block < nblocks;
+         next_not_all_visible_block++)
+    {
+-       if (!visibilitymap_test(onerel, next_not_all_visible_block, &vmbuffer))
++       if (!VM_ALL_VISIBLE(onerel, next_not_all_visible_block, &vmbuffer))
+            break;
+        vacuum_delay_point();
+    }
+@@ -540,6 +540,7 @@ lazy_scan_heap(Relation onerel, LVRelStats *vacrelstats,
+        Size        freespace;
+        bool        all_visible_according_to_vm;
+        bool        all_visible;
++       bool        all_frozen = true;  /* provided all_visible is also true */
+        bool        has_dead_tuples;
+        TransactionId visibility_cutoff_xid = InvalidTransactionId;
+
+@@ -554,8 +555,7 @@ lazy_scan_heap(Relation onerel, LVRelStats *vacrelstats,
+                 next_not_all_visible_block < nblocks;
+                 next_not_all_visible_block++)
+            {
+-               if (!visibilitymap_test(onerel, next_not_all_visible_block,
+-                                       &vmbuffer))
++               if (!VM_ALL_VISIBLE(onerel, next_not_all_visible_block, &vmbuffer))
+                    break;
+                vacuum_delay_point();
+            }

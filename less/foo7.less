@@ -1,0 +1,125 @@
+.sidebar {
+    margin-left: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sidebar .wrapper {
+    font: 10px verdana, sans-serif;
+    background: transparent url(paper-bg.jpg) top left repeat-y;
+    padding: 10px;
+    margin-top: 150px;
+    width: 130px;
+}
+
+body {
+    font: 75% georgia, sans-serif;
+    line-height: 1.88889;
+    color: #555753;
+    background: #fff url(blossoms.jpg) no-repeat bottom right;
+    margin: 0;
+    padding: 0;
+    background-image: -webkit-linear-gradient(top, start-color, end-color);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(start-color), to(end-color));
+    background-image: -moz-linear-gradient(top, start-color, end-color);
+    background-image: linear-gradient(to bottom, start-color, end-color);
+}
+
+@min-container: {
+  min-height: 600px;
+};
+
+#doc-container {
+  margin-top: 70px;
+  @min-container();
+}
+
+.mixin (@a) when (@i <= 1)  {
+  background-color: black;
+}
+.mixin (@a) when (@a < 50%) {
+  background-color: white;
+}
+.mixin (@a) {
+  color: @a;
+}
+
+foo {
+.mixin(1);
+}
+.material-color-class(@name, @property: color) {
+  dispaly: none;
+}
+
+#bundle {
+  .button {
+    display: block;
+    border: 1px solid black;
+    background-color: grey;r
+    &:hover {
+      background-color: white
+    }
+  }
+  .tab { }
+  .citation { }
+}
+#header a {
+  color: orange;
+  #bundle > .button;
+}
+
+#namespace when (@mode=huge) { .mixin() { /* */ } }
+
+.mixin() {
+  transform+_: scale(2);
+}
+.myclass {
+  .mixin();
+  transform+_: rotate(15deg);
+}
+
+.lui_button {
+  .border-box();
+  .lui.box-sizing.border-box();
+  .lui.box-sizing.border();
+}
+
+atom-text-editor::shadow {
+
+}
+
+.vertical-center() {
+    position: relative;
+    top: 50%;
+    #mixins > .translate-accelerate(0, -50%);
+}
+
+.loop(@counter) when (@counter > 0) {
+  .loop((@counter - 1));    // next iteration
+  width: (10px * @counter); // code for each iteration
+}
+
+div {
+  .loop(5); // launch the loop
+}
+
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+  .column-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .generate-columns(@n, (@i + 1));
+}
+
+.generate-columns(1);
+
+@media (min-width: 768px) {
+	.generate-columns(2);
+}
+
+& when (@direction = rtl) {
+
+}
+& when (@direction = ltr) {
+
+}

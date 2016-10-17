@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",    
+    
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "This is the name"
+        },
+        "number1": {
+            "type": "number",
+            "description": "This is number1"
+            
+        },
+        "foo": {
+            "type": "boolean",
+            "description": "This is foo"
+        }
+    },
+    "required": [ "name", "number1" ]   ,
+    
+        
+}

@@ -1,0 +1,24 @@
+module type M = sig
+    type t01
+    type t02
+    type t03
+    type t04
+    type t05
+    type t06
+    type t07
+    type t08
+    type t09
+    type t10
+    type t11
+    type t12
+    type t13
+    type t14
+    type t15
+    type t16
+    type t17
+    type t18
+    type t19
+    type t20
+end
+
+(* A non-highlighted comment *)

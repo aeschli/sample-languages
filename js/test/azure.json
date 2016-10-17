@@ -1,0 +1,63 @@
+﻿ {
+      "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+      "contentVersion": "1.0.0.0",
+      "variables": { "myWorkerSize": 0 },
+      "parameters": {
+        "siteName": { "type": "string" },
+        "hostingPlanName": { "type": "string" },
+        "siteLocation": { "type": "string" },
+        "sku": { 
+          "type": "string",
+          "allowedValues": [ "Free", "Shared", "Basic", "Standard" ],
+          "defaultValue": "Free"
+        },
+        "workerSize": {
+          "type": "string",
+          "allowedValues": [ "0", "1", "2" ], 
+          "defaultValue": "0"
+        }
+      },
+      "resources": [ {
+        "name": "myplan1",
+        "type": "Microsoft.Web/serverfarms",
+        "apiVersion": "2015-01-01",
+        "location": "West US",
+        "tags": { "dept": "test" },
+        "properties": {
+          "Name": "myplan1",
+          "sku": "Free",
+          "workerSize": "[variables('myWorkerSize')]",
+          "numberOfWorkers": 1
+        }
+      },
+      {
+        "name": "[c",
+        "type": "Microsoft.Web/sites",
+        "apiVersion": "2015-01-01",
+        "location": "[parameters('siteLocation')]",
+        "tags": {
+          "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "Resource"
+        },
+        "dependsOn": [
+          "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
+        ],
+        "properties": {
+          "name": "[parameters('siteName')]",
+          "serverFarm": "[parameters('hostingPlanName')]"
+        },
+        "resources": [ {
+          "name": "MSDeploy",
+          "type": "Extensions",
+          "apiVersion": "2015-01-01",
+          "dependsOn": [
+            "[concat('Microsoft.Web/Sites/', parameters('siteName'))]"
+          ],
+          "properties": {
+            "packageUri": "https://auxmktplceprod.blob.core.windows.net/packages/ASPNETEmptySite.zip",
+            "dbType": "None",
+            "connectionString": "",
+            "setParameters": { "Application Path": "[parameters('siteName')]" }
+          }
+        } ]
+      } 
+  

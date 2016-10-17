@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+        "theme": {
+            "enum": [
+                "red",
+                "green"
+            ]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "theme": {
+            "$ref": "#/definitions/theme"
+        }
+    },
+    "required": [
+        "theme"
+    ]
+}

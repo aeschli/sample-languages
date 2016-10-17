@@ -1,0 +1,39 @@
+{
+	"name": "name",
+	"description": "description",
+	"version": "1.0.0",
+	"main": "pathToMain",
+	"contributes": {
+		"languages": [
+			{
+				"id": "languageId",
+				"aliases": [
+					"label"
+				],
+				"extensions": [
+					"extension"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "id",
+				"scopeName": "source.id",
+				"path": "./syntaxes/id.tmLanguage."
+			},
+			
+		]
+	},
+	"activationEvents": [
+		"onLanguage:languageId"
+	],
+
+    "dependencies": {
+		"colors": "*",
+		"@types/babel-types" : 
+		
+		
+    },
+	
+}

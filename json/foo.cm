@@ -1,0 +1,11 @@
+("two", true, 2);
+["two", true, 2];
+((1,2),(3,4,5));
+[[1,2],[3,4,5]];
+[[],[],[]];
+("andrew",size "andrew");
+(["andrew"="andrew","andrew"="ben"],size "andrew", size);
+
+val words = ["ache", "vile", "amid", "evil", "ogre"];
+map roll words;
+map exch words;

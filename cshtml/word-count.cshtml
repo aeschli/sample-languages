@@ -1,0 +1,327 @@
+@{ ViewBag.Page = "docs"; ViewBag.Area = "extensions"; ViewBag.Section = "extensions/example-word-count"; ViewBag.Title =
+"Visual Studio Code Example - Word Count Extension"; Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+<div class="container body-content docs">
+	<div class="row">
+		<div class="col-md-2">
+			@Html.Partial("~/Views/Shared/_DocsNav.cshtml")
+		</div>
+		<div class="col-sm-9 col-md-8 body">
+			<div class="edit-github pull-right">
+				<a href="https://github.com/Microsoft/vscode-docs/blob/master/docs/extensions/example-word-count.md">
+					<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span><i>&nbsp;</i><span class="hidden-xs">Edit</span></button>
+				</a>
+			</div>
+			<h1>Example - Word Count</h1>
+			<p>This document assumes you have read <a href="/docs/extensions/example-hello-world">Your First Extension</a> which covers
+				the basics of VS Code extensibility.</p>
+			<p>Word Count is an end to end tutorial to show you how to create an extension to aid in Markdown authoring. Before we get
+				into how all of this works, let's have a quick demo of the core features you will be building so you know what to expect.</p>
+			<p>Whenever a <code>Markdown</code> file is edited, a status bar message is added. The message includes the current word
+				count and updates as you type and move from file to file:</p>
+			<p><img src="~/Content/images/example-word-count_wordcountevent2.gif" alt="Status"></p>
+			<blockquote>
+				<p><strong>Tip:</strong> The finished sample is available from <a href="https://github.com/microsoft/vscode-wordcount">this GitHub repository</a>					should you have any issues.</p>
+			</blockquote>
+			<h2 id="_overview">Overview</h2>
+			<p>This example has three sections which will take you through a set of related concepts:</p>
+			<ol>
+				<li><a href="/docs/extensions/example-word-count#_update-the-status-bar">Update the Status Bar</a> - display custom text
+					in the VS Code <code>Status Bar</code></li>
+				<li><a href="/docs/extensions/example-word-count#_subscribing-to-events">Subscribing to Events</a> - updating the <code>Status Bar</code>					based on editor events</li>
+				<li><a href="/docs/extensions/example-word-count#_disposing-extension-resources">Disposing Extension Resources</a> - release
+					resources like event subscriptions or UI handles</li>
+			</ol>
+			<p>First make sure you have the latest VS Code extension generator installed then run it:</p>
+			<pre><code class="bash">npm install -g yo generator-code
+yo code
+</code></pre>
+			<p>This will open up the extension generator - we will base this example on the TypeScript <code>New Extension</code> option.
+				For now, simply fill in the fields the same way you see them completed in the image below (putting in your own name as
+				the publisher).</p>
+			<p><img src="~/Content/images/example-word-count_yo1.png" alt="Yo Code"></p>
+			<p>You can now open VS Code as described in the generator output:</p>
+			<pre><code>cd WordCount
+code .
+</code></pre>
+			<h2 id="_run-the-extension">Run the Extension</h2>
+			<p>Before we go on, we can run the extension to make sure everything works as expected by pressing <span class="dynamic-keybinding"
+					data-osx="F5" data-win="F5" data-linux="F5"><span class="keybinding">F5</span></span>. As you saw in the previous &quot;Hello
+				World&quot; walkthrough, VS Code opens another window (the <strong>[Extension Development Host]</strong> window) in which
+				your extension will be loaded. You should find the &quot;Hello World&quot; command in the Command Palette (press
+				<span class="dynamic-keybinding" data-osx="F1" data-win="F1" data-linux="F1"><span class="keybinding">F1</span></span>)
+				and when you select it, you will see an information box at the top of the window saying &quot;Hello World&quot;.</p>
+			<p>Now that you have confirmed that the extension is running properly, you can keep the extension development window open
+				if you like. To test out any changes that you make to your extension, you can either press <span class="dynamic-keybinding"
+					data-osx="F5" data-win="F5" data-linux="F5"><span class="keybinding">F5</span></span> again in the development window
+				or reload the extension development window by pressing <span class="keybinding">Ctrl+R</span> (Mac: <span class="keybinding">Cmd+R</span>).</p>
+			<h2 id="_update-the-status-bar">Update the Status Bar</h2>
+			<p>Replace the contents of the generated <code>extension.ts</code> file with the code shown below. It declares and instantiates
+				a <code>WordCounter</code> class which can count words and shows them in the VS Code Status Bar. The &quot;Hello Word&quot;
+				command will call <code>updateWordCount</code> when invoked.</p>
+			<pre><code class="javascript"><span class="hljs-comment">// The module 'vscode' contains the VS Code extensibility API</span>
+<span class="hljs-comment">// Import the necessary extensibility types to use in your code below</span>
+<span class="hljs-keyword">import</span> {window, commands, Disposable, ExtensionContext, StatusBarAlignment, StatusBarItem, TextDocument} <span class="hljs-keyword">from</span> <span class="hljs-string">'vscode'</span>;
+
+<span class="hljs-comment">// This method is called when your extension is activated. Activation is</span>
+<span class="hljs-comment">// controlled by the activation events defined in package.json.</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">activate</span>(<span class="hljs-params">context: ExtensionContext</span>) </span>{
+
+    <span class="hljs-comment">// Use the console to output diagnostic information (console.log) and errors (console.error).</span>
+    <span class="hljs-comment">// This line of code will only be executed once when your extension is activated.</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Congratulations, your extension "WordCount" is now active!'</span>);
+
+    <span class="hljs-comment">// create a new word counter</span>
+    <span class="hljs-keyword">let</span> wordCounter = <span class="hljs-keyword">new</span> WordCounter();
+
+    <span class="hljs-keyword">var</span> disposable = commands.registerCommand(<span class="hljs-string">'extension.sayHello'</span>, () =&gt; {
+        wordCounter.updateWordCount();
+    });
+
+    <span class="hljs-comment">// Add to a list of disposables which are disposed when this extension is deactivated.</span>
+    context.subscriptions.push(wordCounter);
+    context.subscriptions.push(disposable);
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordCounter</span> </span>{
+
+    private _statusBarItem: StatusBarItem;
+
+    public updateWordCount() {
+
+        <span class="hljs-comment">// Create as needed </span>
+        <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>._statusBarItem) { 
+            <span class="hljs-keyword">this</span>._statusBarItem = <span class="hljs-built_in">window</span>.createStatusBarItem(StatusBarAlignment.Left); 
+        }  
+ 
+        <span class="hljs-comment">// Get the current text editor </span>
+        <span class="hljs-keyword">let</span> editor = <span class="hljs-built_in">window</span>.activeTextEditor; 
+        <span class="hljs-keyword">if</span> (!editor) { 
+            <span class="hljs-keyword">this</span>._statusBarItem.hide(); 
+            <span class="hljs-keyword">return</span>; 
+        } 
+ 
+         <span class="hljs-keyword">let</span> doc = editor.document; 
+ 
+        <span class="hljs-comment">// Only update status if an MarkDown file </span>
+        <span class="hljs-keyword">if</span> (doc.languageId === <span class="hljs-string">"markdown"</span>) { 
+            <span class="hljs-keyword">let</span> wordCount = <span class="hljs-keyword">this</span>._getWordCount(doc); 
+ 
+            <span class="hljs-comment">// Update the status bar </span>
+            <span class="hljs-keyword">this</span>._statusBarItem.text = wordCount !== <span class="hljs-number">1</span> ? <span class="hljs-string">`<span class="hljs-subst">${wordCount}</span> Words`</span> : <span class="hljs-string">'1 Word'</span>; 
+            <span class="hljs-keyword">this</span>._statusBarItem.show(); 
+        } <span class="hljs-keyword">else</span> { 
+            <span class="hljs-keyword">this</span>._statusBarItem.hide(); 
+        } 
+    } 
+
+    public _getWordCount(doc: TextDocument): number { 
+
+        <span class="hljs-keyword">let</span> docContent = doc.getText(); 
+ 
+        <span class="hljs-comment">// Parse out unwanted whitespace so the split is accurate </span>
+        docContent = docContent.replace(<span class="hljs-regexp">/(&lt; ([^&gt;]+)&lt;)/g</span>, <span class="hljs-string">''</span>).replace(<span class="hljs-regexp">/\s+/g</span>, <span class="hljs-string">' '</span>); 
+        docContent = docContent.replace(<span class="hljs-regexp">/^\s\s*/</span>, <span class="hljs-string">''</span>).replace(<span class="hljs-regexp">/\s\s*$/</span>, <span class="hljs-string">''</span>); 
+        <span class="hljs-keyword">let</span> wordCount = <span class="hljs-number">0</span>; 
+        <span class="hljs-keyword">if</span> (docContent != <span class="hljs-string">""</span>) { 
+            wordCount = docContent.split(<span class="hljs-string">" "</span>).length; 
+        } 
+          
+        <span class="hljs-keyword">return</span> wordCount; 
+    } 
+
+    dispose() {
+        <span class="hljs-keyword">this</span>._statusBarItem.dispose();
+    }
+}
+</code></pre>
+			<p>Now let's try our updates to the extension.</p>
+			<p>We have the compilation of the TypeScript file set on a watch (in the extension's .vscode\tasks.json file) so there is
+				no need to re-build. Simply hit <span class="keybinding">Ctrl+R</span> in the <strong>[Extension Development Host]</strong>				window where your code is running and the extension will reload (you can also just <span class="dynamic-keybinding" data-osx="F5"
+					data-win="F5" data-linux="F5"><span class="keybinding">F5</span></span> from your primary development window). We still
+				need to activate the code in the same way as before with the &quot;Hello World&quot; command. Assuming you are in a Markdown
+				file, your Status Bar will display the word count.</p>
+			<p><img src="~/Content/images/example-word-count_wordcount2.png" alt="BOOM Word Count"></p>
+			<p>This is a good start but it would be cooler if the count updated as your file changed.</p>
+			<h2 id="_subscribing-to-events">Subscribing to Events</h2>
+			<p>Let's hook your helper class up to a set of events.</p>
+			<ul>
+				<li><code>onDidChangeTextEditorSelection</code> - Event is raised as the cursor position changes</li>
+				<li><code>onDidChangeActiveTextEditor</code> - Event is raised as the active editor changes.</li>
+			</ul>
+			<p>To do this, we'll add a new class into the <code>extension.ts</code> file. It will set up subscriptions to those events
+				and ask the <code>WordCounter</code> to update the word count. Also note how this class manages the subscription as Disposables
+				and how it stops listing when being disposed itself.</p>
+			<p>Add the <code>WordCounterController</code> as shown below to the bottom of the <code>extension.ts</code> file.</p>
+			<pre><code class="javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordCounterController</span> </span>{
+
+    private _wordCounter: WordCounter;
+    private _disposable: Disposable;
+
+    constructor(wordCounter: WordCounter) {
+        <span class="hljs-keyword">this</span>._wordCounter = wordCounter;
+        <span class="hljs-keyword">this</span>._wordCounter.updateWordCount();
+
+        <span class="hljs-comment">// subscribe to selection change and editor activation events</span>
+        <span class="hljs-keyword">let</span> subscriptions: Disposable[] = [];
+        <span class="hljs-built_in">window</span>.onDidChangeTextEditorSelection(<span class="hljs-keyword">this</span>._onEvent, <span class="hljs-keyword">this</span>, subscriptions);
+        <span class="hljs-built_in">window</span>.onDidChangeActiveTextEditor(<span class="hljs-keyword">this</span>._onEvent, <span class="hljs-keyword">this</span>, subscriptions);
+        
+        <span class="hljs-comment">// update the counter for the current file</span>
+        <span class="hljs-keyword">this</span>._wordCounter.updateWordCount();
+
+        <span class="hljs-comment">// create a combined disposable from both event subscriptions</span>
+        <span class="hljs-keyword">this</span>._disposable = Disposable.from(...subscriptions);
+    }
+
+    dispose() {
+        <span class="hljs-keyword">this</span>._disposable.dispose();
+    }
+
+    private _onEvent() {
+        <span class="hljs-keyword">this</span>._wordCounter.updateWordCount();
+    }
+}
+</code></pre>
+			<p>We no longer want the Word Count extension to be loaded when a command is invoked but instead be available for each <em>Markdown</em>				file.</p>
+			<p>First, replace the body of the <code>activate</code> function with this:</p>
+			<pre><code class="javascript"><span class="hljs-comment">// Use the console to output diagnostic information (console.log) and errors (console.error).</span>
+<span class="hljs-comment">// This line of code will only be executed once when your extension is activated.</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Congratulations, your extension "WordCount" is now active!'</span>);
+
+<span class="hljs-comment">// create a new word counter</span>
+<span class="hljs-keyword">let</span> wordCounter = <span class="hljs-keyword">new</span> WordCounter();
+<span class="hljs-keyword">let</span> controller = <span class="hljs-keyword">new</span> WordCounterController(wordCounter);
+
+<span class="hljs-comment">// Add to a list of disposables which are disposed when this extension is deactivated.</span>
+context.subscriptions.push(controller);
+context.subscriptions.push(wordCounter);
+</code></pre>
+			<p>Second, we must make sure the extension is activated upon the opening of a <code>Markdown</code> file. To do this, we'll
+				need to modify the <code>project.json</code> file. Previously the extension was activated via the <code>extension.sayHello</code>				command which we no longer need and so we can delete the entire <code>contributes</code> attribute from <code>package.json</code>:</p>
+			<pre><code class="json">    <span class="hljs-string">"contributes"</span>: {
+        "<span class="hljs-attribute">commands</span>":
+            <span class="hljs-value">[{
+                "<span class="hljs-attribute">onCommand</span>": <span class="hljs-value"><span class="hljs-string">"extension.sayHello"</span></span>,
+                "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Hello World"</span>
+            </span>}
+        ]
+    </span>},
+</code></pre>
+			<p>Now change your extension so that it is activated upon the opening of a <em>Markdown</em> file by updating the <code>activationEvents</code>				attribute to this:</p>
+			<pre><code class="json">    <span class="hljs-string">"activationEvents"</span>: [
+        <span class="hljs-string">"onLanguage:markdown"</span>
+    ]
+</code></pre>
+			<p>The <a href="/docs/extensionAPI/activation-events#_activationeventsonlanguage"><code>onLanguage:${language}</code></a>				event takes the language id, in this case &quot;markdown&quot;, and will be raised whenever a file of that language is
+				opened.
+			</p>
+			<p>Run the extension by either doing a window reload <span class="keybinding">Ctrl+R</span> or with <span class="dynamic-keybinding"
+					data-osx="F5" data-win="F5" data-linux="F5"><span class="keybinding">F5</span></span> and then start editing a Markdown
+				file. You should now should have a live updating Word Count.</p>
+			<p><img src="~/Content/images/example-word-count_wordcountevent2.gif" alt="Word Count Updating on Events"></p>
+			<p>If you set a breakpoint on the <code>activate</code> function, you'll notice that it is only called once when the first
+				Markdown file is opened. The <code>WordCountController</code> constructor runs and subscribes to the editor events so
+				that the <code>updateWordCount</code> function is called as Markdown files are opened and their text changes.</p>
+			<h2 id="_customizing-the-status-bar">Customizing the Status Bar</h2>
+			<p>We've seen how you can display formatted text on the Status Bar. VS Code allows you to customize your Status Bar additions
+				even further with color, icons, tooltips and more. Using IntelliSense, you can see the various <code>StartBarItem</code>				fields. Another great resource for learning about the VS Code extensibility APIs is the <code>vscode.d.ts</code> typings
+				file included in your generated Extension project. Open <code>node_modules\vscode\vscode.d.ts</code> in the editor, you'll
+				see the complete VS Code extensibility API with comments.</p>
+			<p><img src="~/Content/images/example-word-count_vscode-d-ts.png" alt="vscode-d-ts"></p>
+			<p>Replace the StatusBarItem update code with:</p>
+			<pre><code class="javascript">            <span class="hljs-comment">// Update the status bar </span>
+            <span class="hljs-keyword">this</span>._statusBarItem.text = wordCount !== <span class="hljs-number">1</span> ? <span class="hljs-string">`$(pencil) <span class="hljs-subst">${wordCount}</span> Words`</span> : <span class="hljs-string">'$(pencil) 1 Word'</span>; 
+            <span class="hljs-keyword">this</span>._statusBarItem.show(); 
+</code></pre>
+			<p>to display a <a href="https://octicons.github.com">GitHub Octicon</a> <code>pencil</code> icon to the left of the calculated
+				word count.</p>
+			<p><img src="~/Content/images/example-word-count_wordcount-pencil.png" alt="word count pencil"></p>
+			<h2 id="_disposing-extension-resources">Disposing Extension Resources</h2>
+			<p>Now we'll take a deeper look at how extensions should handle VS Code resources through <a href="/docs/extensions/patterns-and-principles#_disposables">Disposables</a>.</p>
+			<p>When an extension is activated, it is passed an <code>ExtensionContext</code> object which has a <code>subscriptions</code>				collection of Disposables. Extensions can add their Disposable objects to this collection and VS Code will dispose of
+				those objects when the extension is deactivated.</p>
+			<p>Many VS Code APIs which create workspace or UI objects (e.g. <code>registerCommand</code>) return a Disposable and extensions
+				can remove these elements from VS Code by calling their dispose method directly.</p>
+			<p>Events are another example where <code>onDid*</code> event subscriber methods return a Disposable. Extensions unsubscribe
+				to an event by disposing the event's Disposable. In our example, <code>WordCountController</code> handles the event subscription
+				Disposables directly by keeping its own Disposable collection which it cleans up on deactivation.</p>
+			<pre><code class="javascript">        <span class="hljs-comment">// subscribe to selection change and editor activation events</span>
+        <span class="hljs-keyword">let</span> subscriptions: Disposable[] = [];
+        <span class="hljs-built_in">window</span>.onDidChangeTextEditorSelection(<span class="hljs-keyword">this</span>._onEvent, <span class="hljs-keyword">this</span>, subscriptions);
+        <span class="hljs-built_in">window</span>.onDidChangeActiveTextEditor(<span class="hljs-keyword">this</span>._onEvent, <span class="hljs-keyword">this</span>, subscriptions);
+
+        <span class="hljs-comment">// create a combined disposable from both event subscriptions</span>
+        <span class="hljs-keyword">this</span>._disposable = Disposable.from(...subscriptions);
+</code></pre>
+			<h2 id="_installing-your-extension-locally">Installing your Extension Locally</h2>
+			<p>So far, the extension you have written only runs in a special instance of VS Code, the Extension Development Host instance.
+				To make your extension available to all VS Code instances, copy the extension folder contents to a new folder under
+				<a href="/docs/extensions/install-extension#_your-extensions-folder">your <code>.vscode/extensions</code> folder</a>.</p>
+			<h2 id="_publishing-your-extension">Publishing your Extension</h2>
+			<p>Read about how to <a href="/docs/tools/vscecli">Share an Extension</a>.</p>
+			<h2 id="_next-steps">Next Steps</h2>
+			<p>Read on to find out about:</p>
+			<ul>
+				<li><a href="/docs/tools/yocode">Yo Code</a> - learn about other options in Yo Code</li>
+				<li><a href="/docs/extensionAPI/overview">Extension API</a> - Get an overview of the Extension API</li>
+				<li><a href="/docs/customization/overview">Customization</a> - Themes, settings and keyboard bindings</li>
+				<li><a href="/docs/tools/vscecli">Publishing Tool</a> - Learn how to publish an extension to the public gallery</li>
+				<li><a href="/docs/extensionAPI/vscode-api#_window">Editor API</a> - Learn more about Text Documents, Text Editors and editing
+					text
+				</li>
+			</ul>
+			<h2 id="_common-questions">Common Questions</h2>
+			<p>Nothing yet</p>
+
+			<div class="feedback"></div>
+
+			<div class="body-footer">Last updated on 11/18/2015</div>
+
+		</div>
+		<div class="hidden-xs col-sm-3 col-md-2">
+			<nav id="docs-subnavbar">
+				<h4>In this article</h4>
+				<ul class="nav">
+
+					<li><a href="#_overview">Overview</a></li>
+
+					<li><a href="#_run-the-extension">Run the Extension</a></li>
+
+					<li><a href="#_update-the-status-bar">Update the Status Bar</a></li>
+
+					<li><a href="#_subscribing-to-events">Subscribing to Events</a></li>
+
+					<li><a href="#_customizing-the-status-bar">Customizing the Status Bar</a></li>
+
+					<li><a href="#_disposing-extension-resources">Disposing Extension Resources</a></li>
+
+					<li><a href="#_installing-your-extension-locally">Installing your Extension Locally</a></li>
+
+					<li><a href="#_publishing-your-extension">Publishing your Extension</a></li>
+
+					<li><a href="#_next-steps">Next Steps</a></li>
+
+					<li><a href="#_common-questions">Common Questions</a></li>
+
+				</ul>
+				<!-- "https://github.com/Microsoft/vscode-docs/blob/master/docs/extensions/example-word-count.md" -->
+
+				<a class="twitter-share-button" href="https://twitter.com/share" data-text="Sharing this doc" data-via="Code" data-counturl="https://code.visualstudio.com/Docs/extensions/example-word-count"
+					data-count="vertical">
+				    Tweet
+				</a>
+
+				<div class="fb-like" data-href="https://code.visualstudio.com/Docs/extensions/example-word-count" data-layout="box_count"
+					data-action="like" data-show-faces="false" data-share="false"></div>
+			</nav>
+		</div>
+	</div>
+</div>
+@section scripts {
+<div id="fb-root"></div>
+@Scripts.Render("~/Content/docsjs") } @section MoreMetadata {
+<meta name="description" content="The Word Count extension (plug-in) example takes you deeper into the Visual Studio Code extensibility model, showing how to interact with the editor and manage extension and VS Code resources."
+/>
+<meta name="keywords" content="" /> }

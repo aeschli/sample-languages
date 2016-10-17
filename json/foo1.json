@@ -1,0 +1,4996 @@
+[{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+},
+{
+	"foo1234": 0.343E+01,
+	"name": "json",
+	"version":null,
+	"publisher": 1.2,
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"languages": [{
+			"id": "jso\u3903n1",
+			"aliases": ["jso\u3903n1", "jso\u3903n1"],
+			"extensions": [".json1"],
+			"mimetypes": [{"a": "b", "c":["f"]}]
+		}],
+		"grammars": [{
+			"language": "jso\u3903n1",
+			"scopeName": "source.json",
+			"path": "./syntaxes/JSON.tmLanguage"
+			
+		}]
+	}
+	
+
+}
+]
+

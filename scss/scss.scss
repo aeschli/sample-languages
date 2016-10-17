@@ -1,0 +1,19 @@
+foo {
+	border-width: 0k
+}
+
+@mixin foo { display: inline } foo { @include /*here*/foo; }
+
+.head {
+  height: 64px;
+  line-height: 64px;
+  background-color: #f2f2f2;
+  margin-top: $gradientHeight;
+
+  @at-root #{&}__title {
+    font-size: 2rem;
+    color: #339;
+    margin-left: 2rem;
+    display: inline-block;
+	
+  }

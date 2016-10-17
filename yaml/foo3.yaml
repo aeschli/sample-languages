@@ -1,0 +1,1 @@
+fields: publisher_id.`split(., 1, 1)`

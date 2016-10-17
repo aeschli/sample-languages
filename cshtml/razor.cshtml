@@ -1,0 +1,34 @@
+
+<!-- Single statement block  --> 
+
+@Code dim myMessage = "Hello World" End Code
+
+ 
+
+<!-- Inline expression or variable --> 
+
+<p>The value of myMessage is: @myMessage</p> 
+
+ 
+
+<!-- Multi-statement block --> 
+
+@Code
+
+dim greeting = "Welcome to our site!" 
+
+dim weekDay = DateTime.Now.DayOfWeek 
+
+dim greetingMessage = greeting & " Here in Huston it is: " & weekDay
+
+End Code 
+
+
+<p>
+
+<img id="captchaImg" src=@Url.Content("~/Account/GetCaptchaImage?t="+DateTime.UtcNow.Subtract(DateTime.MinValue).TotalSeconds.ToString())>
+<span class="loading"></span>
+</p>
+
+
+<p>The greeting is: @greetingMessage</p>
