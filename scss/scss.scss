@@ -4,7 +4,7 @@ foo {
 
 @mixin foo { display: inline } foo { @include /*here*/foo; }
 
-.head {
+.head:hov {
   height: 64px;
   line-height: 64px;
   background-color: #f2f2f2;

@@ -2,12 +2,20 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "title": "JSON schema for component.json files",
-	"additionalProperties": true,
+    "additionalProperties": true,
     "properties": {
         "foo": {
-            "description": "Hello http://myserver:9090/loo",
-            "default": "http://foo/bar"
+            "description": "Hello http://myserver:9090/loo dsdsd",
+            "oneOf" : [{
+                "enum": ["1"],
+                "description": "It's 1"
+            },{
+                "enum": ["2"],
+                "description": "It's 2"
+            },{
+                "enum": ["23"],
+                "description": "It's 23"
+            }]
         }
-    }
-    
+    }  
 }

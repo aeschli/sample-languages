@@ -1,0 +1,19 @@
+{
+    "vertical": "apps",
+    "device": "responsive",
+    "head": {
+        "css": [
+            "../../../global/apps/css/apps.css",
+            "../../../global/responsive/css/owl.carousel.css",
+            "../../../global/responsive/css/cms.css"
+        ],
+        "js": []
+    },
+    "footer": {
+        "js": [
+            "../../../global/responsive/js/vendors/owl.carousel.js",
+            "../../../global/responsive/js/vendors/owl.carousel.js",
+            "../../../global/responsive/js/vendors/owl.carousel.js"
+        ]
+    }
+}

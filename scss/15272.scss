@@ -1,0 +1,8 @@
+    tr {
+        th, td {
+            border-bottom: 1px solid gray;
+            @at-root #{foo(&, ss, dfd)} {
+                border-bottom: 0;
+            }
+        }
+    }

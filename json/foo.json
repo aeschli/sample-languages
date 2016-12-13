@@ -1,36 +1,4 @@
 {
 	"$schema": "./foo.schema.json",
-	"foo": "http://foo/bar",
-	// hello test
-	/* asdsad */
-	"version": 1,
-	"publisher": null,
-	"engines": {
-		"vscode": "*"
-	},
-	"contributes": {
-		"languages": [
-			{
-				"id": "json1",
-				"aliases": [
-					"JSON1",
-					1,
-					"json1"
-				],
-				"extensions": [
-					".json1"
-				],
-				"mimetypes": [
-					"application/json1"
-				]
-			}
-		],
-		"grammars": [
-			{
-				"language": "json1",
-				"scopeName": "source.json",
-				"path": "./syntaxes/JSON.tmLanguage"
-			}
-		]
-	}
-}
+	"foo": "23"
+}  

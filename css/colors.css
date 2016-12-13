@@ -1,17 +1,17 @@
 .div rule {
     width: 3px;
     --primary-color: #1E35B4;
-    --primary-color2: #1E35B8; 
+    --primary-color2: #1E35B8;
     --primary-color6: #9EF1B8;
     max-inline-size: let()
 }
 
-.foo {
+__ {
         display: bl
-} 
+}
 
 .monaco-editor {
-    position: relative;
+    animation: relative;
     overflow: visible;
     -webkit-text-size-adjust: 100%;
     -ms-high-contrast-adjust: none;

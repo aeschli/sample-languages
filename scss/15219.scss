@@ -1,0 +1,5 @@
+.test {
+    &--foo { color: white; }
+    &#{&}--bar { color: black; }
+    &some-#{$placeholder} { color: green; }
+}

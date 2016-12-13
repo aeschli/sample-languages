@@ -1,0 +1,21 @@
+<div class="ad_middle">
+    <div class="pro_list"> {{if taglist != ''}}
+        <ul class="clear"> {{each taglist as list}} <input class="tagid" type="hidden" data-tagid="{{taglist[0].id}}"> {{each list.goodslist
+            as value index }} {{if index
+            < 4}} <li class="column_2 content" data-recid="{{value.recid}}" data-sortid="{{value.sortid}}">
+                <div class="item_content">
+                    <div class="pro_type"> <span></span> </div>
+                    <div class="pro_img">
+                        <a href="{{if value.id != null && value.id != ''}}{{value.goodslink}}{{else}}#{{/if}}"> <img src="{{if value.goodspic != null }}http://img3.wtoip.com{{value.goodspic}}{{else}}/static/img/template/pro_img-1.png{{/if}}">                            </a>
+                    </div>
+                    <div class="pro_text">
+                        <p class="name"> {{if value.goodsname != null}}{{value.goodsname}}{{else}}点击添加你想展示的文字内容{{/if}} </p>
+                        <p class="des">
+                        {{if value.goodsdesc != null}} {{=getGoodsIntro(value.goodsdesc)}} {{else}} 点击添加你想展示的文字内容 {{/if}}
+                            </p>
+                        <p class="price"> {{if value.id != null && value.id != ''}} {{if value.price > 0 }} ￥{{value.price}} {{else}} 面议 {{/if}}
+                            {{else}} 价格：待定 {{/if}} </p>
+                    </div>
+                </div>
+                </li> {{/if}} {{/each}} {{/each}} </ul> {{/if}} </div>
+</div>

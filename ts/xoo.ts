@@ -33,3 +33,11 @@ class Repro {
     return 1
   }
 }
+let res =   {
+      defaults: 1,
+      refresh: function(f) {},
+      _refresh: function(f) {},
+};
+let res2 =   {
+      defaults: function(f) {}
+  }

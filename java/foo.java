@@ -3,8 +3,9 @@ package foo;
 import org.junit.Test;
 import org.junit.runners.*;
 
-/*
+/**
  * Multi line comment
+ <p>Note: </p> asddasd
  */
 public class TestClass {
 
@@ -18,7 +19,7 @@ public class TestClass {
 		double c = 10e3;
 		long l = 134l;
 	}
-new String 
+new String
     ("(A)" + "B");
 new String("Following line");
 	/*

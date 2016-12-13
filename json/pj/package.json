@@ -1,0 +1,18 @@
+{
+	"contributes": {
+		"grammars": [
+			{
+				"language": "id",
+				"scopeName": "source.id",
+				"path": "./syntaxes/id.tmLanguage."
+			},
+			{
+				"language": "id",
+				"scopeName": "source.id",
+				"path": "./syntaxes/id.tmLanguage."
+			},
+
+
+		]
+    }
+}

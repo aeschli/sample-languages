@@ -8,3 +8,5 @@ struct bar{
 struct foo:public bar<int>{
     using bar<int>::operator();
 };
+
+int foo = 100'000;

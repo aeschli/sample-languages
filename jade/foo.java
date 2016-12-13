@@ -16,8 +16,8 @@ public class TestClass {
 	 */
 	public void doSomething(int a) {
 		double b = 0.0;
-		double c = 10e3;
-		long l = 134l;
+	 	double c = 10e3;
+	lo	ng l = 134l;
 log			
 	}
 	

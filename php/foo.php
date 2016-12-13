@@ -1,11 +1,11 @@
 
 
-
+html
 <?php
 // The next line contains a syntax error:
 if () {
 	return "The parser recovers from this type of syntax error";
-}
+} html
 ?>
 
 <html>

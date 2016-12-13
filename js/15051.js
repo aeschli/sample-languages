@@ -1,0 +1,1 @@
+var v = (a / b).toString().match(/\d*(\.\d+)?/)

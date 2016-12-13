@@ -1,0 +1,637 @@
+Jumpshare SaveDownload mob.edit_partner.html
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-md-2">
+			<div headroom class="doc-side-nav headroom" tolerance="50" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+
+				<nav class="hidden-print hidden-xs hidden-sm" role="tablist">
+					<ul class="nav">
+
+						<li du-scrollspy du-smooth-scroll="domain">
+							<a ng-href="#/mob-edit/#domain" du-scrollspy du-smooth-scroll>Partner Info</a>
+						</li>
+
+						<li du-scrollspy du-smooth-scroll="contacts">
+							<a ng-href="#/mob-edit#contacts" du-scrollspy du-smooth-scroll>Contacts</a>
+							<ul class="nav" du-spy-context="contacts">
+								<li>
+									<a ng-href="#/mob-edit#partnerContact" du-scrollspy du-smooth-scroll>Partner</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#returns" du-scrollspy du-smooth-scroll>Returns</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#technicalContact" du-scrollspy du-smooth-scroll>Technical</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#warehouseContact" du-scrollspy du-smooth-scroll>Warehouse</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#billingContact" du-scrollspy du-smooth-scroll>Billing</a>
+								</li>
+							</ul>
+						</li>
+
+						<li du-scrollspy du-smooth-scroll="settings">
+							<a ng-href="#/mob-edit#settings" du-scrollspy du-smooth-scroll>Settings</a>
+							<ul class="nav" du-spy-context="contacts">
+								<li>
+									<a ng-href="#/mob-edit#basicSettings" du-scrollspy du-smooth-scroll>Basic</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#securitySettings" du-scrollspy du-smooth-scroll>Security</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#orderManagementSettings" du-scrollspy du-smooth-scroll>Order Management</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#parcelProtectionSettings" du-scrollspy du-smooth-scroll>Parcel Protection</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#sftpClaimsFilesSettings" du-scrollspy du-smooth-scroll>SFTP Claims Files</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#sftpFileIntegrationSettings" du-scrollspy du-smooth-scroll>SFTP File Integration</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#fileExchangeSettings" du-scrollspy du-smooth-scroll>File Exchange</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#parcelTrackingSettings" du-scrollspy du-smooth-scroll>Parcel Tracking</a>
+								</li>
+								<li>
+									<a ng-href="#/mob-edit#billingAccountSettings" du-scrollspy du-smooth-scroll>Billing Account</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+					<a href="#/mob-edit#top-of-page" class="back-to-top" du-scrollspy du-smooth-scroll> Back to top </a>
+				</nav>
+
+			</div>
+
+		</div>
+		<div class="col-md-6 col-md-offset-1 col-sm-9" id="top-of-page">
+			<!-- right  (main) column -->
+
+			<h1>Edit Partner</h1>
+			<div style="color:green;">
+				<script>
+					$.post()
+				</script>
+			</div>
+
+
+			<form novalidate class="display-options-form">
+				<table>
+					<tbody>
+
+						<tr class="required">
+							<td>
+								<label class="control-label">Display</label>
+							</td>
+
+							<td>
+								<input type="checkbox" name="option1" value="option1" ng-model="mob.showInherited">
+							</td>
+							<td>
+
+								<div class="display-options">
+									<div>
+										<label class="control-label">Show inherited data <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top"  data-content="Checkbox indicates fields that can inherit values from partner defaults" aria-label="Help"><i class="nc-icon-mini ui-2_alert-circle text-gray-500" aria-hidden="true"></i></a></label>
+									</div>
+
+									<div>
+										<label class="radio-inline">
+                  <input type="radio" name="fieldsToShow" id="inlineRadio1" ng-model="mob.switchStatus1" ng-value="true"> All Fields
+                  </label>
+										<label class="radio-inline">
+                  <input type="radio" name="fieldsToShow" id="inlineRadio2" ng-model="mob.switchStatus1" ng-value="false"> Only My Fields
+                  </label>
+									</div>
+								</div>
+
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+
+
+
+
+
+			<form novalidate name="mobForm" class="form-horizontal mob-form" ng-class="{'hide-inherited': !mob.showInherited}">
+
+				<!-- NOTE: Each section is one or more includes in the prototype
+					Each section is a table.  Each TR has a class of "required" and/or "inherited".
+					If a row is class "inherited" the related checkbox is visible, otherwise it's hidden.
+					The actual value(s) of the controls are in the related JSON files.
+			-->
+
+				<section id="domain">
+					<h2>Partner Info</h2>
+					<table>
+						<tbody>
+
+							<tr class="required">
+								<td class="labels">
+									<label class="control-label">Partner Name</label>
+								</td>
+								<td class="cb">
+									<input type="checkbox" name="partnerCodePrefixInherit" id="" ng-model="mob.mobData[6].inherit">
+								</td>
+								<td class="data">
+									<input type="text" class="form-control" ng-model="mob.mobData[6].val" ng-disabled="mob.mobData[6].inherit">
+								</td>
+							</tr>
+							<tr class="required">
+								<td class="labels">
+									<label class="control-label">Partner Code</label>
+								</td>
+								<td class="cb">
+									&nbsp;
+								</td>
+								<td class="data">
+									<div class="read-only-data">{{mob.mobData[2].val}}</div>
+								</td>
+							</tr>
+							<tr class="inherited required">
+								<td class="labels">
+									<label class="control-label">Partner Prefix</label>
+								</td>
+								<td class="cb">
+									<input type="checkbox" name="partnerCodePrefixInherit" id="" ng-model="mob.mobData[1].inherit">
+								</td>
+								<td class="data">
+									<input type="text" class="form-control" ng-model="mob.mobData[1].val" ng-disabled="mob.mobData[1].inherit">
+								</td>
+							</tr>
+							<tr class="required">
+								<td class="labels">
+									<label class="control-label">Pricing Tier</label>
+								</td>
+								<td class="cb"><input type="checkbox" name="" id=""></td>
+								<td class="data">
+									<select name="{{mob.mobData[0].name}}" ng-model="mob.mobData[0].values[6]" ng-options="s.name for s in mob.mobData[0].values"
+										class="form-control"></select>
+								</td>
+							</tr>
+
+							<tr class="required">
+								<td class="labels">
+									<label class="control-label">D&amp;B Number (DUNS)</label>
+								</td>
+								<td class="cb">
+									&nbsp;
+								</td>
+								<td class="data">
+									<input type="text" name="" id="" class="form-control" required>
+								</td>
+							</tr>
+							<tr class="required">
+								<td class="labels">
+									<label class="control-label">Active</label>
+								</td>
+								<td class="cb">
+									&nbsp;
+								</td>
+								<td class="data">
+									<label class="radio-inline">
+										<input type="radio" name="ACTIVE" id="inlineRadioActive1" ng-model="mob.mobData[4].val" ng-value="true"> Yes
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="ACTIVE" id="inlineRadioActive2" ng-model="mob.mobData[4].val" ng-value="false"> No
+									</label>
+								</td>
+							</tr>
+							<tr class="required">
+								<td class="labels">
+									<label class="control-label">Key Name</label>
+								</td>
+								<td class="cb">
+									&nbsp;
+								</td>
+								<td class="data">
+									<div class="read-only-data">{{mob.mobData[5].val}}</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+				</section>
+
+				<section id="contacts">
+					<h2>Contacts</h2>
+
+					<uib-accordion close-others="mob.accordions.oneAtATime" class="accordion-noborder accordion-graybg">
+
+						<uib-accordion-group heading="Partner Contact" is-open="true" id="partnerContact">
+							<div ng-include="'views/mob-partials/partner/mob-company_info.html'"></div>
+							<div ng-include="'views/mob-partials/partner/mob-contact_info.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="Returns" is-open="false" id="returns" class="optional">
+							<div ng-include="'views/mob-partials/partner/mob-company_info.html'"></div>
+							<div ng-include="'views/mob-partials/partner/mob-contact_info.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="Technical Contact" is-open="false" id="technicalContact" class="optional">
+							<div ng-include="'views/mob-partials/partner/mob-contact_info.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="Warehouse Contact" is-open="false" id="warehouseContact" class="optional">
+							<div ng-include="'views/mob-partials/partner/mob-contact_info.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="Billing Contact" is-open="false" id="billingContact" class="optional">
+							<div ng-include="'views/mob-partials/partner/mob-contact_info.html'"></div>
+						</uib-accordion-group>
+
+					</uib-accordion>
+
+				</section>
+
+				<section id="settings">
+					<h2>Settings</h2>
+
+					<uib-accordion close-others="mob.accordions.oneAtATime" class="accordion-noborder accordion-graybg">
+
+						<uib-accordion-group heading="Basic Settings" is-open="true" id="basicSettings">
+							<div ng-include="'views/mob-partials/partner/mob-settings-basic.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="Security Settings" is-open="true" id="securitySettings">
+							<div ng-include="'views/mob-partials/partner/mob-settings-security.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="Order Management Settings" is-open="true" id="orderManagementSettings">
+							<div ng-include="'views/mob-partials/partner/mob-settings-ordermgmnt.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="Parcel Protection Settings" is-open="true" id="parcelProtectionSettings">
+							<div ng-include="'views/mob-partials/partner/mob-settings-parcel-protection.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="SFTP Claims Files Settings" is-open="true" id="sftpClaimsFilesSettings">
+							<div ng-include="'views/mob-partials/partner/mob-settings-sftp-claims-files.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="SFTP File Integration Settings" is-open="true" id="sftpFileIntegrationSettings">
+							<div ng-include="'views/mob-partials/partner/mob-settings-sftp-file-integration.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="File Exchange Settings" is-open="true" id="fileExchangeSettings">
+							<div ng-include="'views/mob-partials/partner/mob-settings-file-exchange.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="Parcel Tracking Settings" is-open="true" id="parcelTrackingSettings">
+							<div ng-include="'views/mob-partials/partner/mob-settings-parcel-tracking.html'"></div>
+						</uib-accordion-group>
+
+						<uib-accordion-group heading="Billing Account Settings" is-open="true" id="billingAccountSettings">
+							<div ng-include="'views/mob-partials/partner/mob-settings-billing-account.html'"></div>
+						</uib-accordion-group>
+
+					</uib-accordion>
+
+				</section>
+
+				<div class="row">
+					<div class="col-md-12">
+						<button class="btn btn-primary">Save</button>
+						<button class="btn btn-default">Cancel</button>
+					</div>
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="popover"]').popover();
+  });
+</script>
+Choose FilesChoose File

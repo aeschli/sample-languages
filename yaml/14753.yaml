@@ -1,0 +1,12 @@
+Bla:
+  - 
+  {
+    "jsonStuff": {
+      "${something}": {
+        "bla1":"sd",
+        "bal2":"${asdf}",
+        "bla3":"$[asdf]"
+      }
+    }
+  }
+this: is,

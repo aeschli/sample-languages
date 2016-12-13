@@ -1,0 +1,1 @@
+function foo(a) { return <div className={`abcd-${a}`}></div> }

@@ -1,12 +1,19 @@
+
 {
 	"name": "name",
 	"description": "description",
 	"version": "1.0.0",
 	"main": "pathToMain",
+	"engines": {
+		"vscode": ""
+	},
+
 	"contributes": {
+
 		"languages": [
 			{
 				"id": "languageId",
+
 				"aliases": [
 					"label"
 				],
@@ -17,12 +24,20 @@
 			}
 		],
 		"grammars": [
+
 			{
 				"language": "id",
 				"scopeName": "source.id",
 				"path": "./syntaxes/id.tmLanguage."
 			},
-			
+
+
+		],
+		"jsonValidation": [
+			{
+				"fileMatch": "\${1:file.json}",
+				"url": "url"
+			}
 		]
 	},
 	"activationEvents": [
@@ -30,10 +45,10 @@
 	],
 
     "dependencies": {
-		"colors": "*",
-		"@types/babel-types" : 
-		
-		
+		"angular-latest": "*",
+		"micromatch": "http://f/d"
+
+
     },
-	
+
 }
