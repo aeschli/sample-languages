@@ -12,7 +12,7 @@
 
 		"languages": [
 			{
-				"id": "languageId",
+				"id": 1,
 
 				"aliases": [
 					"label"
@@ -29,13 +29,13 @@
 				"language": "id",
 				"scopeName": "source.id",
 				"path": "./syntaxes/id.tmLanguage."
-			},
+			}
 
 
 		],
 		"jsonValidation": [
 			{
-				"fileMatch": "\${1:file.json}",
+				"fileMatch": "{1:file.json}",
 				"url": "url"
 			}
 		]
@@ -45,10 +45,9 @@
 	],
 
     "dependencies": {
-		"angular-latest": "*",
-		"micromatch": "http://f/d"
-
-
-    },
+			"jquery": ""
+    }
+		,
+		
 
 }

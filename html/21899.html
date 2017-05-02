@@ -1,0 +1,14 @@
+<product-select formControlName="product"
+                required
+                [defaultItem]="[{
+                                                            productId: productItem.productId,
+                                                            productName: productItem.productName,
+                                                            extension: productItem.productMediaExtension
+                                                        }]"
+                [disabled]="readonly || !productItem || !productItem.vendorId"
+                [duplicateThumbnailFrom]="productItemMediaThumbnail"
+                [employeeOfficeId]="productItem.employeeOfficeId"
+                [editing]="isProductEditMode"
+                [valuePrimitive]="true"
+                [vendorId]="productItem.vendorId">
+</product-select>

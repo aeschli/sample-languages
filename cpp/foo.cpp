@@ -7,6 +7,7 @@
 int main(int argc, char** argv)
 {
 	int value;
+	
 	string raw_str=R"(First line.\nSecond line.\nEnd of message.\n)";
 	regex rr(R"(((\+|-)?[[:digit:]]+)(\.(([[:digit:]]+)?))?((e|E)((\+|-)?)[[:digit:]]+)?)");
 	return 0x1.1e7f4707fc4dcp-9 + 7;
@@ -28,6 +29,7 @@ namespace TestSpace
 		foo method() const override
 		{
 			auto s = new Bar();
+			const vector<string> s;
 			
 			if (s.field) {
 				for(const auto & b : s.field) {

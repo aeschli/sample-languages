@@ -25,7 +25,7 @@ func Reverse(s string) string {
 	}
 	return string(r)
 }
-
+	
 var {
 	// a comment
 	var1 = "Hello" + 'h' + `klk`;

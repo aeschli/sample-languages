@@ -5,7 +5,11 @@
 declare module s {
     export default function foo;
 }
-
+export module Conway {
+}
+/**
+ * The Conway thingy
+ */
 export module Conway {
     export interface Foo {
     }

@@ -1,0 +1,2 @@
+if true,do: "foo", else: "bar"
+if true,do: "foo", else: "bar"nil

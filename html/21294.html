@@ -1,0 +1,11 @@
+<div id="dialer-capmaign-console" class="fill-vertically" style="flex: 1 1 auto;">
+    <div id="sessionsGrid" data-columns="[
+		{ field: 'dialerSession.startTime', format:'{0:G}', title:'Start time', width:122 },
+		{ field: 'dialerSession.endTime', format:'{0:G}', title:'End time', width:122, attributes: {class:'tooltip-column'}},
+		{ field: 'conversationStartTime', template: cty.ui.gct.duration_dialerSession_conversationStartTime_endTime, title:'Duration', width:80},
+		{ field: 'dialerSession.caller.lastName',template: cty.ui.gct.person_dialerSession_caller_link, title:'Caller', width:160 },
+		{ field: 'noteType',template:cty.ui.gct.nameDescription_noteType, title:'Note type', width:150, attributes: {class:'tooltip-column'}},
+		{ field: 'note', title:'Note'}
+		]">
+    </div>
+</div>

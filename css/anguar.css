@@ -4,9 +4,7 @@ foo {
 
 :host rect.d3chart-background {
   fill: rgba(250,250,250,0.8);
-  -m
-  
-  color1: limegreen;   
+  color: limegreen;   color: limegreen;  color: limegreen;  color: limegreen;  color: limegreen;  color: limegreen;  color: limegreen;  color: limegreen;  color: limegreen;  
   border-radius: 3px;
   color: asa
 }

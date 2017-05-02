@@ -1,0 +1,5 @@
+@each $display, $size in $grid-properties {
+@media (min-width: $display) {
+@include generate-grid;
+}
+}

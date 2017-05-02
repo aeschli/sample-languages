@@ -1,0 +1,35 @@
+@{
+    var total = 0;
+    var totalMessage = "";
+    if(IsPost) {
+
+        // Retrieve the numbers that the user entered.
+        var num1 = Request["text1"];
+        var num2 = Request["text2"];
+
+        // Convert the entered strings into integers numbers and add.
+        total = num1.AsInt() + num2.AsInt();
+        totalMessage = "Total = " + total;
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            p {
+                margin: 6px 0;
+            }
+        </style>
+        <script>
+            window.alert('hello');
+        </script>
+    </head>
+    <body>
+        <ul>
+            @for (int i = 0; i < 10; i++) {
+                <li>@i</li>
+            }
+        </ul>
+    </body>
+</html>

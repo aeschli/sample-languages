@@ -1,5 +1,7 @@
 open System.IO
 
+let mutable (*samplesLabel*) : System.Windows.Forms.Label = null
+
 let writetofile2 filename obj =
     using (System.IO.File.CreateText(filename)) ( fun file1 ->
         file1.WriteLine("{0}", obj.ToString() )

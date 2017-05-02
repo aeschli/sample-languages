@@ -1,0 +1,9 @@
+@if (index($_RESOURCES, "clean") != null) {
+    @error "sdssd";
+} @else {
+    $_RESOURCES: append($_RESOURCES, "clean") !global;
+}
+
+.foo {
+    display: 
+}

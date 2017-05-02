@@ -10,7 +10,7 @@ class Parent {
 export class Class extends Parent {
 
     constructor(private parent: Parent) { super(); }
-r
+
     fus = {
         ro: {
             da: (): void => {
@@ -28,7 +28,7 @@ r
         if(a instanceof String) console.log('instanceof string');
         else if(a instanceof Parent) console.log(`instanceof ${"parent"}`);
         var x = a.normal.keys.x.y.z.length.id.title.event.all.getAll().get().set().push().forEach().navigate().apply().sub().sup().anchor().big().normal().methods();
-
+        a  =19;
         this.fus.ro.da();
         super.bar();
 

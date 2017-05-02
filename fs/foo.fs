@@ -29,7 +29,7 @@ type Person(name:string, age:int) =
     member this.Age
         with get() = internalAge
         and set(value) = internalAge <- value
-
+let mutable (*samplesLabel*) : System.Windows.Forms.Label = null
     // Instance methods.
     // Increment the person's age.
 (* member this.HasABirthday () = internalAge <- internalAge + 1 *)

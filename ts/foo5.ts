@@ -1,3 +1,5 @@
+import * as CX from './foo'
+
 export class UI {
 	public searchbar: SearchBar;
 	public console: Console;
@@ -25,13 +27,15 @@ class B {
 
 	}
 }
-class C {
+class C {r
 
 }
 function foo<T>() { return 1; }
 let x1: A<(param?: number) => void, B>;
 let x2: A<C | B, C & B>;
-const t = 1 < (5 > 10 ? 1 : 2);
+const t = 1 < (5 > 10 ? 1 : 2);r
 var f6 = 1 < foo<string>();
+
+var t1 = CX.Conway;
 
 

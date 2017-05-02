@@ -1,0 +1,7 @@
+
+
+@each $prod-name, $color, $size in $products {
+    &--#{$prod-num} {
+        @include foo($size)
+    }
+}

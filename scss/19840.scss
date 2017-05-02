@@ -1,0 +1,5866 @@
+// Main widget styles 
+// --------------------------------------------- Notification event counters
+.widget-evt-count {
+	@include pad(.2rem .5rem);
+	border-radius: $des-br;
+	color: #fff;
+	font-size: $fsize-sub-text !important;
+	line-height: normal;
+	text-align: center;
+	z-index: 100;
+}
+
+// --------------------------------------------- Small avatar with info on the side
+.widget-img-w-nfo {
+	@include flex-justify-start;
+	.info-pic,
+	.info-ico {
+		font-size: 2rem;
+		margin-right: 1.5rem;
+		font-size: 20px;
+	}
+	.info-pic {
+		border-radius: 50%;
+		max-width: 4rem;
+		width: 4rem;
+		&.pic-notif-type {
+			@include flex-center;
+			@include flex-shrink(0);
+			color: #fff;
+			font-size: 1.6rem;
+			height: 3.5rem;
+			margin: 0 1.5rem;
+			width: 3.5rem;
+		}
+	}
+	.info-content {
+		.content-text {
+			color: $color-main-black;
+			font-size: $fsize-list-item;
+			line-height: $lay-main-lh;
+			margin-bottom: .4rem;
+			.text-link {
+				@include anchor-link($color-main-black, inherit);
+				@include transit;
+				font-weight: bold;
+				&:hover {
+					color: $color-main-red-dim;
+				}
+			}
+			.icon,
+			.text {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+		.content-sub {
+			@include flex-justify-start;
+			@include align-items(center);
+			@include align-content(center);
+			color: $color-grey-subtle;
+			font-size: $fsize-sub-text;
+			.sub-ind {
+				border-radius: 50%;
+				display: inline-block;
+				height: .7rem;
+				margin-right: .5rem;
+				vertical-align: middle;
+				width: .7rem;
+				&.active {
+					background: $color-succ-green;
+				}
+				&.inactive {
+					background: $color-main-red-dim;
+				}
+			}
+			&.urgent {
+				color: $color-main-red;
+				font-style: italic;
+				.icon {
+					margin-right: .3rem;
+					color: $color-main-black;
+				}
+			}
+		}
+	}
+	&.dim {
+		.info-content {
+			.content-text {
+				color: #fff;
+				opacity: .6;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- SIDEBOX widget
+.widget-sidebox {
+	// @include transform(translateX(100%));
+	// TEMP? translate3D performance
+	@include transform(translate3d(100%, 0, 0));
+	@include transit-fast;
+	@include display(flex);
+	@include flex-direction(column);
+	will-change: transform;
+	background: #fff;
+	bottom: 0;
+	box-shadow: $des-dropsh;
+	position: fixed;
+	right: 0;
+	top: $lay-head-spc;
+	z-index: 1000;
+	&.sidebox-min {
+		width: 33.7rem;
+	}
+	&.sidebox-s {
+		width: 25%;
+	}
+	&.sidebox-m {
+		width: 75%;
+	}
+	&.sidebox-open {
+		// @include transform(translateX(0%));
+		// TEMP? - translate3D Performance
+		@include transform(translate3d(0, 0, 0));
+	}
+	&.sidebox-m-push {
+		// @include transform(translateX(-300%));
+		// TEMP? - translate3D Performance
+		@include transform(translate3d(-300%, 0, 0));
+	}
+	.sidebox-block-group {
+		overflow-x: hidden;
+		overflow-y: auto;
+		&.supv-form-item-fold-sel {
+			display: none;
+		}
+	}
+	.sidebox-block {
+		@include display(flex);
+		@include flex-direction(column);
+		@include flex-grow(2);
+		.block-heading {
+			font-weight: bold;
+			margin-bottom: $lay-gut-def;
+		}
+		.block-paragraph {
+			color: $color-grey-subtle;
+			margin-bottom: $lay-gut-def;
+		}
+		.block-list {
+			margin-bottom: $lay-gut-def;
+			.list-item {
+				@include pad(0 0 0 .7rem);
+				color: $color-grey-subtle;
+				line-height: $lay-main-lh;
+				margin-bottom: $lay-gut-def;
+				margin-left: $lay-gut-def;
+				position: relative;
+				&::before {
+					border: .1rem solid $color-main-red-dim;
+					border-radius: 50%;
+					content: '';
+					height: .7rem;
+					left: -1.5rem;
+					opacity: .5;
+					position: absolute;
+					top: .6rem;
+					width: .7rem;
+				}
+			}
+		}
+		// Old Notification styles
+		.old {
+			background: $color-grey-lite;
+		}
+		.block-content {
+			@include display(flex);
+			@include flex-direction(column);
+			@include flex-grow(2);
+			.content-nocont {
+				@include pad(7rem 0);
+				color: $color-grey-outer;
+				text-align: center;
+				.icon {
+					font-size: 6rem;
+				}
+				.nocont-message {
+					font-size: $fsize-main;
+					margin-top: $lay-gut-def/2;
+					text-transform: capitalize;
+				}
+			}
+			// Main notification styles (sidebar)
+			.content-notif {
+				.notif-list {
+					@include pad(0 3.5rem 3.6rem 0);
+					.list-item {
+						@include pad(1.5rem 0);
+						.widget-img-w-nfo {
+							@include flex-justify-start;
+							@include align-items(flex-start);
+							// Pic - Notification type
+							.pic-notif-type {
+								position: relative;
+								// Colored line below notification pic
+								&::after {
+									background: inherit;
+									bottom: 0;
+									content: '';
+									width: .1rem;
+									height: 200%;
+									position: absolute;
+									left: 0;
+									right: 0;
+									margin: 0 auto;
+									top: 100%;
+								}
+								// Notification-type specific backgrounds
+								&.action {
+									background: $color-notif-action;
+								}
+								&.company {
+									background: $color-notif-company;
+									color: $color-grey-dark;
+								}
+								&.checklist {
+									background: $color-notif-checklist;
+								}
+								&.urgent {
+									background: $color-notif-urgent;
+								}
+								&.share {
+									background: $color-notif-share;
+								}
+								&.form {
+									background: $color-notif-form;
+								}
+								&.crew {
+									background: $color-notif-crew;
+								}
+								&.site {
+									background: $color-notif-site;
+								}
+							}
+						}
+					}
+				}
+			}
+			// Message list specific styles
+			.content-msgs {
+				.msgs-list {
+					.list-item {
+						border-bottom: .1rem solid $color-grey-med;
+						@include transit-fast;
+						&.unread {
+							background: $color-messages-bg-lightblue;
+						}
+						&:hover {
+							background: $color-grey-lite;
+							&.unread {
+								background: $color-grey-outer;
+							}
+						}
+						.msg-link {
+							@include pad(1.5rem $lay-gut-def);
+							text-decoration: none;
+							.info-pic {
+								@include align-self(flex-start);
+							}
+							.info-content {
+								.content-name {
+									.name {
+										color: $color-main-black;
+										font-size: 1.4rem;
+										font-weight: bold;
+										margin-bottom: .2rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.block {
+			.block-el {
+				margin-bottom: $lay-gut-def/2;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&.sidebox-help-form {
+			display: none;
+		}
+		button {
+			@extend .mod-des-appear-red;
+			margin: $lay-gut-def 0;
+			width: 100%;
+			&:hover {
+				@extend .mod-des-appear-red-dim;
+			}
+		}
+	}
+	// Notification Sidebox Widget specific styles
+	&.notif {
+		.sidebox-block {
+			@include display(flex);
+			@include flex-direction(column);
+			overflow: hidden;
+			// top notification block
+			&.notif-1 {
+				height: 46rem;
+			}
+			// bottom notification block
+			&.notif-2 {
+				@include flex-grow(2);
+			}
+			.block-content {
+				overflow: auto;
+			}
+		}
+	}
+	&.red-info-sidebox {
+		font-size: $fsize-main;
+		.sidebox-block {
+			.block {
+				.tab-content {
+					.content-wrap {
+						@include pad($lay-gut-def 0 0);
+						&.no-pad {
+							@include pad(0);
+						}
+					}
+				}
+				@include pad($lay-gut-def);
+			}
+		}
+		.red-info-header {
+			@include display(flex);
+			@include justify-content(space-between);
+			@include flex-direction(column);
+			@include flex-grow(0);
+			background: liveurl('../../assets/img/file_info_bg.png') $cover;
+			color: #fff;
+			// min-height: auto; <-- Does not work @ Safari
+			// Safari fix _
+			min-height: 22rem;
+			.close-btn {
+				@include anchor-link-bl;
+				@include pad($lay-gut-def);
+				font-size: $fsize-common-icon;
+				.icon {
+					@include transit-fast;
+				}
+				&:hover {
+					.icon {
+						color: $color-grey-dark;
+					}
+				}
+			}
+			.red-name {
+				@include pad($lay-gut-def);
+				.name {
+					font-weight: bold;
+				}
+				.name-details {
+					@include flex-justify-start;
+					font-size: 1.4rem;
+					margin-top: .7rem;
+					opacity: .7;
+					.icon {
+						margin-right: .7rem;
+					}
+				}
+			}
+			.file-actions {
+				@include display(flex);
+				.action {
+					@include anchor-link-bl;
+					@include pad(1.3rem);
+					@include transit-fast;
+					text-transform: uppercase;
+					font-size: $fsize-sub-text;
+					border-right: .1rem solid rgba(255, 255, 255, .3);
+					border-top: .1rem solid rgba(255, 255, 255, .3);
+					width: 50%;
+					text-align: center;
+					.icon {
+						@include display(inline-block);
+						vertical-align: middle;
+						margin-right: .5rem;
+						opacity: .7;
+					}
+					.action-text {
+						@include display(inline-block);
+						vertical-align: middle;
+					}
+					&:hover {
+						@extend .mod-des-appear-black;
+					}
+					&.with-opt {
+						@include flex-justify-between;
+						@include align-items(center);
+						@include align-content(center);
+						@include pad(.5rem $lay-gut-def/2);
+					}
+					&.disabled {
+						opacity: .3;
+					}
+				}
+				&.one {
+					.action {
+						width: 100%;
+					}
+				}
+			}
+			&.supv-fol-sel-header {
+				display: none;
+			}
+		}
+		.file-preview {
+			@include flex-center;
+			@include pad($lay-gut-def);
+			max-height: 30rem;
+			.preview-image {
+				max-width: 15rem;
+			}
+		}
+	}
+}
+
+// New notification styles
+.widget-dash-sb-header {
+	@include flex-justify-between;
+	// Gap fix
+	border-top: $des-border;
+	border-bottom: $des-border;
+	.header-title {
+		@include flex-grow(1);
+		@include pad($lay-gut-def);
+		text-transform: capitalize;
+		font-size: 1.8rem;
+		.title-link {
+			@include transit-fast;
+			text-decoration: none;
+			font-weight: bold;
+			color: inherit;
+			&:hover {
+				color: $color-main-red-dim;
+			}
+		}
+	}
+	// Specific margin 0-out 
+	.widget-sh-btn {
+		.icon {
+			margin: 0;
+		}
+	}
+}
+
+.widget-sidebox-block-heading {
+	@include flex-justify-start;
+	@include align-items(center);
+	@include pad($lay-gut-def);
+	border-top: $des-border;
+	border-bottom: $des-border;
+	font-size: $fsize-main;
+	position: relative;
+	.icon {
+		font-size: $fsize-common-icon;
+		margin-right: $lay-gut-def;
+	}
+	.sidebox-heading-text {
+		.text-link {
+			@include transit-fast;
+			color: $color-main-red;
+			&:hover {
+				color: $color-main-red-dim;
+			}
+		}
+	}
+	.sidebox-heading-feature {
+		position: absolute;
+		right: $lay-gut-def;
+		top: $lay-gut-def/2;
+	}
+}
+
+// --------------------------------------------- DESIGN specific widgets
+.widget-grey-form-line {
+	@include pad($lay-gut-def);
+	background: $color-grey-lite;
+	border-top: .1rem solid $color-grey-med;
+	border-bottom: .1rem solid $color-grey-med;
+}
+
+// --------------------------------------------- TAG LIST widget
+.widget-tag-list {
+	.list-item {
+		display: inline-block;
+		margin-bottom: $lay-gut-def/2;
+	}
+}
+
+// --------------------------------------------- TAG element widget
+.widget-tag {
+	border: .1rem solid $color-grey-subtle-lite;
+	color: $color-grey;
+	background: $color-grey-med;
+	@include display(flex);
+	margin-right: $lay-gut-def/2;
+	&:last-of-type {
+		margin-right: 0;
+	}
+	.tag-text {
+		font-size: $fsize-sub-text;
+	}
+	.tag-remove {
+		background: $color-grey-subtle-lite;
+		color: $color-grey-dark;
+		.icon {
+			display: block;
+		}
+	}
+	.tag-remove,
+	.tag-text {
+		@include pad($lay-gut-def/2);
+		display: inline-block;
+		vertical-align: middle;
+		font-size: $fsize-sub-text;
+	}
+}
+
+// --------------------------------------------- SEARCH BAR widget
+.widget-search-bar {
+	position: relative;
+	font-size: 2.4rem;
+	overflow: hidden;
+	.icon {
+		position: absolute;
+		left: $lay-gut-def;
+		top: 30%;
+		bottom: 0;
+	}
+	.bar-field {
+		@include pad(2.1rem $lay-gut-def $lay-gut-def 6rem);
+		font-size: 2.4rem;
+		width: 100%;
+		border: none !important;
+		z-index: 10;
+		color: $color-grey-subtle-lite;
+		font-style: italic;
+		&:active,
+		&:focus {
+			font-style: normal;
+			color: $color-main-black !important;
+		}
+	}
+	.cancel-search {
+		display: block;
+		position: absolute;
+		z-index: 100;
+		top: 30%;
+		right: 6.5rem;
+		color: inherit;
+		&:hover {
+			color: $color-main-red-dim;
+		}
+	}
+	// Dimmed style for serach bar
+	&.dimmed {
+		.icon {
+			color: $color-grey-subtle-lite;
+		}
+		.bar-field {
+			background: $color-grey-lite;
+			color: $color-grey-subtle-lite;
+		}
+		.cancel-search {
+			&:hover {
+				color: $color-main-red-dim;
+			}
+		}
+	}
+	&.mini {
+		.cancel-search,
+		.bar-field {
+			font-size: $fsize-main;
+		}
+		.cancel-search {
+			top: 35%;
+			right: 5rem;
+		}
+	}
+}
+
+// --------------------------------------------- USER SELECT LIST widget
+.widget-user-select-list {
+	@include display(flex);
+	@include flex-wrap(wrap);
+	.list {
+		@include display(flex);
+		@include flex-wrap(wrap);
+		.list-item {
+			display: inline-block;
+			margin-right: $lay-gut-def/2;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			.item-pic,
+			.item-no-pic {
+				width: 4.5rem;
+				height: 4.5rem;
+				border-radius: 50%;
+				border: .1rem solid transparent;
+			}
+			.item-no-pic {
+				@include flex-center;
+				font-size: 2rem;
+				color: #fff;
+			}
+		}
+	}
+	.remove-user-btn {
+		@include display(flex);
+		@include flex-grow(2);
+		@include justify-content(flex-end);
+		.item-remove {
+			@include align-self(flex-end);
+			@include flex-center;
+			@include transit-fast;
+			font-size: 2.2rem;
+			text-decoration: none;
+			color: $color-grey-subtle;
+			width: 4.5rem;
+			height: 4.5rem;
+			border-radius: 50%;
+			border: .1rem solid $color-grey-subtle-lite;
+			&:hover {
+				color: #fff;
+				background: $color-grey-dark;
+				border-color: $color-grey-dark;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- FILE UPLOAD LINE widget
+.widget-upload {
+	@include flex-justify-between;
+	@include justify-content(center);
+	.widget-file-upload {
+		@include flex-center;
+		@include flex-direction(column);
+		text-align: center;
+		.upload-label {
+			font-size: $fsize-main;
+		}
+	}
+}
+
+// --------------------------------------------- FILE UPLOAD widget 
+.widget-file-upload {
+	@include flex-center;
+	@include pad($lay-gut-def);
+	color: $color-grey-outer;
+	position: relative;
+	.upload-select {
+		@include transit-fast;
+		position: absolute;
+		opacity: 0;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+	}
+	.icon {
+		@include transit-fast;
+		font-size: 3.5rem;
+		margin-right: $lay-gut-def/2;
+	}
+	.upload-label {
+		@include transit-fast;
+		font-size: 2rem;
+	}
+	&:hover {
+		.upload-select {
+			cursor: pointer;
+		}
+		.icon,
+		.upload-label {
+			color: $color-grey;
+		}
+	}
+}
+
+// --------------------------------------------- TEXTAREA widget
+.widget-textarea {
+	.textarea {
+		@include pad($lay-gut-def/2);
+		border: .1rem solid $color-grey-outer;
+		color: $color-grey-subtle;
+		font-style: italic;
+		outline: none;
+		font-size: $fsize-main;
+		width: 100%;
+	}
+	&.notepad {
+		@include pad($lay-gut-def $lay-gut-def/2 0 $lay-gut-def*2);
+		background: liveurl('../../assets/img/txtarea_col_line.png') repeat-y 2rem center, liveurl('../../assets/img/txtarea_row_line.png') repeat center;
+		background-attachment: local;
+		border: .2rem solid $color-grey-subtle-lite;
+		resize: none;
+		line-height: 4rem;
+		font-size: 1.8rem;
+		font-style: italic;
+		color: $color-grey;
+		width: 100%;
+		min-height: 24rem;
+	}
+}
+
+// --------------------------------------------- FILE LIST widget
+.widget-file-list {
+	padding-bottom: $lay-gut-def;
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 100%;
+	max-width: 100%;
+	.list {
+		@include flex-justify-start;
+		.list-item {
+			margin: $lay-gut-def/2 .5rem;
+			white-space: normal;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+	// File upload specific styles
+	.widget-file-upload {
+		@include flex-direction(column);
+		@include transit-fast;
+		margin: 1rem .7rem 1rem 1rem;
+		text-align: center;
+		height: 18.5rem;
+		min-width: 23rem;
+		width: 23rem;
+		border: .1rem solid $color-grey-med;
+		border-radius: $des-br;
+		.icon {
+			font-size: 8rem;
+			color: $color-grey-med;
+		}
+		.upload-label {
+			font-size: $fsize-main;
+		}
+		&:hover {
+			border-color: $color-grey-dark;
+			.icon {
+				color: $color-grey;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- FILE widget
+.widget-file {
+	@include flex-justify-between;
+	@include pad(1.2rem .7rem);
+	@include transit-fast;
+	max-width: 23rem;
+	background: $color-grey-lite;
+	border-radius: $des-br;
+	box-shadow: $des-dropsh-file;
+	&:hover {
+		background: $color-grey-med;
+		box-shadow: $des-dropsh-file-hover;
+	}
+	.file-icon {
+		width: 3.8rem;
+		.icon-image {
+			width: 100%;
+		}
+	}
+	.file-info {
+		@include pad(0 $lay-gut-def 0 $lay-gut-def/2);
+		.info-name {
+			font-size: $fsize-main;
+		}
+		.info-size {
+			margin-top: .2rem;
+			font-size: $fsize-sub-text;
+			color: $color-grey-subtle;
+		}
+	}
+	.file-action {
+		color: $color-grey-dark;
+		font-size: $fsize-main;
+		padding-right: .7rem;
+		.action-link {
+			@include transit-fast;
+			text-decoration: none;
+			color: inherit;
+			&:hover {
+				color: $color-main-red;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- File widget with a thumb above
+.widget-file-with-thumb {
+	.file-thumb {
+		@include transit-fast;
+		display: block;
+		min-height: 12rem;
+		width: 23rem;
+		border-radius: $des-br;
+		// Inline background-image override
+		background-size: cover !important;
+		background-position: center !important;
+		// Overlay workaround
+		box-shadow: inset 0 0 100rem rgba(0, 0, 0, .25);
+		&:hover {
+			box-shadow: inset 0 0 100rem rgba(0, 0, 0, 0);
+		}
+		&.vid {
+			position: relative;
+			// Video file icon overlay indicator
+			&::after {
+				@include flex-center;
+				@include transit-fast;
+				width: 100%;
+				height: 100%;
+				font-family: $des-iconfont;
+				content: '\\e949';
+				position: absolute;
+				color: #fff;
+				font-size: 5rem;
+			}
+		}
+	}
+	&:hover {
+		box-shadow: $des-dropsh-file-hover;
+		.file-thumb {
+			&.vid {
+				&::after {
+					color: $color-main-red;
+					background: rgba(255, 255, 255, .9);
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- CHAT widget
+.widget-chat {
+	@include flex-grow(2);
+	@include pad($lay-gut-def);
+	border-top: .1rem solid $color-grey-med;
+	border-bottom: .1rem solid $color-grey-med;
+	overflow: auto;
+	.chat-msg {
+		margin-bottom: $lay-gut-def+1;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		.widget-img-w-nfo {
+			@include align-items(flex-start);
+			.info-content {
+				.content-text {
+					@include display(flex);
+					margin-bottom: $lay-gut-def/2;
+					.text-message {
+						@include pad(1.5rem);
+						background: $color-messages-bg-lightblue;
+						border-radius: $des-br;
+					}
+					&:first-of-type {
+						position: relative;
+					}
+				}
+				.content-sub {
+					.icon {
+						margin-right: .5rem;
+					}
+				}
+			}
+		}
+		// Incomming message styles 
+		&.in {
+			.widget-img-w-nfo {
+				.info-content {
+					.content-text {
+						.text-message {
+							background: $color-messages-bg-lightblue;
+						}
+						&:first-of-type {
+							&::before {
+								top: 0.5rem;
+								left: -.7rem;
+								position: absolute;
+								content: '';
+								width: 0;
+								height: 0;
+								border-style: solid;
+								border-width: 1.5rem 1.5rem 1.5rem 0;
+								border-color: transparent #E4F1FA transparent transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+		// Outgoing message styles 
+		&.out {
+			.widget-img-w-nfo {
+				@include justify-content(flex-end);
+				.info-content {
+					margin-left: 5.5rem;
+					.content-text {
+						@include justify-content(flex-end);
+						.text-message {
+							background: $color-grey-lite;
+						}
+						&:first-of-type {
+							&::before {
+								top: 0.5rem;
+								right: -.8rem;
+								position: absolute;
+								content: '';
+								width: 0;
+								height: 0;
+								border-style: solid;
+								border-width: 1.5rem 0 1.5rem 1.5rem;
+								border-color: transparent transparent transparent $color-grey-lite;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.chat-query {
+		font-size: 1.6rem;
+		.query-name {
+			@include transit-fast;
+			text-decoration: none;
+			font-weight: bold;
+			color: inherit;
+			&:hover {
+				color: $color-main-red-dim;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Chat file message widget
+.widget-file-msg {
+	@include flex-justify-between;
+	.msg-info {
+		@include flex-justify-between;
+		.info-img {
+			margin-right: $lay-gut-def/2;
+		}
+		.info {
+			margin-right: $lay-gut-def*2;
+			.info-size {
+				font-size: $fsize-sub-text;
+				text-transform: uppercase;
+				color: $color-grey-subtle;
+			}
+		}
+	}
+	.msg-action {
+		.icon {
+			color: $color-grey-subtle;
+			font-size: 2rem;
+		}
+	}
+}
+
+// --------------------------------------------- BREADCRUMB widget
+.widget-chat-info-bar {
+	@include flex-justify-between;
+	@include pad($lay-gut-def/2 $lay-gut-def);
+	background: $color-grey-lite;
+	border-top: $des-border;
+	border-bottom: $des-border;
+	.bar-text {
+		font-size: $fsize-main;
+	}
+	.bar-actions {
+		.action {
+			@include flex-justify-between;
+			.action-left {
+				text-transform: uppercase;
+				color: $color-grey-subtle;
+				margin-right: $lay-gut-def/2;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- BREADCRUMB widget
+.widget-breadcrumbs {
+	margin: $lay-gut-def 0;
+	overflow: auto;
+	.breadcrumbs-list {
+		@include display(inline-block);
+		white-space: nowrap;
+		padding-bottom: $lay-gut-def/2;
+		.list-item {
+			font-size: $fsize-main;
+			display: inline-block;
+			color: $color-grey-subtle-lite;
+			.item-link {
+				@include transit-fast;
+				text-decoration: none;
+				color: inherit;
+				color: $color-grey;
+				.link-text {
+					@include display(inline-block);
+					vertical-align: middle;
+				}
+				&.active {
+					color: $color-grey-subtle-lite;
+				}
+				&:hover {
+					color: $color-main-red-dim;
+				}
+			}
+		}
+	}
+	&.solid {
+		@include pad($lay-gut-def);
+		overflow: auto;
+		background: $color-grey-lite;
+		border-bottom: $des-border;
+		border-top: $des-border;
+		margin: 0;
+	}
+}
+
+// --------------------------------------------- Tabs widget
+.widget-tabs {
+	.tab-container {
+		.etabs {
+			@include display(flex);
+			@include justify-content(center);
+			.tab {
+				@include flex-grow(1);
+				text-align: center;
+				background: #fff;
+				margin: 0;
+				display: inline-block;
+				border-bottom: .6rem solid $color-grey-med;
+				border-right: .1rem solid $color-grey-med;
+				.tab-link {
+					@include anchor-link($color-grey-dark,
+					2rem);
+					@include pad($lay-gut-def 0);
+					width: 100%;
+					.link-content {
+						@include flex-center;
+						.icon {
+							font-size: 2.7rem;
+							margin-right: $lay-gut-def/2;
+						}
+						.link-text {
+							@include flex-justify-start;
+							@include flex-direction(column);
+							// Chrome fix
+							text-align: left;
+							margin-left: .7rem;
+							.text-heading,
+							.text-content {
+								width: 100%;
+							}
+							.text-heading {
+								font-size: 1.6rem;
+								margin-bottom: .5rem;
+							}
+							.text-content {
+								font-size: 1.4rem;
+							}
+						}
+					}
+				}
+				&.active {
+					@extend .mod-des-appear-red;
+					border-color: $color-main-red-dim;
+					.tab-link {
+						color: #fff;
+						.link-text {
+							.text-content {
+								color: $color-grey-med;
+							}
+						}
+					}
+				}
+			}
+			&:last-of-type {
+				border-right: none;
+			}
+		}
+		.tab-content {
+			background: #fff;
+			//@include pad($lay-gut-def/2 $lay-gut-def);
+		}
+	}
+	// Inner sub-widget
+	&.mini-tabs {
+		.tab-container {
+			.etabs {
+				.tab {
+					@include transit-fast;
+					border: none;
+					.tab-link {
+						@include pad(.5rem 0);
+						border: .1rem solid $color-grey-outer;
+						display: block;
+						.link-content {
+							.link-text {
+								margin: 0;
+								.text-heading {
+									font-size: 1.3rem;
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+					&.active {
+						.tab-link {
+							border: .1rem solid transparent;
+						}
+					}
+					&:hover {
+						background: $color-main-red-dim;
+						.tab-link {
+							border-color: $color-main-red-dim;
+							color: #fff;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+			.tab-content {
+				.content-wrap {
+					box-shadow: none;
+					padding-top: $lay-gut-def+1;
+					.no-content {
+						color: $color-grey-subtle;
+						text-align: center;
+						font-size: $fsize-main;
+					}
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Tab Content Heading Bar widget
+.widget-tab-heading-bar {
+	@include flex-justify-between;
+	@include pad($lay-gut-def/2 0 $lay-gut-def);
+	margin-bottom: $lay-gut-def*2;
+	border-bottom: $des-border;
+	.heading-bar-info {
+		.bar-info-title {
+			font-size: 1.8rem;
+		}
+		.bar-info-count {
+			margin-top: .7rem;
+			font-size: 1.4rem;
+			color: $color-grey-subtle-lite;
+			.count {
+				&.count-deadline {
+					color: $color-main-red;
+				}
+				&.count-urgent {
+					color: $color-notif-urgent;
+				}
+			}
+		}
+	}
+	.bar-features {
+		@include flex-justify-start;
+		.feature {
+			@include flex-justify-between;
+			margin-right: $lay-gut-def+1;
+			.feature-title {
+				font-size: $fsize-main;
+				margin-right: $lay-gut-def/2;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+	&.contacts {
+		padding-left: $lay-gut-def;
+	}
+}
+
+// --------------------------------------------- Form List widget
+.widget-list-heading {
+	padding-bottom: $lay-gut-def/2;
+	margin-bottom: $lay-gut-def+1;
+	border-bottom: $des-border;
+	font-size: 1.6rem;
+}
+
+.widget-form-list {
+	.form-list {
+		@include flex-justify-start;
+		@include flex-wrap(wrap);
+		margin-bottom: 5rem;
+		.list-item {
+			position: relative;
+		}
+	}
+	&:last-of-type {
+		.form-list {
+			margin-bottom: 0;
+		}
+	}
+	&.db-list {
+		.form-list {
+			@include flex-direction(column);
+			.list-item {
+				width: 100%;
+				.widget-form-item {
+					.icon {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.widget-form-item {
+	@include pad($lay-gut-def);
+	@include flex-center;
+	@include flex-direction(column);
+	@include transit-fast;
+	will-change: transform;
+	width: 14.5rem;
+	height: 15rem;
+	background: $color-grey-med;
+	border-radius: $des-br;
+	position: relative;
+	overflow: hidden;
+	margin: 0 $lay-gut-def $lay-gut-def 0;
+	text-decoration: none;
+	color: inherit;
+	.icon {
+		font-size: 5.5rem;
+		margin-bottom: 2.5rem;
+		color: $color-grey-subtle-lite;
+	}
+	.item-name {
+		font-size: $fsize-main;
+		text-align: center;
+		line-height: 2rem;
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5.5rem 5.5rem 0 0;
+		border-color: #007bff transparent transparent transparent;
+		z-index: 9;
+	}
+	&::before {
+		font-family: $des-iconfont;
+		content: '';
+		color: $color-grey-lite;
+		position: absolute;
+		font-size: $fsize-common-icon;
+		top: .6rem;
+		left: .6rem;
+		right: 0;
+		z-index: 10;
+	}
+	&.general {
+		&::after {
+			border-color: $color-forms-bg-general transparent transparent transparent;
+		}
+		&::before {
+			content: $icon-siteform_general;
+		}
+	}
+	&.hazard {
+		&::after {
+			border-color: $color-forms-bg-hazard transparent transparent transparent;
+		}
+		&::before {
+			content: $icon-siteform_hazard;
+		}
+	}
+	&.incident {
+		&::after {
+			border-color: $color-forms-bg-incident transparent transparent transparent;
+		}
+		&::before {
+			content: $icon-siteform_incident;
+		}
+	}
+	&.inspect {
+		&::after {
+			border-color: $color-forms-bg-inspect transparent transparent transparent;
+		}
+		&::before {
+			content: $icon-siteform_inspection;
+		}
+	}
+	&:hover {
+		@include transform(scale(1.07));
+		background: #fff;
+		box-shadow: $des-dropsh-lite;
+		border: .3rem solid black;
+		&.general {
+			border-color: $color-forms-bg-general;
+		}
+		&.hazard {
+			border-color: $color-forms-bg-hazard;
+		}
+		&.incident {
+			border-color: $color-forms-bg-incident;
+		}
+		&.inspect {
+			border-color: $color-forms-bg-inspect;
+		}
+		// Hover angle fix
+		&::after {
+			margin-top: -.2rem;
+			margin-left: -.2rem;
+		}
+	}
+	&.supv-form-item {
+		@include flex-justify-between;
+		@include flex-direction(row);
+		width: 100%;
+		height: auto;
+		.icon {
+			font-size: $fsize-common-icon;
+		}
+		.item-name {
+			@include flex-grow(1);
+			text-align: left;
+			padding-left: 5rem;
+		}
+		&:hover {
+			@include transform(scale(1));
+			border: none;
+			background: $color-grey-lite;
+		}
+		&::before {
+			top: $lay-gut-def;
+			left: 1.75rem;
+		}
+		&::after {
+			border-width: 1000rem 5.5rem 0 0;
+		}
+	}
+}
+
+// --------------------------------------------- Accordion widget
+// Main accordion styling for Tabber @ sites pages
+.widget-accordion {
+	// Default toggler/content states
+	.accordion-toggle {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.accordion-content {
+		display: none;
+		will-change: opacity;
+		will-change: transform;
+	}
+	// Main type accordion e.g. > Sites pages
+	&.main {
+		.accordion-item {
+			.accordion-toggle {
+				@include pad($lay-gut-def);
+				@include flex-justify-between;
+				@include transit;
+				background: $color-grey-lite;
+				color: $color-grey-dark;
+				border-radius: $des-br;
+				font-size: 1.6rem;
+				margin-bottom: $lay-gut-def;
+				.toggle-heading {
+					@include flex-center;
+					.icon,
+					.user-pic {
+						margin-right: 1.8rem;
+					}
+					.icon {
+						@include transit;
+						font-size: 2.4rem;
+					}
+					.user-pic {
+						border-radius: 50%;
+						width: 3rem;
+						height: 3rem;
+					}
+				}
+				.toggle-state {
+					@include transform(rotate(180deg));
+					@include transit-fast;
+					.icon {
+						color: $color-grey-subtle-lite;
+						font-size: 2.4rem;
+					}
+				}
+				&.opened {
+					margin-bottom: 0;
+					background: #fff;
+					border-left: $des-border;
+					border-right: $des-border;
+					border-top: $des-border;
+					.toggle-state {
+						@include transform(rotate(0deg));
+						.icon {
+							color: $color-grey-dark;
+						}
+					}
+				}
+				&:hover {
+					background: $color-grey-med;
+					cursor: pointer;
+				}
+			}
+			.accordion-content {
+				@include pad($lay-gut-def);
+				border-left: $des-border;
+				border-right: $des-border;
+				border-bottom: $des-border;
+				margin-bottom: $lay-gut-def;
+				display: none;
+			}
+			&:last-of-type {
+				.accordion-toggle {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	// History type accordion styles
+	&.history {
+		background: $color-grey-dark;
+		overflow-y: auto;
+		.accordion-item {
+			border-bottom: $des-border-dim;
+			.accordion-toggle {
+				@include flex-justify-between;
+				@include pad($lay-gut-def);
+				font-size: $fsize-main;
+				.toggle-heading {
+					@include flex-justify-start;
+					@include transit;
+					.icon {
+						@include pad(.7rem);
+						@include transit;
+						color: $color-grey-subtle-lite;
+						font-size: $fsize-common-icon;
+						margin-right: $lay-gut-def/2;
+						background: $color-grey;
+						border-radius: 50%;
+					}
+					.toggle-title {
+						color: #fff;
+					}
+				}
+				.toggle-state {
+					@include transit;
+					.icon {
+						@include transit;
+						font-size: 1.4rem;
+						color: $color-grey-med;
+					}
+				}
+				&.opened {
+					padding-bottom: 0;
+					.toggle-heading {
+						.icon {
+							background: #fff;
+							color: $color-grey;
+						}
+					}
+					.toggle-state {
+						@include transform(rotate(-180deg));
+						.icon {
+							color: $color-grey;
+						}
+					}
+				}
+			}
+			.accordion-content {
+				padding-bottom: $lay-gut-def;
+			}
+		}
+	}
+	&.history-sub {
+		.accordion-item {
+			border: none;
+			.accordion-toggle {
+				@include pad($lay-gut-def 0 0 $lay-gut-def);
+				border-left: $des-border-dim;
+				margin-left: 3.6rem;
+				.toggle-heading {
+					position: relative;
+					.icon {
+						background: none;
+						font-size: $fsize-main;
+						margin-right: .1rem;
+					}
+					.toggle-title {
+						@include transit;
+						text-decoration: underline;
+						&:hover,
+						&:active,
+						&:focus {
+							color: $color-grey-subtle-lite;
+							padding-left: .2rem;
+						}
+					}
+					&::before {
+						position: absolute;
+						content: '';
+						height: .1rem;
+						width: 2.7rem;
+						top: 1.5rem;
+						left: -30%;
+						background: $color-grey;
+					}
+				}
+				&.opened {
+					.toggle-heading {
+						.icon {
+							background: none;
+							color: #fff;
+						}
+					}
+				}
+			}
+			.accordion-content {
+				.history-sub-activity {
+					margin-top: $lay-gut-def/2;
+					.activity-title {
+						@include flex-justify-between;
+						@include pad(1.5rem 1rem 1.5rem 3.5rem);
+						@extend .mod-des-appear-red;
+						position: relative;
+						&::after {
+							position: absolute;
+							content: '';
+							left: 6.2rem;
+							top: -.7rem;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 0 1rem 1rem 1rem;
+							border-color: transparent transparent $color-main-red transparent;
+						}
+						.title {
+							font-size: $fsize-main;
+							font-weight: bold;
+						}
+						.icon {
+							font-size: $fsize-main;
+						}
+					}
+					.activity-list {
+						background: $color-grey;
+						.list {
+							.list-item {
+								@include transit-fast;
+								position: relative;
+								.item-link {
+									@include flex-justify-between;
+									@include pad($lay-gut-def 1.8rem $lay-gut-def 3.5rem);
+									text-decoration: none;
+									color: #fff;
+									.link-name {
+										font-size: 1.4rem;
+									}
+									.link-time {
+										color: $color-grey-subtle-lite;
+										font-size: $fsize-sub-text;
+									}
+								}
+								&:hover {
+									background: $color-grey-subtle;
+									.item-link {
+										.link-time {
+											color: #fff;
+										}
+									}
+									&::after {
+										position: absolute;
+										content: '>';
+										font-size: $fsize-common-icon;
+										left: 5%;
+										top: 30%;
+										color: #fff;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			// Fix for sub-list bottom border
+			&:last-of-type {
+				position: relative;
+				&::before {
+					position: absolute;
+					content: '';
+					height: 1.5rem;
+					width: .1rem;
+					background: $color-grey-dark;
+					left: 3.6rem;
+					top: 3.6rem;
+					z-index: 100;
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Arrow link pointing right with a circle around it
+.widget-arrow-link {
+	@include anchor-link($color-grey-subtle,
+	inherit);
+	&:hover {
+		.icon {
+			color: $color-main-red;
+			border-color: $color-main-red;
+		}
+	}
+}
+
+// --------------------------------------------- Header Options widget (double sub heaeder with switch)
+.widget-form-options {
+	@include flex-justify-start-stretch;
+	height: $lay-height-sh-el;
+	border-bottom: $des-border;
+	background: #fff;
+	top: 4.5rem;
+	left: 0;
+	right: 0;
+	z-index: 1002;
+	.options-history {
+		@include flex-center;
+		@include transit;
+		border-left: none;
+		background: $color-grey-dark;
+		font-size: $fsize-main;
+		color: #fff;
+		height: $lay-height-sh-el;
+		.icon {
+			color: $color-grey-subtle-lite;
+		}
+		.history-title {
+			text-transform: uppercase;
+			color: $color-grey-med;
+		}
+		&:hover {
+			cursor: pointer;
+			background: $color-main-black;
+		}
+	}
+	.options-main {
+		@include flex-justify-between;
+		@include flex-grow(1);
+		@include transit;
+		background: #fff;
+		height: $lay-height-sh-el;
+		.main-info {
+			@include flex-justify-start;
+			height: 100%;
+			.info-type {
+				font-size: 3.5rem;
+				margin: 0 $lay-gut-def;
+				color: $color-grey-subtle-lite;
+			}
+			.info-details {
+				.details-name {
+					font-weight: bold;
+					font-size: $fsize-main;
+				}
+				.details-id {
+					font-size: $fsize-sub-text;
+					color: $color-grey-subtle;
+					margin-top: .5rem;
+				}
+			}
+		}
+		&.options-toggle {
+			background: $color-main-black;
+			color: #fff;
+			.main-actions {
+				.action {
+					border: none;
+				}
+			}
+		}
+	}
+	.main-actions {
+		@include display(flex);
+		height: $lay-height-sh-el;
+		.action {
+			@include flex-center;
+			@include pad(0 $lay-gut-def);
+			@include transit-fast;
+			font-size: $fsize-main;
+			text-decoration: none;
+			color: inherit;
+			width: auto;
+			height: 100%;
+			.icon {
+				font-size: $fsize-common-icon;
+				margin-right: .7rem;
+			}
+			&:first-of-type {
+				border-left: $des-border;
+			}
+			&:hover {
+				color: #fff;
+			}
+			&.drawer {
+				border-left: $des-border;
+				&:hover {
+					@extend .mod-des-appear-red-dim;
+				}
+			}
+			&.drawer,
+			&.close {
+				.icon {
+					margin: 0;
+				}
+			}
+			&.favorite {
+				.icon {
+					color: $color-notif-checklist;
+				}
+			}
+			&.new-subm {
+				@include pad(0 $lay-gut-def+1);
+				@extend .mod-des-appear-red;
+				.icon {
+					font-size: 2.4rem;
+					margin: 0;
+				}
+				&:hover {
+					background: $color-grey-dark;
+				}
+			}
+		}
+		&.secondary {
+			.widget-sh-btn {
+				background: $color-main-black;
+				border-left: .1rem solid $color-grey;
+				color: #fff;
+				&:hover {
+					color: $color-grey-med;
+					background: $color-grey-dark;
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- History sidebar widget with Accordions
+.widget-history {
+	@include pad($lay-gut-def/2 0);
+	// @include transform(translateX(-100%));
+	// TEMP? translate3d Performance
+	@include transform(translate3d(-100%,
+	0,
+	0));
+	@include transit-fast;
+	background: $color-grey-dark;
+	width: 32rem;
+	position: fixed;
+	top: $lay-head-spc;
+	bottom: 0;
+	left: 0;
+	color: #fff !important;
+	z-index: 999;
+	overflow-y: auto;
+	&.opened {
+		// @include transform(translateX(0%));
+		// TEMP? translate3d Performance
+		@include transform(translate3d(0,
+		0,
+		0));
+	}
+}
+
+// --------------------------------------------- Form widget 
+.widget-form {
+	background: #fff;
+	box-shadow: $des-dropsh;
+	overflow: hidden;
+}
+
+.widget-form-approve {
+	@include flex-justify-between;
+	@extend .mod-des-appear-black;
+	font-size: $fsize-main;
+	.approve-title {
+		padding-left: $lay-gut-def;
+	}
+	.approve-actions {
+		@include flex-justify-between;
+		.action {
+			@include pad($lay-gut-def);
+			@include transit-fast;
+			border-left: $des-border-dim;
+			text-decoration: none;
+			color: inherit;
+			&:hover {
+				background: $color-grey-dark;
+			}
+			.icon {
+				margin-right: .7rem;
+			}
+			&.reject {
+				.icon {
+					color: $color-main-red;
+				}
+			}
+			&.approve {
+				.icon {
+					color: $color-notif-form;
+				}
+			}
+		}
+	}
+}
+
+.widget-form-section {
+	@include pad($lay-gut-def);
+	background: $color-grey-med;
+	color: $color-main-black;
+	text-transform: uppercase;
+	font-size: $fsize-main;
+	font-weight: bold;
+}
+
+.widget-fieldset {
+	border-top: .1rem solid $color-grey-outer;
+	margin-top: $lay-gut-def;
+	.fieldset-legend {
+		@include pad($lay-gut-def/2);
+		display: inline-block;
+		margin-left: 2.5rem;
+		background: #fff;
+		position: relative;
+		top: -1.95rem;
+		font-size: 1.7rem;
+	}
+	.fieldset-content {
+		@include pad($lay-gut-def/2 $lay-gut-def);
+		&.plain {
+			font-size: $fsize-main;
+			line-height: $lay-main-lh;
+		}
+	}
+	&.no-margin {
+		margin: 0;
+	}
+}
+
+.widget-instruction {
+	@include pad($lay-gut-def);
+	border-radius: $des-br;
+	background: $color-instr-bg;
+	color: $color-instr-text;
+	border-radius: $des-br;
+	font-size: 1.4rem;
+	line-height: $lay-main-lh;
+	.instruction-link {
+		font-weight: bold;
+		color: $color-instr-text;
+	}
+}
+
+.widget-txt-input {
+	margin-bottom: $lay-gut-def;
+	font-size: $fsize-main;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	.input-label,
+	.input {
+		display: block;
+		width: 100%;
+	}
+	.input-label {
+		margin-bottom: $lay-gut-def;
+	}
+	.input {
+		@extend .mod-des-default-input;
+		font-style: italic;
+		&:focus {
+			font-style: normal;
+			color: $color-main-black;
+		}
+	}
+}
+
+// --------------------------------------------- Solo label input
+.widget-input-label {
+	margin-bottom: $lay-gut-def;
+	.label {
+		display: block;
+		width: 100%;
+		font-size: $fsize-main;
+	}
+}
+
+.widget-form-sep {
+	height: .1rem;
+	background: $color-grey-med;
+	margin: 2.5rem 0;
+}
+
+.widget-signoff {
+	@include flex-justify-between;
+	font-size: $fsize-main;
+	.label {
+		width: 100%;
+		display: block;
+		margin-bottom: $lay-gut-def;
+		font-size: $fsize-main;
+	}
+	.user-name,
+	.user-pass {
+		width: 40%;
+		position: relative;
+		.input {
+			@include pad(1rem 1rem 1rem $lay-gut-def*2);
+			border: .3rem solid $color-grey-med;
+			margin-right: $lay-gut-def+1;
+			width: 100%;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			font-family: $des-iconfont;
+			color: $color-grey-subtle-lite;
+			font-size: $fsize-common-icon;
+			left: $lay-gut-def/2;
+			bottom: 1.2rem;
+		}
+	}
+	.user-name {
+		&::after {
+			content: $icon-siteform_user;
+		}
+	}
+	.user-pass {
+		&::after {
+			content: $icon-siteform_password;
+		}
+	}
+	.signoff-submit {
+		@include align-self(flex-end);
+		.submit {
+			@include pad(1.1rem 5rem);
+			@extend .mod-des-appear-black;
+			font-size: $fsize-main;
+			&:hover {
+				cursor: pointer;
+				background: $color-grey-med;
+				color: $color-main-black;
+			}
+		}
+	}
+}
+
+.widget-form-questopt {
+	@include flex-justify-between;
+	margin-bottom: $lay-gut-def/2;
+	border: $des-border;
+	.questopt-title {
+		font-size: $fsize-main;
+		padding-left: 1.5rem;
+		width: 100%;
+	}
+	.questopt-list {
+		@include display(flex);
+		.radio-opt {
+			width: 33.33%;
+			.radio-label {
+				@include transit-fast;
+				@include pad($lay-gut-def);
+				display: block;
+				background: $color-grey-med;
+				font-size: 1.6rem;
+				text-align: center;
+				border-left: .1rem solid $color-grey-subtle-lite;
+				&:hover {
+					cursor: pointer;
+					background: $color-grey-lite;
+				}
+			}
+			.radio-input {
+				display: none;
+				&:checked {
+					+.radio-label {
+						color: #fff;
+						&.opt-yes {
+							background: $color-succ-green;
+						}
+						&.opt-no {
+							background: $color-main-red-dim;
+						}
+						&.opt-na {
+							background: $color-main-black;
+						}
+					}
+				}
+			}
+			&:first-of-type {
+				.radio-label {
+					border-left: none;
+				}
+			}
+		}
+	}
+}
+
+.widget-form-img-upload {
+	.img {
+		@include flex-justify-between;
+		.img-description {
+			width: 100%;
+			height: 14.8rem;
+			.description {
+				@extend .mod-des-default-input;
+				width: 100%;
+				height: 100%;
+				resize: none;
+			}
+		}
+	}
+}
+
+.widget-upload-field {
+	@include flex-center;
+	@include pad($lay-gut-def);
+	@include transit-fast;
+	margin-bottom: $lay-gut-def;
+	background: $color-grey-lite;
+	color: $color-grey;
+	border: .1rem dashed $color-grey-subtle-lite;
+	font-size: $fsize-main;
+	.icon {
+		font-size: 3.5rem;
+		margin-right: $lay-gut-def/2;
+	}
+	.btn-text {
+		color: $color-grey-subtle-lite;
+	}
+	&:hover {
+		background: $color-grey-med;
+		cursor: pointer;
+	}
+}
+
+.widget-img-preview {
+	margin-right: $lay-gut-def;
+	width: 31rem;
+	height: 14.8rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+	.preview-options {
+		@include flex-center;
+		@include flex-direction(column);
+		@include alpha-attribute('background-color',
+		rgba($color-main-black,
+		.7),
+		transparent);
+		// @include transform(translateX(100%));
+		// TEMP? translate3D Performance
+		@include transform(translate3d(100%,
+		0,
+		0));
+		@include transit-fast;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		width: 4rem;
+		color: #fff;
+		.option {
+			@include flex-center;
+			@include transit-fast;
+			height: 100%;
+			width: 100%;
+			font-size: 2.2rem;
+			&:hover {
+				background: $color-grey-dark;
+				cursor: pointer;
+				font-size: 2.5rem;
+			}
+			&:first-of-type {
+				border-bottom: .1rem solid $color-grey-subtle;
+			}
+		}
+	}
+	&:hover {
+		.preview-options {
+			// @include transform(translateX(0%));
+			// TEMP? translate3D performance
+			@include transform(translate3d(0,
+			0,
+			0));
+		}
+	}
+}
+
+.widget-select-group {
+	.group-label {
+		font-size: $fsize-main;
+		margin-bottom: $lay-gut-def;
+	}
+}
+
+.widget-select {
+	@include flex-justify-between;
+	@extend .mod-des-default-input;
+	font-size: $fsize-main;
+	.select-text {
+		padding-right: $lay-gut-def;
+	}
+	.icon {
+		color: $color-grey-subtle;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	&.no-border {
+		border: none !important;
+	}
+}
+
+.widget-sketch {
+	border-top: .3rem solid $color-grey-med;
+	border-left: .3rem solid $color-grey-med;
+	border-right: .3rem solid $color-grey-med;
+	border-bottom: .3rem dashed $color-grey-med;
+	.sketch-toolbar {
+		@include flex-center;
+		background: $color-grey-outer;
+		.toolbar-settings {
+			width: 50%;
+			.setting-title {
+				@include pad($lay-gut-def/2 $lay-gut-def);
+				font-size: $fsize-main;
+				color: $color-grey;
+				text-transform: uppercase;
+			}
+			.setting-options {
+				background: $color-grey-med;
+			}
+			// Color chooser options
+			&.colors {
+				.setting-options {
+					@include pad(1.3rem 0);
+					.color-list {
+						@include display(flex);
+						@include justify-content(space-around);
+						border-right: .1rem solid $color-grey-subtle-lite;
+						.color {
+							.color-link {
+								@include transit-fast;
+								@include anchor-link-bl;
+								width: 4rem;
+								height: 4rem;
+								border-radius: 50%;
+								// Color Palette settings 
+								&.color-sketch-1 {
+									background: $color-sketch-1;
+								}
+								&.color-sketch-2 {
+									background: $color-sketch-2;
+								}
+								&.color-sketch-3 {
+									background: $color-sketch-3;
+								}
+								&.color-sketch-4 {
+									background: $color-sketch-4;
+								}
+								&.color-sketch-5 {
+									background: $color-sketch-5;
+								}
+								&.color-sketch-6 {
+									background: $color-sketch-6;
+								}
+								&.color-sketch-7 {
+									background: $color-sketch-7;
+								}
+								&.color-sketch-8 {
+									background: $color-sketch-8;
+								}
+								&.color-sketch-9 {
+									background: $color-sketch-9;
+								}
+								&.color-sketch-10 {
+									background: $color-sketch-10;
+								}
+								// Chosen color styles
+								&.active {
+									position: relative;
+									&::after {
+										font-family: $des-iconfont;
+										content: $icon-siteform_save;
+										position: absolute;
+										margin: 0 auto;
+										width: 2rem;
+										height: 2rem;
+										left: 0;
+										right: 0;
+										top: $lay-gut-def/2;
+										font-weight: bold;
+										color: #fff;
+										font-size: $fsize-common-icon;
+									}
+								}
+								&:hover {
+									@include filter-drop-shadow(0 .3rem 0 $color-main-black);
+									position: relative;
+									top: -.3rem;
+									cursor: pointer;
+									opacity: .4;
+								}
+								&:active,
+								&:focus {
+									position: relative;
+									top: .3rem;
+								}
+							}
+						}
+					}
+				}
+			}
+			// Right Brush toolbar
+			&.brush {
+				.setting-options {
+					@include flex-justify-between;
+					.brush-list {
+						@include flex-justify-between;
+						width: 100%;
+						.brush {
+							@include pad($lay-gut-def $lay-gut-def/2);
+							@include transit-fast;
+							margin-right: $lay-gut-def/2;
+							.brush-thickness {
+								font-size: 1.4rem;
+								margin-bottom: .7rem;
+								text-transform: uppercase;
+							}
+							.brush-view {
+								background: $color-main-black;
+							}
+							&.brush-1px {
+								.brush-view {
+									height: .1rem;
+								}
+							}
+							&.brush-2px {
+								.brush-view {
+									height: .2rem;
+								}
+							}
+							&.brush-3px {
+								.brush-view {
+									height: .3rem;
+								}
+							}
+							&.brush-4px {
+								.brush-view {
+									height: .4rem;
+								}
+							}
+							&.brush-5px {
+								.brush-view {
+									height: .5rem;
+								}
+							}
+							&.active {
+								background: #fff;
+							}
+							&:hover {
+								cursor: pointer;
+								background: $color-grey-outer;
+							}
+						}
+					}
+					.clear-screen {
+						margin-right: $lay-gut-def;
+						border-left: .1rem solid $color-grey-subtle-lite;
+						padding-left: $lay-gut-def;
+						white-space: nowrap;
+						text-align: center;
+						.clear-screen-btn {
+							@include pad($lay-gut-def/2 $lay-gut-def);
+							@extend .mod-des-appear-black;
+							text-transform: uppercase;
+							font-size: 1.4rem;
+							&:hover {
+								cursor: pointer;
+								background: $color-grey-subtle;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	// Sketch Canvas
+	.sketch-canvas {
+		position: relative;
+		.canvas-resize {
+			width: 2rem;
+			height: 2rem;
+			position: absolute;
+			margin: 0 auto;
+			bottom: -1.1rem;
+			left: 0;
+			right: 0;
+			.icon {
+				font-size: $fsize-common-icon;
+				color: $color-grey-subtle-lite;
+				background: #fff;
+			}
+			&:hover {
+				cursor: n-resize;
+			}
+		}
+	}
+}
+
+.widget-find-user {
+	position: relative;
+	.find-user-input {
+		@extend .mod-des-default-input;
+		font-size: $fsize-main;
+		font-style: italic;
+		width: 100%;
+	}
+	.icon {
+		font-size: $fsize-common-icon;
+		color: $color-grey-subtle;
+		position: absolute;
+		right: 1.2rem;
+		bottom: 1.2rem;
+	}
+	.find-user-label {
+		display: block;
+		font-size: $fsize-main;
+		margin-bottom: $lay-gut-def;
+	}
+}
+
+// --------------------------------------------- Find user list widget
+.widget-find-user-list {
+	.user-list-item {
+		margin: $lay-gut-def 0;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// --------------------------------------------- Siteform user widget
+.widget-siteform-user {
+	@include flex-justify-between;
+	@include transit-fast;
+	@extend .mod-des-default-input;
+	.siteform-user-remove {
+		text-decoration: none;
+		.icon {
+			@include transit-fast;
+			color: $color-main-red-dim;
+			font-size: $fsize-common-icon;
+			&:hover,
+			&:focus,
+			&:active {
+				@include transform(rotate(20deg));
+				display: block;
+			}
+		}
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		background: $color-grey-med;
+		.icon {
+			font-size: 3.4rem;
+		}
+	}
+}
+
+// --------------------------------------------- Signature widget
+.widget-signature {
+	@include flex-justify-between;
+	.signature-name,
+	.signature-canvas {
+		width: 49%;
+	}
+	.signature-name {
+		@include align-self(flex-start);
+	}
+	.signature-canvas {
+		@include flex-justify-start;
+		@include flex-direction(column);
+		position: relative;
+		.canvas {
+			@extend .mod-des-default-input;
+			background: $color-grey-lite;
+			max-height: 20rem;
+			width: 100%;
+		}
+		.canvas-label {
+			font-size: $fsize-main;
+			margin-bottom: $lay-gut-def;
+			display: block;
+			width: 100%;
+			text-align: left;
+		}
+	}
+}
+
+.widget-form-info {
+	background: #fff;
+	.info-main {
+		font-size: 1.4rem;
+		.main-details {
+			@include flex-justify-between;
+			@include pad($lay-gut-def);
+			border-bottom: $des-border;
+			.details-top,
+			.details-bot {
+				@include flex-justify-start;
+				@include align-content(center);
+				@include align-items(center);
+				.icon {
+					font-size: 3rem;
+					margin-right: $lay-gut-def/2;
+				}
+			}
+			.details-top {
+				.top-cont {
+					.detail-name {
+						font-size: $fsize-main*1.15;
+					}
+					.detail-id {
+						margin-top: .7rem;
+						margin-bottom: .4rem;
+						color: $color-grey-subtle-lite;
+					}
+				}
+			}
+			.details-bot {
+				.icon {
+					color: $color-wrn-orange;
+				}
+				.bot-cont {
+					.detail-date {
+						@include flex-justify-between;
+						@include flex-direction(column);
+						.date {
+							@include flex-justify-between;
+							.date-span {
+								margin-bottom: .65rem;
+								&:first-of-type {
+									font-weight: bold;
+									margin-right: .5rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.info-list {
+		@include flex-justify-between;
+		@include pad($lay-gut-def+1);
+		.list-item {
+			@include pad(0 $lay-gut-def+1);
+			width: 25%;
+			border-right: $des-border;
+			&:last-of-type {
+				border-right: none;
+			}
+			.icon {
+				display: block;
+				font-size: 4.5rem;
+				margin-bottom: $lay-gut-def;
+			}
+			.item-content {
+				font-size: $fsize-main;
+				.content-title {
+					font-weight: bold;
+					margin-bottom: .7rem;
+				}
+				// .content-text {
+				// 	line-height: $lay-main-lh;
+				// }
+			}
+		}
+	}
+}
+
+.widget-show-more {
+	display: none;
+	@include transit-fast;
+	@include pad($lay-gut-def);
+	cursor: pointer;
+	font-size: $fsize-main;
+	background: #fff;
+	.icon {
+		@include transit-fast;
+		margin-right: $lay-gut-def/2;
+	}
+	.show-more-title {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&:hover {
+		@extend .mod-des-appear-black;
+	}
+	&.opened {
+		.icon {
+			@include transform(rotate(-180deg));
+		}
+	}
+}
+
+.widget-table-view {
+	overflow: auto;
+	position: relative;
+	table {
+		border-collapse: separate;
+		border-spacing: 2rem;
+		tr {
+			td {
+				width: auto;
+				min-width: 24rem;
+				input {
+					@extend .mod-des-default-input;
+					font-size: $fsize-main;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.widget-table-wrap {
+	position: relative;
+}
+
+.widget-table-glow {
+	position: absolute;
+	width: 3rem;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: -webkit-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 1) 100%);
+	background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 1) 100%);
+	z-index: 10;
+}
+
+.widget-file-details-table {
+	.table {
+		border-collapse: separate;
+		text-align: left;
+		@include pad($lay-gut-def 0);
+		.table-row {
+			.cell-content {
+				@include pad($lay-gut-def/2 $lay-gut-def);
+			}
+			.table-heading {
+				font-weight: bold;
+				color: #000;
+			}
+			.table-cell {
+				color: $color-grey-subtle;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Top Drawer widget
+.widget-top-drawer-header {
+	@include flex-justify-between;
+	will-change: transform;
+	display: none;
+	margin-top: $lay-head-spc;
+	font-size: 2.2rem;
+	font-weight: bold;
+	position: relative;
+	background: $color-grey-med;
+	z-index: 1100;
+	.drawer-header-back {
+		@include display(flex);
+		@include flex-center;
+		@include anchor-link-bl;
+		background: $color-grey-subtle-lite;
+		color: $color-grey;
+		text-align: center;
+		height: 6rem;
+		width: 20rem;
+		.header-back-text {
+			margin-left: $lay-gut-def/2;
+			font-size: $fsize-main;
+			text-transform: uppercase;
+		}
+	}
+	.drawer-header-title {
+		width: 100%;
+		text-align: left;
+		margin-left: $lay-gut-def;
+	}
+	.drawer-header-close {
+		@include pad(1.75rem);
+		@include transit-fast;
+		color: #fff;
+		font-size: 2.5rem;
+		background: $color-main-black;
+		&:hover {
+			@extend .mod-des-appear-red;
+			cursor: pointer;
+		}
+	}
+	&.opened {
+		// @include transform(translateX(0%));
+		// TEMP? translate3d performance
+		@include transform(translate3d(0,
+		0,
+		0));
+		position: static;
+	}
+	&.drawer-open {
+		@include display(flex);
+	}
+}
+
+.widget-extra {
+	@include flex-justify-between;
+	@include pad($lay-gut-def/2 $lay-gut-def);
+	border-top: $des-border;
+	border-bottom: $des-border;
+	margin-top: $lay-gut-def;
+	width: 48%;
+	&.extra-folder {
+		@include flex-justify-between;
+		.icon {
+			width: 4rem;
+			.icon-img {
+				max-width: 5rem;
+			}
+		}
+		.folder {
+			@include flex-justify-start;
+			.folder-select {
+				@include pad(.3rem $lay-gut-def/2);
+				font-weight: bold;
+				font-size: $fsize-main;
+				.select-subt {
+					margin-top: .4rem;
+					font-size: $fsize-sub-text;
+					font-weight: normal;
+					color: $color-grey-subtle;
+				}
+			}
+		}
+		.folder-submit-btn {
+			@include anchor-link(#fff,
+			$fsize-main);
+			@include pad($lay-gut-def/2 $lay-gut-def);
+			@extend .mod-des-appear-black;
+			text-transform: uppercase;
+			.btn-arrow {
+				color: $color-grey-subtle;
+			}
+			&:hover {
+				background: $color-grey;
+			}
+		}
+		&.supv-form-item-folder-tr {
+			cursor: pointer;
+		}
+	}
+	&.extra-urgent {
+		.urgent-title {
+			font-size: $fsize-main;
+		}
+	}
+	&.full-width {
+		width: 100%;
+	}
+}
+
+.widget-top-drawer {
+	@include pad($lay-gut-def 0);
+	will-change: transform;
+	box-shadow: $des-dropsh;
+	display: none;
+	position: relative;
+	background: #fff;
+	z-index: 1000;
+	.drawer-container {
+		max-width: 80rem;
+		margin: 0 auto;
+		padding-bottom: $lay-gut-def;
+		.send-form-add-mail {
+			@include flex-justify-start;
+			max-width: 20rem;
+			margin-bottom: $lay-gut-def*2;
+			color: $color-main-red;
+			font-size: $fsize-main;
+			.icon {
+				margin-right: $lay-gut-def/2;
+			}
+			&:hover {
+				cursor: pointer;
+				.add-mail-text {
+					text-decoration: underline;
+				}
+			}
+		}
+		.drawer-details {
+			@include flex-justify-between;
+			.details {
+				&.desc,
+				&.date {
+					width: 48%;
+				}
+				&.date {
+					@include align-self(flex-start);
+				}
+				&.desc {
+					.desc-text,
+					.desc-corr {
+						@extend .mod-des-default-input;
+						min-height: 18.4rem;
+						width: 100%;
+						resize: none;
+					}
+					.desc-text {
+						margin-bottom: $lay-gut-def;
+					}
+				}
+			}
+		}
+		.drawer-extra {
+			@include flex-justify-between;
+		}
+		&.full-width {
+			max-width: 100%;
+		}
+	}
+	.top-drawer-btn {
+		@include pad($lay-gut-def);
+		@extend .mod-des-appear-red;
+		font-size: $fsize-main;
+		text-transform: uppercase;
+		text-align: center;
+		max-width: 80rem;
+		margin: 0 auto;
+		&:hover {
+			@extend .mod-des-appear-black;
+			cursor: pointer;
+		}
+	}
+	&.opened {
+		// @include transform(translateY(0%));
+		// TEMP? translate3D performance
+		@include transform(translate3d(0,
+		0,
+		0));
+		position: relative;
+	}
+	&.move-to-folder-drawer {
+		@include pad(0);
+		.drawer-container {
+			@include pad(0);
+			.widget-sub-header {
+				@include flex-justify-between;
+				.widget-breadcrumbs {
+					@include flex-grow(1);
+					margin-left: $lay-gut-def;
+				}
+			}
+			// Folder Select styles
+			.widget-file-table {
+				.file-table {
+					.table-head {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Label field widget
+.widget-label-field {
+	@include flex-justify-between;
+	border: .3rem solid $color-grey-outer;
+	margin-bottom: $lay-gut-def/2;
+	font-size: $fsize-main;
+	height: 100%;
+	max-height: 100%;
+	.label {
+		@include flex-justify-start;
+		@include pad($lay-gut-def/2);
+		background: $color-grey-med;
+		height: 100%;
+		min-width: 15rem;
+		.icon {
+			margin-right: $lay-gut-def/2;
+			font-size: 1.7rem;
+			&.no-text {
+				margin: 0 auto;
+			}
+		}
+		.label-text {
+			text-transform: uppercase;
+		}
+	}
+	.field {
+		@include flex-grow(2);
+		height: 100%;
+		.field-input {
+			@include appearance(none);
+			background: #fff;
+			outline: none;
+			border: none;
+			width: 100%;
+			height: 100%;
+			max-height: 100%;
+			padding-left: $lay-gut-def/2;
+			display: block;
+			color: $color-grey-subtle;
+			&:focus {
+				font-style: italic;
+				outline: none;
+				color: $color-main-black;
+			}
+		}
+		// Drop-down ico for input container
+		&.dropsel {
+			position: relative;
+			&::after {
+				@include flex-center;
+				font-family: $des-iconfont;
+				position: absolute;
+				content: '\\e941';
+				right: $lay-gut-def/2;
+				top: 0;
+				height: 100%;
+				color: $color-grey-subtle-lite;
+				font-size: $fsize-sub-text;
+			}
+		}
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	&.short {
+		width: 30% !important;
+		.label {
+			width: 50%;
+		}
+		.field {
+			width: 50%;
+		}
+	}
+	&.no-label {
+		.label {
+			min-width: auto;
+			.icon {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.widget-label-field-group {
+	@include flex-justify-between;
+	.widget-label-field {
+		margin: 0;
+	}
+	&.two {
+		.widget-label-field {
+			width: 49.3%;
+		}
+	}
+	&.three {
+		.widget-label-field {
+			width: 32%;
+		}
+	}
+	&.flex-wrap {
+		@include flex-wrap(wrap);
+		.widget-label-field {
+			margin-bottom: $lay-gut-def;
+		}
+	}
+	&.assign {
+		@include flex-direction(row);
+		.widget-label-field {
+			margin-right: $lay-gut-def;
+			width: 49%;
+		}
+		.widget-generic-btn {
+			.btn {
+				@include pad(1.4rem);
+				height: 100%;
+			}
+		}
+		.widget-radio-btn {
+			margin-bottom: 0;
+			md-radio-button {
+				margin-bottom: 0 !important;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Widget Add Another item
+.widget-add-another {
+	@include flex-justify-start;
+	@include transit-fast;
+	margin: $lay-gut-def 0;
+	font-size: $fsize-main;
+	color: $color-main-red;
+	cursor: pointer;
+	.icon {
+		@include transit-fast;
+		margin-right: $lay-gut-def/2;
+	}
+	&:hover {
+		color: $color-main-red-dim;
+	}
+}
+
+// --------------------------------------------- Custom Radio button widget
+.widget-radio-btn {
+	@include flex-justify-start;
+	margin-bottom: $lay-gut-def;
+	md-radio-button {
+		margin-right: $lay-gut-def;
+		font-size: $fsize-main;
+		&.md-checked {
+			.md-off {
+				border-color: $color-main-red !important;
+			}
+		}
+		.md-on {
+			background: $color-main-red !important;
+		}
+		.md-off {
+			border-color: $color-grey-med;
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+
+// --------------------------------------------- Toggle switch widget
+.widget-toggle-switch {
+	.toggle-switch {
+		@include pad(.5rem);
+		border: .1rem solid $color-grey-outer;
+		border-radius: 1.2rem;
+		background: $color-grey-med;
+		display: inline-block;
+		width: 8rem;
+		white-space: nowrap;
+		overflow: hidden;
+		cursor: pointer;
+		.switch {
+			display: none;
+			&:checked {
+				+.toggle-switch {
+					border: .1rem solid green;
+				}
+				+.toggle-slider {
+					margin-left: 0;
+					background: $color-main-red;
+				}
+			}
+		}
+		.toggle-slider {
+			@include transit;
+			width: 2.5rem;
+			height: 2.5rem;
+			background: #fff;
+			@include filter-drop-shadow($des-dropsh);
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+			margin-left: 4.35rem;
+			font-size: $fsize-main;
+			&::before,
+			&::after {
+				text-transform: uppercase;
+				position: absolute;
+				display: inline-block;
+				width: 2.8rem;
+				text-align: center;
+				line-height: 2.4rem;
+			}
+			&::before {
+				content: "No";
+				left: -3.5rem;
+				color: $color-grey-subtle;
+			}
+			&::after {
+				content: "Yes";
+				right: -3.5rem;
+				color: $color-main-red;
+			}
+		}
+	}
+	&.mini {
+		.toggle-switch {
+			background: transparent;
+			width: 5rem;
+			.toggle-slider {
+				background: $color-grey-subtle;
+				width: 1.5rem;
+				height: 1.5rem;
+				margin-left: 2.5rem;
+				box-shadow: none;
+				&::before,
+				&::after {
+					font-size: $fsize-sub-text;
+					color: #fff;
+					line-height: 1.5rem;
+				}
+				&::before {
+					left: -2.8rem;
+					color: $color-grey-outer;
+				}
+				&::after {
+					right: -2.8rem;
+					font-weight: bold;
+				}
+			}
+			.switch {
+				&:checked {
+					+.toggle-slider {
+						margin-left: -2.5rem;
+						background: #fff;
+					}
+				}
+			}
+		}
+	}
+	// &.switched {
+	// 	border: .2rem dashed tomato;
+	// }
+}
+
+.widget-sub-header {
+	@include flex-justify-start;
+	background: #fff;
+	box-shadow: $des-dropsh;
+	border-bottom: $des-border;
+	top: $lay-head-spc;
+	position: fixed;
+	right: 0;
+	left: 17.7rem;
+	z-index: 101;
+	.widget-search-bar {
+		@include flex-grow(1);
+	}
+	.header-middle-field {
+		@include flex-grow(1);
+		@include flex-justify-start;
+		height: $lay-height-sh-el !important;
+		background: #fff;
+		height: 100%;
+		.icon {
+			@include pad(0 $lay-gut-def);
+			color: $color-grey-subtle-lite;
+			font-size: 3rem;
+		}
+		.field-title {
+			margin-left: $lay-gut-def;
+			font-size: $fsize-main;
+			font-weight: bold;
+		}
+	}
+}
+
+// ------------------------------------------------- Generic sub-header button widget
+.widget-sh-btn {
+	@include flex-center;
+	@include transit-fast;
+	@include pad(0 $lay-gut-def);
+	background: #fff;
+	color: $color-main-black;
+	width: auto;
+	height: $lay-height-sh-el;
+	text-decoration: none;
+	border-left: $des-border;
+	.icon {
+		@include transit-fast;
+		font-size: 1.8rem;
+		margin-right: $lay-gut-def/2;
+	}
+	.btn-text {
+		font-size: $fsize-sub-text;
+		text-transform: uppercase;
+	}
+	&.succ {
+		@extend .mod-des-appear-green;
+		color: #fff !important;
+		&:hover {
+			@extend .mod-des-appear-green-dim;
+		}
+	}
+	&.archive {
+		@extend .mod-des-appear-red;
+		&:hover {
+			@extend .mod-des-appear-red-dim;
+		}
+	}
+	&:hover {
+		@extend .mod-des-appear-black;
+	}
+	// First sub header button (far left)
+	&.first {
+		border-right: $des-border !important;
+		border-left: none !important;
+		// background: #fff;
+		// color: inherit;
+		@extend .mod-des-appear-d-grey;
+		&:hover {
+			@extend .mod-des-appear-black;
+		}
+		&.disabled {
+			background: #fff;
+			color: $color-grey-outer !important;
+			cursor: default;
+			.icon,
+			.btn-text {
+				&:hover {
+					cursor: default;
+				}
+			}
+			&:hover {
+				background: #fff;
+			}
+		}
+		&.back {
+			background: #fff;
+			color: $color-main-black;
+			&:hover {
+				background: $color-grey-lite;
+				color: $color-main-black;
+			}
+		}
+	}
+	&.dim {
+		background: $color-grey-dark;
+		.icon {
+			color: $color-grey-subtle;
+		}
+		.btn-text {
+			color: #fff;
+		}
+		&:hover {
+			@extend .mod-des-appear-black;
+		}
+	}
+	// No text button
+	&.drawer,
+	&.close {
+		.icon {
+			margin: 0;
+		}
+	}
+	&.btn {
+		@include transit-fast;
+		font-size: $fsize-main;
+		text-decoration: none;
+		color: inherit;
+		&.btn-msg {
+			color: #fff;
+			background: $color-notif-share;
+		}
+		&.btn-close {
+			@extend .mod-des-appear-black;
+		}
+		&.btn-close-sec {
+			display: none;
+		}
+		&:hover {
+			background: $color-grey;
+		}
+	}
+}
+
+// --------------------------------------------- Pill btn widget
+.widget-btn-pill {
+	@include anchor-link($color-grey-subtle, 1.3rem);
+	@include pad($lay-gut-def/2 $lay-gut-def);
+	@include transit-fast;
+	text-transform: capitalize;
+	border-radius: $des-br;
+	border: .1rem solid $color-grey-subtle;
+	&:hover {
+		@extend .mod-des-appear-black;
+	}
+}
+
+// ---------------------------------------------- Generic plus button widget
+.widget-plus-btn {
+	@include anchor-link-bl;
+	@include pad(1.95rem);
+	@include transit-fast;
+	@extend .mod-des-appear-red;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	width: $lay-height-sh-el;
+	height: $lay-height-sh-el;
+	.icon {
+		@include transit-fast;
+		font-size: 3rem;
+	}
+	&:hover {
+		@extend .mod-des-appear-black;
+	}
+	&.mini {
+		@include flex-center;
+		@include pad(.1rem);
+		width: 1.7rem;
+		height: 1.7rem;
+		text-align: center;
+		.icon {
+			color: #fff;
+			font-size: 1rem;
+		}
+	}
+}
+
+.widget-action-status {
+	@include flex-justify-start;
+	@include pad($lay-gut-def/2 $lay-gut-def);
+	background: $color-notif-urgent;
+	font-size: $fsize-main;
+	color: #fff;
+	.icon {
+		margin-right: $lay-gut-def/2;
+	}
+	.status-date {
+		margin-left: .5rem;
+		font-weight: bold;
+	}
+	&.completed {
+		background: $color-succ-green;
+	}
+	&.deadline {
+		background: $color-main-red;
+	}
+}
+
+.widget-action-header-info {
+	@include display(flex);
+	@include flex-grow(1);
+	@include pad(0 $lay-gut-def);
+	background: #fff;
+	.widget-img-w-nfo {
+		height: $lay-height-sh-el;
+		.icon {
+			color: $color-grey-subtle;
+			font-size: 3rem;
+			margin-right: $lay-gut-def;
+		}
+		.info-content {
+			.content-text {
+				font-size: $fsize-main;
+			}
+			.content-action-id {
+				font-size: $fsize-main;
+				color: $color-grey-subtle;
+			}
+		}
+	}
+}
+
+.widget-checklist-name {
+	@include flex-justify-start;
+	@include align-items(center);
+	@include flex-grow(1);
+	@include pad(0 $lay-gut-def);
+	height: $lay-height-sh-el;
+	background: #fff;
+	.icon {
+		margin-right: $lay-gut-def/2;
+		font-size: 3.5rem;
+		color: $color-grey-subtle;
+	}
+	.checklist-name {
+		font-size: $fsize-main;
+	}
+	.checklist-name-input {
+		.input {
+			font-size: $fsize-common-icon;
+			border: none;
+		}
+	}
+}
+
+// --------------------------------------------- CHECKLIST widget
+.widget-checklist {
+	background: #fff;
+	.checklist-table {
+		width: 100%;
+		font-size: $fsize-main;
+		.table-head {
+			border-bottom: .5rem solid $color-grey-outer;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 1.4rem;
+			text-align: left;
+			.table-row {
+				.table-cell {
+					vertical-align: bottom;
+				}
+			}
+		}
+		.table-row {
+			border-bottom: $des-border;
+			height: 7rem;
+			padding-left: $lay-gut-def;
+			.table-cell {
+				vertical-align: middle;
+				width: 90%;
+				.cell-content {
+					@include pad($lay-gut-def);
+					line-height: $lay-main-lh;
+					.content-details {
+						display: none;
+						color: $color-grey-subtle-lite;
+						font-size: $fsize-sub-text;
+						margin-top: .2rem;
+						.details-link {
+							@include transit-fast;
+							color: $color-grey;
+							&:hover {
+								color: $color-main-red-dim;
+							}
+						}
+					}
+					&.edit {
+						@include flex-justify-end;
+						@include pad(0);
+						.edit-opt {
+							@include flex-center;
+							@include flex-direction(column);
+							@include transit-fast;
+							text-decoration: none;
+							color: inherit;
+							text-transform: uppercase;
+							width: 7rem;
+							height: 7rem;
+							border-left: $des-border;
+							.opt-text {
+								margin-top: .2rem;
+								font-size: $fsize-sub-text;
+							}
+							&:hover {
+								@extend .mod-des-appear-black;
+							}
+							&.remove {
+								&:hover {
+									@extend .mod-des-appear-red-dim;
+								}
+							}
+						}
+					}
+				}
+				&.switch {
+					width: 10%;
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Add new table item widget
+.widget-add-new-table-item {
+	@include filter-drop-shadow($des-dropsh);
+	@include pad($lay-gut-def+1);
+	@include flex-justify-between;
+	background: $color-grey-lite;
+	.item-input {
+		@include flex-grow(1);
+		padding-right: $lay-gut-def;
+	}
+	.item-submit {
+		@include align-self(flex-end);
+	}
+}
+
+.widget-red-submit {
+	.submit {
+		@include pad(1.1rem $lay-gut-def);
+		@include transit-fast;
+		font-size: $fsize-main;
+		color: #fff;
+		background: $color-main-red;
+		min-width: 12rem;
+		&:hover {
+			@extend .mod-des-appear-black;
+		}
+	}
+}
+
+// --------------------------------------------- Widget file table
+.widget-file-table {
+	background: #fff;
+	.file-table {
+		font-size: $fsize-main;
+		width: 100%;
+		.table-row {
+			border-bottom: $des-border;
+			// Row Selection styles
+			&.selected {
+				background: $color-sel-pink;
+				.table-cell {
+					.cell-content {
+						.content-select {
+							.icon {
+								color: $color-main-red-dim;
+							}
+						}
+						.file-info-action {
+							.icon {
+								color: $color-main-red-dim;
+							}
+						}
+					}
+					&.folder-move-link {
+						background: $color-sel-pink;
+						.cell-content {
+							.folder-move-action {
+								.icon {
+									color: $color-main-red;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.supv-sel-folder-tr {
+				cursor: pointer;
+			}
+		}
+		.table-cell {
+			@include pad($lay-gut-def);
+			vertical-align: middle;
+			&.file-icon-cell {
+				width: 10%;
+			}
+			&.file-name-cell {
+				width: 44%;
+			}
+			&.owner-name-cell {
+				width: 24%;
+			}
+			&.file-size-cell {
+				width: 15%;
+			}
+			&.file-info-cell {
+				width: 7%;
+			}
+			&.folder-move-link {
+				width: 7% !important;
+			}
+			.cell-content {
+				.table-view-change {
+					@include flex-center;
+					.change-opt {
+						@include anchor-link-bl;
+						@include transit-fast;
+						margin: 0 $lay-gut-def/2;
+						font-size: $fsize-main;
+						&:hover {
+							color: $color-main-red-dim;
+						}
+					}
+				}
+			}
+			&.folder-move-link {
+				width: 5rem;
+				@include pad(0);
+				background: $color-grey-lite;
+				.cell-content {
+					@include pad(0);
+					@include flex-center;
+					.folder-move-action {
+						@include flex-center;
+						@include anchor-link-bl;
+						width: 4rem;
+						height: 4rem;
+						.icon {
+							color: $color-grey-outer;
+							font-size: 4rem;
+						}
+					}
+				}
+			}
+		}
+		.table-head {
+			.table-row {
+				border-bottom: .2rem solid $color-grey-med;
+				.table-cell {
+					text-align: left;
+					text-transform: capitalize;
+					font-size: $fsize-sub-text;
+				}
+			}
+		}
+		.table-body {
+			.table-row {
+				@include transit-fast;
+				&:hover {
+					background: $color-grey-lite;
+				}
+				.table-cell {
+					&.file-icon-cell {
+						.cell-content {
+							@include flex-justify-start;
+							@include align-items(center);
+							.content-select {
+								// @include transit-fast;
+								text-decoration: none;
+								color: $color-grey-subtle-lite;
+								font-size: 2.2rem;
+								margin-right: $lay-gut-def+1;
+								&:hover,
+								&:active,
+								&:focus {
+									color: $color-main-red-dim;
+									position: relative;
+									@include transform(scale(1.4));
+								}
+							}
+							.content-type-icon {
+								width: 3.5rem;
+							}
+						}
+					}
+					&.file-info-cell {
+						.cell-content {
+							.sidebox-trigger {
+								@include transit-fast;
+								text-decoration: none;
+								color: inherit;
+								&:hover {
+									color: $color-main-red;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.no-head {
+			.table-head {
+				display: none;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Widget File checkmark toggler for tablet/mobile
+.widget-toggle-select-items {
+	@include flex-center;
+	@include transit-fast;
+	@include pad($lay-gut-def/2);
+	display: none;
+	text-align: center;
+	width: 8.8rem;
+	font-size: $fsize-main;
+	color: #fff;
+	background: $color-grey-subtle-lite;
+	.icon {
+		@include align-self(flex-start);
+		margin-right: .7rem;
+	}
+	&:hover {
+		background: $color-grey-subtle;
+		cursor: pointer;
+	}
+	&.active {
+		@extend .mod-des-appear-black;
+	}
+}
+
+// --------------------------------------------- My profile widgets
+.widget-profile-avatar {
+	@include display(flex);
+	@include justify-content(flex-end);
+	@include flex-direction(column);
+	position: relative;
+	overflow: hidden;
+	width: 28rem;
+	height: 32rem;
+	background-position: center !important;
+	background-size: cover !important;
+	.avatar-actions {
+		@include display(flex);
+		// @include transform(translateY(100%));
+		// TEMP? translate3D performance
+		@include transform(translate3d(0,
+		100%,
+		0));
+		@include transit-fast;
+		.action {
+			@include anchor-link-bl;
+			@include pad(1.5rem 0);
+			@include flex-center;
+			@include transit-fast;
+			width: 50%;
+			text-align: center;
+			font-size: 1.1rem;
+			text-transform: uppercase;
+			background: rgba(47, 47, 47, .7);
+			color: #fff;
+			.icon {
+				margin-right: .5rem;
+				font-size: $fsize-main;
+			}
+			&.change {
+				border-right: .1rem solid rgba(255, 255, 255, .2);
+			}
+			&:hover {
+				background: $color-grey;
+			}
+		}
+	}
+	&:hover {
+		.avatar-actions {
+			// @include transform(translateY(0%));
+			// TEMP? translate3D Performance
+			@include transform(translate3d(0,
+			0,
+			0));
+		}
+	}
+}
+
+.widget-profile-settings {
+	@include display(flex);
+	margin: $lay-gut-def 0;
+	.settings-avatar {
+		@include flex-justify-between;
+		@include flex-direction(column);
+		width: 30rem;
+		padding-right: $lay-gut-def;
+		border-right: $des-border;
+		.widget-signature {
+			.signature-canvas {
+				width: 100%;
+			}
+		}
+	}
+	.settings-form {
+		@include flex-grow(1);
+		margin-left: $lay-gut-def;
+	}
+}
+
+.widget-form-section-heading {
+	font-size: $fsize-main;
+	text-transform: uppercase;
+	margin: $lay-gut-def*2 0 $lay-gut-def;
+	padding-bottom: $lay-gut-def;
+	border-bottom: $des-border;
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+// --------------------------------------------- Generic button grouping styles
+.widget-generic-button-group {
+	@include flex-justify-between;
+	margin: $lay-gut-def 0;
+	&.two {
+		.widget-generic-btn {
+			width: 49%;
+		}
+	}
+}
+
+// --------------------------------------------- Pill btn widget
+.widget-widget-btn-pill {
+	@include anchor-link($color-grey-subtle,
+	1.3rem);
+	@include pad($lay-gut-def/2 $lay-gut-def);
+	@include transit-fast;
+	text-transform: capitalize;
+	border-radius: $des-br;
+	border: .1rem solid $color-grey-subtle;
+	&:hover {
+		@extend .mod-des-appear-black;
+	}
+}
+
+// --------------------------------------------- Generic button styles
+.widget-generic-btn {
+	@include display(flex);
+	border-radius: 0;
+	.btn {
+		@include pad($lay-gut-def/2 $lay-gut-def);
+		@include transit-fast;
+		@include anchor-link-bl;
+		@extend .mod-des-appear-red;
+		font-size: $fsize-main;
+		text-transform: capitalize;
+		color: #fff;
+		.btn-text {
+			@include display(inline-block);
+			vertical-align: middle;
+		}
+		.icon {
+			font-size: $fsize-common-icon;
+			margin-right: $lay-gut-def/2;
+		}
+		&:hover {
+			@extend .mod-des-appear-red-dim;
+			cursor: pointer;
+		}
+	}
+	&.full-width {
+		.btn {
+			width: 100%;
+			text-align: center;
+		}
+	}
+	&.left {
+		@include justify-content(flex-start);
+	}
+	&.center {
+		@include justify-content(center);
+	}
+	&.right {
+		@include justify-content(flex-end);
+	}
+	&.red {
+		.btn {
+			@extend .mod-des-appear-red;
+		}
+	}
+	&.black {
+		.btn {
+			@extend .mod-des-appear-black;
+			&:hover {
+				@extend .mod-des-appear-red;
+			}
+		}
+	}
+	&.grey {
+		.btn {
+			@extend .mod-des-appear-l-grey;
+			&:hover {
+				background: $color-grey-dark;
+				color: #fff;
+			}
+		}
+	}
+	&.blue {
+		.btn {
+			@extend .mod-des-appear-blue;
+			&:hover {
+				background: $color-main-black;
+				color: #fff;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Certificate ulpload
+.widget-cert-upload {
+	.cert-upload-content {
+		.content-empty {
+			text-align: center;
+			color: $color-grey-subtle-lite;
+			font-size: $fsize-main;
+			margin: $lay-gut-def 0;
+		}
+		.cert-list {
+			.list-item {
+				@include flex-justify-between;
+				.item-desc {
+					@include flex-grow(1);
+					@include align-self(flex-start);
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Widget Contacts table
+.widget-contacts-table {
+	.contacts-table {
+		width: 100%;
+		.table-head {
+			.table-row {
+				.table-cell {
+					@include pad(0 $lay-gut-def $lay-gut-def);
+					text-align: left;
+					text-transform: uppercase;
+					font-size: $fsize-main;
+					font-weight: bold;
+				}
+			}
+		}
+		.table-body {
+			@extend .mod-des-appear-striped;
+			border-top: $des-border;
+			border-bottom: $des-border;
+			.table-row {
+				.table-cell {
+					vertical-align: middle;
+					.cell-content {
+						font-size: $fsize-main;
+						&.contact-info {
+							padding-left: $lay-gut-def;
+							.widget-img-w-nfo {
+								.info-content {
+									.content-text {
+										color: $color-grey-subtle;
+									}
+								}
+							}
+						}
+						&.contact-details {
+							.detail {
+								&.phone {
+									margin-bottom: .5rem;
+								}
+								&.mail {
+									color: $color-grey-subtle;
+								}
+							}
+						}
+						&.contact-actions {
+							@include display(flex);
+							@include justify-content(flex-end);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Contact actions widget
+.widget-contact-actions {
+	@include display(flex);
+	.action {
+		@include transit-fast;
+		border-left: $des-border;
+		.action-link {
+			@include anchor-link-bl;
+			@include pad($lay-gut-def);
+			text-transform: uppercase;
+			text-align: center;
+			color: $color-grey-subtle;
+			.link-text {
+				margin-top: .5rem;
+				font-size: 1.4rem;
+			}
+		}
+		&:hover {
+			@extend .mod-des-appear-black;
+			.action-link {
+				color: #fff;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Datepicker select widget
+.widget-date-select {
+	position: relative;
+	max-height: 4.4rem;
+	.select {
+		@extend .mod-des-default-input;
+	}
+	&::after {
+		@include flex-center;
+		font-family: $des-iconfont;
+		position: absolute;
+		right: 1.3rem;
+		top: 1.3rem;
+		content: '\\e912';
+		font-size: 1.5rem;
+		color: $color-grey;
+	}
+	.select-label {
+		font-size: $fsize-main;
+		margin-right: $lay-gut-def/2;
+	}
+}
+
+// --------------------------------------------- Supervisor page widgets
+.widget-supv-db-stat-list {
+	@include flex-justify-between;
+	margin-bottom: $lay-gut-def;
+	.widget-supv-db-stat {
+		width: 24%;
+		&:nth-of-type(even) {
+			background: $color-main-red;
+			.stat-top {
+				.stat-count {
+					.count-title {
+						color: $color-grey-outer;
+					}
+				}
+			}
+		}
+	}
+}
+
+.widget-supv-db-stat {
+	@include filter-drop-shadow($des-dropsh);
+	background: $color-grey;
+	color: #fff;
+	font-size: $fsize-main;
+	.stat-top {
+		@include flex-justify-between;
+		@include pad($lay-gut-def/2 $lay-gut-def);
+		.icon {
+			font-size: 3.5rem;
+			margin-bottom: 1.5rem;
+		}
+		.stat-count {
+			text-align: right;
+			.count {
+				font-size: 3rem;
+				font-weight: bold;
+			}
+			.count-title {
+				color: $color-grey-subtle-lite;
+			}
+		}
+	}
+	.stat-bot {
+		.bot-link {
+			@include anchor-link-bl;
+			@include flex-justify-between;
+			@include pad($lay-gut-def/2 $lay-gut-def);
+			@include transit-fast;
+			background: #fff;
+			color: $color-grey-subtle-lite;
+			.icon,
+			.link-text {
+				@include transit-fast;
+			}
+			&:hover {
+				background: $color-grey-lite;
+				.icon,
+				.link-text {
+					color: $color-main-black;
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Supervisor dashboard panel widget
+.widget-db-panel {
+	@include filter-drop-shadow($des-dropsh);
+	border-radius: $des-br;
+	background: #fff;
+	margin: $lay-gut-def 0;
+	overflow: hidden;
+	.db-panel-title {
+		@include pad($lay-gut-def);
+		border-bottom: $des-border;
+		font-size: 2rem;
+	}
+	.panel-header {
+		@include pad($lay-gut-def);
+		@include flex-justify-between;
+		border-bottom: $des-border;
+		position: relative;
+		z-index: 30;
+		background: #fff;
+		.header-title {
+			font-size: 2rem;
+		}
+		.header-options {
+			@include flex-justify-between;
+			.option {
+				@include anchor-link-bl;
+				@include transit-fast;
+				color: $color-grey-subtle-lite;
+				font-size: 1.5rem;
+				margin-left: $lay-gut-def;
+				.option-text {
+					margin-left: $lay-gut-def/2;
+				}
+				&.link {
+					color: $color-main-black;
+				}
+				&:hover {
+					color: $color-main-red-dim;
+				}
+			}
+		}
+	}
+	.panel-content {
+		position: relative;
+		.content-overlay {
+			@include display(flex);
+			@include flex-direction(column);
+			@include justify-content(center);
+			// @include transform(translateY(-100%));
+			//TEMP? translate3D Performance
+			@include transform(translate3d(0,
+			-100%,
+			0));
+			@include pad($lay-gut-def);
+			@include transit;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: #fff;
+			z-index: 20;
+			.widget-label-field-group {
+				margin-bottom: $lay-gut-def;
+			}
+			.widget-label-field {
+				height: auto;
+			}
+			.widget-generic-btn {
+				.btn {
+					@include transit-fast;
+					@extend .mod-des-appear-grey;
+					&:hover {
+						@extend .mod-des-appear-red-dim;
+					}
+				}
+			}
+			&.active {
+				// @include transform(translateY(0));
+				// TEMP? translate3D performance
+				@include transform(translate3d(0,
+				0,
+				0));
+			}
+		}
+		// Content separator
+		.content-pad {
+			@include pad($lay-gut-def);
+			&.flex {
+				@include flex-justify-between;
+			}
+		}
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	.db-tabs {
+		md-content {
+			background: transparent;
+			md-tabs {
+				md-tabs-wrapper {
+					background: transparent;
+					md-tabs-canvas {
+						margin-bottom: 0;
+					}
+				}
+			}
+			.widget-tabs {
+				&.mini-tabs {
+					.tab-container {
+						.etabs {
+							@include display(block);
+							background: $color-grey-lite;
+							.tab {
+								background: transparent;
+								.tab-link {
+									color: $color-grey-subtle-lite;
+									border: none;
+									@include pad($lay-gut-def);
+									.link-text {
+										@include flex-center;
+									}
+									&.active {
+										font-weight: bold;
+										color: $color-main-black;
+									}
+								}
+							}
+							&.filler {
+								height: 5.5rem;
+							}
+						}
+						.tab-content {
+							.content-wrap {
+								@include pad(0);
+								.widget-label-field-group {
+									@include pad($lay-gut-def);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.widget-doughnut-chart-details {
+	@include display(flex);
+	width: 100%;
+	.details-list {
+		width: 100%;
+		.list-item {
+			margin-bottom: $lay-gut-def;
+			.item-link {
+				@include flex-justify-between;
+				text-decoration: none;
+				color: inherit;
+				font-size: $fsize-main;
+				@include transit-fast;
+				.link-info {
+					@include transit-fast;
+					@include display(flex);
+					@include align-items(center);
+					margin: 0 $lay-gut-def 0 5rem;
+					.icon {
+						display: block;
+						width: $lay-gut-def/2;
+						height: $lay-gut-def/2;
+						background: $color-main-red;
+					}
+					.info-text {
+						@include transit-fast;
+						margin-left: $lay-gut-def;
+					}
+				}
+				.link-count {
+					color: $color-grey-subtle-lite;
+					padding-right: $lay-gut-def/2;
+				}
+				&:hover {
+					background: $color-grey-lite;
+					.link-info {
+						.info-text {
+							color: $color-main-red-dim;
+						}
+					}
+				}
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.widget-db-panel-group {
+	@include flex-justify-between;
+	@include align-items(flex-start);
+	@include align-content(flex-start);
+	.widget-db-panel {
+		height: 29.1rem;
+		margin: $lay-gut-def 0;
+		overflow: auto;
+	}
+	&.two {
+		.widget-db-panel {
+			width: 49.2%;
+		}
+	}
+}
+
+// --------------------------------------------- n3-charts widget @ main Supervisor dashboard
+.widget-supv-chart-main {
+	margin-top: $lay-gut-def;
+	.ng-isolate-scope {
+		.chart-legend {
+			display: none;
+		}
+	}
+}
+
+.widget-supv-chart-table {
+	.chart-table {
+		width: 100%;
+		.table-cell {
+			vertical-align: middle;
+			.cell-content {
+				@include pad($lay-gut-def/2 $lay-gut-def);
+				font-size: 1.4rem;
+			}
+		}
+		.table-head {
+			border-bottom: .3rem solid $color-grey-outer;
+			.table-row {
+				.table-cell {
+					.cell-content {
+						text-align: left;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		.table-body {
+			.table-row {
+				.table-cell {
+					&:nth-of-type(1) {
+						.cell-content {
+							@include display(flex);
+							.hide-stat {
+								@include anchor-link-bl;
+								margin-right: $lay-gut-def;
+							}
+						}
+					}
+					&.subm {
+						.cell-content {
+							.subm-link {
+								color: $color-main-red;
+							}
+						}
+					}
+				}
+			}
+			@extend .mod-des-appear-striped;
+		}
+	}
+	&.sitemap {
+		.chart-table {
+			.sitemap-forms {
+				width: 80%;
+			}
+			.sitemap-subm {
+				width: 20%;
+			}
+		}
+	}
+}
+
+.widget-supv-subm-changes {
+	@include flex-justify-between;
+	font-size: $fsize-sub-text;
+	color: $color-grey-subtle-lite;
+	.changes {
+		color: #000;
+	}
+	.changes-link {
+		@include anchor-link-bl;
+		@include transit-fast;
+		font-size: 1.6rem;
+		&:hover {
+			color: $color-main-red-dim;
+		}
+	}
+}
+
+// --------------------------------------------- Stat Progress widget
+.widget-stat-progress {
+	margin-bottom: $lay-gut-def+1;
+	.progress-title {
+		font-size: $fsize-main;
+		font-weight: bold;
+		margin-bottom: $lay-gut-def/2;
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	md-progress-linear {
+		.md-container {
+			background-color: $color-grey-med;
+		}
+	}
+}
+
+// --------------------------------------------- Widget link list
+.widget-link-list {
+	.list {
+		@extend .mod-des-appear-striped;
+		.list-item {
+			.item-link {
+				@include transit-fast;
+				@include pad($lay-gut-def/2 $lay-gut-def);
+				@include flex-justify-between;
+				@include anchor-hide;
+				.widget-img-w-nfo {
+					.icon {
+						@include transit-fast;
+						font-size: $fsize-common-icon;
+						margin-right: $lay-gut-def;
+						color: $color-grey-subtle-lite;
+					}
+					.info-content {
+						.content-text {
+							font-size: $fsize-main;
+						}
+						.content-action-id {
+							@include transit-fast;
+							color: $color-grey-subtle-lite;
+							font-size: $fsize-sub-text;
+						}
+					}
+				}
+				.widget-arrow-link {
+					font-size: $fsize-common-icon;
+				}
+				&:hover {
+					background: $color-grey-outer;
+					.widget-img-w-nfo {
+						.info-content {
+							.content-action-id {
+								color: $color-main-black;
+							}
+						}
+						.icon {
+							color: $color-main-black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.widget-link-list-item {
+	@include flex-justify-between;
+	@include pad($lay-gut-def/2);
+	.list-arrow-right {
+		.widget-arrow-link {
+			.icon {
+				font-size: $fsize-common-icon;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Stat panel selection widget
+.widget-stat-panel-selection {
+	@include flex-justify-between;
+	@include pad($lay-gut-def/2 $lay-gut-def);
+	display: none;
+	background: $color-grey-lite;
+	border-bottom: $des-border;
+	.selection-list {
+		@include display(flex);
+		@include justify-content(flex-start);
+		font-size: $fsize-main;
+		.list-item {
+			@include display(flex);
+			@include justify-content(flex-start);
+			margin-right: $lay-gut-def;
+			.icon {
+				margin-right: $lay-gut-def/2;
+				color: $color-grey-subtle;
+			}
+			.item-name {
+				text-transform: uppercase;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+	.selection-close {
+		@include anchor-link-bl;
+		@include transit-fast;
+		color: $color-grey-subtle;
+		&:hover {
+			color: $color-main-red-dim;
+		}
+	}
+}
+
+// --------------------------------------------- Supervisor Monthly submission list 
+.widget-supv-monthly-sub-list {
+	@extend .mod-des-appear-striped;
+}
+
+.widget-supv-monthly-sub {
+	@include pad($lay-gut-def);
+	.sub-info {
+		.info {
+			margin-bottom: $lay-gut-def;
+			line-height: $lay-main-lh;
+			.info-link {
+				@include anchor-hide;
+				@include transit-fast;
+				font-weight: bold;
+				&:hover {
+					color: $color-main-red-dim;
+				}
+			}
+		}
+		.info-date {
+			color: $color-grey-subtle;
+			margin-bottom: $lay-gut-def;
+		}
+	}
+	.sub-by {
+		.by-title {
+			text-transform: uppercase;
+			margin-bottom: $lay-gut-def/2;
+		}
+		.by-user {
+			.user-link {
+				@include anchor-hide;
+				.info-content {
+					.content-text {
+						@include transit-fast;
+					}
+				}
+				&:hover {
+					.info-content {
+						.content-text {
+							color: $color-main-red-dim;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Widget file download status
+.widget-status-animation {
+	margin-right: $lay-gut-def/2;
+	.loader {
+		.loader-inner {
+			>* {
+				background: tomato;
+			}
+		}
+	}
+}
+
+.widget-file-download-status {
+	@include transit-fast;
+	background: $color-grey-outer;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	.status {
+		@include pad($lay-gut-def);
+		@include transit-fast;
+		@include flex-center;
+		height: 6rem;
+		.status-count {
+			@include transit-fast;
+			font-size: $fsize-sub-text;
+			color: $color-grey-subtle;
+		}
+		.widget-status-icon {
+			.icon {
+				@include pad($lay-gut-def/2);
+				margin-right: $lay-gut-def/2;
+				border-radius: 50%;
+				font-size: 1.8rem;
+				background: $color-main-red;
+				color: #fff;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+			background: #fff;
+		}
+	}
+	&.complete {
+		display: none;
+		.status {
+			@include animation(bounceInDown 1.0s ease-in,
+			slide 2.0s ease);
+			.status-count {
+				.count-view {
+					color: $color-grey-dark;
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- PDF Download widget
+.widget-pdf-download {
+	@include flex-justify-between;
+	border-bottom: $des-border;
+	.download-details {
+		@include pad($lay-gut-def);
+		@include flex-justify-between;
+		.details-icon {
+			position: relative;
+			width: 4rem;
+			margin-right: $lay-gut-def/2;
+			// Green tick when file is ready
+			&::before {
+				@include animation(zoomIn 1.0s ease-in,
+				slide 2.0s ease);
+				position: absolute;
+				font-family: $des-iconfont;
+				content: '\\e9fd';
+				background: $color-succ-green;
+				color: #fff;
+				border-radius: 50%;
+				@include pad(.7rem);
+				top: -.9rem;
+				left: -.9rem;
+			}
+		}
+		.details {
+			line-height: $lay-main-lh;
+			.details-size {
+				color: $color-grey-subtle;
+				text-transform: uppercase;
+			}
+		}
+		&.loading {
+			.details-icon {
+				.icon {
+					@include filter(grayscale(100%));
+					opacity: .3;
+				}
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+	.download-action {
+		@include flex-center;
+		.action-dl {
+			background: $color-grey-med;
+			color: $color-main-black;
+			@include transit-fast;
+			@include pad(3.5rem $lay-gut-def);
+			&:hover {
+				background: $color-grey-subtle;
+				color: #fff;
+			}
+		}
+		&.loading {
+			margin-right: .95rem;
+			.loader {
+				.loader-inner {
+					>* {
+						background: $color-main-red-dim;
+					}
+				}
+			}
+		}
+	}
+}
+
+.widget-gear-switch {
+	@include transit-fast;
+	color: $color-grey-subtle;
+	cursor: pointer;
+	.icon {
+		@include pad($lay-gut-def/2);
+		font-size: $fsize-common-icon;
+		display: block;
+		z-index: 19 !important;
+		position: relative;
+	}
+	.switch-content {
+		@include transit-fast;
+		overflow: hidden;
+		display: none;
+		min-width: 17rem;
+		position: absolute;
+		background: #fff;
+		left: 0;
+		z-index: 50;
+		.content-link {
+			@include pad($lay-gut-def/2);
+			@include anchor-link-bl;
+			@include transit-fast;
+			@include flex-justify-start;
+			border-bottom: $des-border;
+			font-size: $fsize-sub-text;
+			text-transform: uppercase;
+			.link-text {
+				@include display(inline-block);
+				vertical-align: middle;
+			}
+			&:hover {
+				color: $color-main-red-dim;
+			}
+		}
+		&.right {
+			left: auto;
+			right: 0;
+		}
+	}
+	&:hover {
+		.icon {
+			color: $color-main-red-dim;
+		}
+	}
+	&.active {
+		@include filter-drop-shadow(0 0 .5rem rgba(47,
+		47,
+		47,
+		.3));
+		border-radius: $des-br $des-br 0 0;
+		background: #fff;
+		z-index: 100;
+		.icon {
+			@include animation(spin 5s linear .1s infinite alternate);
+			z-index: 1 !important;
+		}
+		.switch-content {
+			display: block;
+			z-index: 100;
+		}
+	}
+	&.col-sw {
+		.icon {
+			@include pad(0);
+			color: $color-grey-subtle;
+			font-size: $fsize-main;
+		}
+		.switch-content {
+			.content-link {
+				.link-text {
+					margin-left: $lay-gut-def/2;
+				}
+			}
+		}
+		&.active {
+			.icon {
+				@include animation(none);
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Widget matrix + first and second body-left column size vars 
+$matrix-f-col-w: 30rem;
+$matrix-s-col-w: 15rem;
+.widget-matrix {
+	.widget-matrix-table {
+		.table-head {
+			.table-row {
+				@include display(flex);
+				background: #fff;
+				border-bottom: $des-border;
+				.row-left {
+					@include flex-justify-between;
+					box-shadow: 0 .3rem 1rem rgba(47, 47, 47, .15);
+					.wrap {
+						@include flex-center;
+						font-size: $fsize-main;
+						width: $matrix-f-col-w;
+						height: 5rem;
+						&.col-two {
+							width: $matrix-s-col-w;
+						}
+					}
+				}
+				.row-right {
+					@include flex-grow(1);
+					position: relative;
+					.wrap {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						overflow-y: hidden;
+						overflow-x: auto;
+						.wrap-inner {
+							@include display(flex);
+							.col-heading {
+								@include flex-center;
+								.heading-cont {
+									@include flex-center;
+									width: 20rem;
+									height: 2rem;
+									border: $des-border;
+									white-space: normal;
+									letter-spacing: normal;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.table-body {
+			@include display(flex);
+			overflow-y: auto;
+			overflow-x: hidden;
+			.row-item {
+				@include display(flex);
+				@include align-items(center);
+				@include align-content(center);
+				@include justify-content(center);
+				height: 5.5rem;
+				font-size: $fsize-main;
+				border-left: $des-border;
+				border-bottom: $des-border;
+				white-space: normal;
+				letter-spacing: normal;
+				.item-check {
+					width: 2rem;
+					height: 2rem;
+				}
+			}
+			.body-left {
+				@include flex-justify-between;
+				height: 100%; // HACK
+				z-index: 30;
+				box-shadow: 0 .3rem 1rem rgba(47, 47, 47, .15);
+				position: static;
+				.row-item {
+					@include display(flex);
+					@include justify-content(flex-start);
+				}
+				.body-left-cont {
+					position: relative;
+					width: $matrix-f-col-w;
+					.cont-wrap {
+						@extend .mod-des-appear-striped;
+					}
+					&.col-two {
+						width: $matrix-s-col-w;
+						.cont-wrap {
+							.row-item {
+								padding-left: $lay-gut-def;
+							}
+						}
+					}
+				}
+			}
+			.body-right {
+				@include flex-grow(2);
+				height: 100%; // HACK
+				position: relative;
+				.body-right-wrapper {
+					position: absolute;
+					width: 100%;
+					left: 0;
+					top: 0;
+					width: 100%;
+					overflow-y: hidden;
+					overflow-x: scroll;
+					.body-right-wrapper-inner {
+						white-space: nowrap;
+						letter-spacing: -.31em;
+					}
+					.body-col {
+						@extend .mod-des-appear-striped-dim;
+						width: 20rem;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Widget list item 
+.widget-list {
+	.list-item {
+		position: relative;
+		margin-bottom: $lay-gut-def;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// --------------------------------------------- Generic list item widget
+.widget-list-item {
+	@include flex-justify-between;
+	@include pad($lay-gut-def/2 $lay-gut-def);
+	@include transit-fast;
+	border-radius: $des-br;
+	text-decoration: none;
+	font-size: $fsize-main;
+	background: $color-grey-med;
+	color: $color-main-black;
+	margin-bottom: $lay-gut-def;
+	height: 6rem;
+	position: relative;
+	.item-left {
+		@include flex-justify-between;
+		.icon {
+			font-size: 2.5rem;
+			margin-right: $lay-gut-def;
+		}
+		.left-text {
+			@include pad($lay-gut-def/2 0);
+		}
+		.left-avatar {
+			max-width: 4rem;
+			border-radius: 50%;
+			margin-right: $lay-gut-def/2;
+		}
+	}
+	.item-right {
+		@include transit;
+		position: relative;
+		color: $color-grey-subtle;
+		.link-arrow {
+			@include transit-fast;
+		}
+		.link-pdf {
+			display: block;
+			width: 3rem;
+		}
+		&:hover {
+			cursor: pointer;
+			color: $color-main-red;
+		}
+	}
+	&:hover {
+		background: $color-grey-lite;
+	}
+	&.action {
+		cursor: pointer;
+		&.deadline {
+			border: .1rem solid $color-main-red;
+			background: #fff;
+			.widget-img-w-nfo {
+				.icon {
+					color: $color-main-red;
+				}
+				.info-content {
+					.content-duedate {
+						color: $color-main-red;
+					}
+				}
+			}
+			.link-arrow {
+				color: $color-main-red;
+			}
+			&:hover {
+				background: $color-main-red-dim;
+				.widget-img-w-nfo {
+					.icon {
+						color: #fff;
+					}
+					.info-content {
+						.content-duedate {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+		&.urgent {
+			@extend .mod-des-appear-warning;
+			color: #fff;
+			.widget-img-w-nfo {
+				.info-content {
+					.content-duedate {
+						@include transit-fast;
+						color: #fff;
+					}
+				}
+			}
+			.link-arrow {
+				color: #fff;
+			}
+			&:hover {
+				background: $color-grey-subtle-lite;
+				color: $color-main-black;
+				.widget-img-w-nfo {
+					.info-content {
+						.content-duedate {
+							color: $color-main-black;
+						}
+					}
+				}
+			}
+		}
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+// --------------------------------------------- Recover file widget 
+.widget-recover-file {
+	@include pad($lay-gut-def);
+	@include align-items(center);
+	@include display(flex);
+	@include transit-fast;
+	text-decoration: none;
+	background: $color-main-red;
+	color: #fff;
+	font-size: $fsize-sub-text;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 6rem;
+	border-radius: 0 $des-br $des-br 0;
+	text-transform: uppercase;
+	z-index: 50;
+	.icon {
+		@include transit;
+		font-size: $fsize-main;
+		margin-right: $lay-gut-def/2;
+	}
+	&:hover {
+		background: $color-main-red-dim;
+		.icon {
+			@include transform(rotate(-540deg));
+		}
+	}
+}
+
+// --------------------------------------------- Widget chart sort
+.widget-chart-sort {
+	position: absolute;
+	right: $lay-gut-def;
+	top: $lay-gut-def;
+	.sort-list {
+		.list-item {
+			display: inline-block;
+			margin-left: $lay-gut-def;
+			.item-link {
+				@include transit-fast;
+				text-decoration: none;
+				font-size: 1.3rem;
+				color: $color-grey-subtle-lite;
+				&:hover,
+				&.active {
+					color: $color-main-black;
+				}
+			}
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
+	}
+	.sort-date {
+		display: none;
+		.date-item {
+			@include display(inline-block);
+			margin-left: $lay-gut-def;
+		}
+	}
+	&.sett-toggle {
+		top: .7rem;
+	}
+}
+
+// --------------------------------------------- Widget red link .btn 
+.widget-red-link-btn {
+	@include transit-fast;
+	@include anchor-link($color-main-red,
+	$fsize-main);
+	.icon {
+		margin-right: $lay-gut-def/2;
+		vertical-align: middle;
+	}
+	.btn-txt {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&:hover {
+		color: $color-main-red-dim;
+	}
+}
+
+.widget-remove-item {
+	@include anchor-link-bl;
+	color: $color-grey-subtle;
+	.icon {
+		font-size: $fsize-sub-text !important;
+		font-weight: bold;
+	}
+	&:hover {
+		.icon {
+			color: $color-main-red;
+		}
+	}
+}
+
+.widget-misc-btn-list {
+	@include flex-justify-between;
+	&.two {
+		.widget-misc-btn {
+			width: 49%;
+		}
+	}
+}
+
+.widget-misc-btn {
+	@include transit-fast;
+	@include pad($lay-gut-def/2);
+	background: transparent;
+	color: $color-main-black;
+	border: .1rem solid $color-main-black;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.3rem;
+	&:hover {
+		background: $color-main-black;
+		color: #fff;
+	}
+	&.red {
+		color: $color-main-red;
+		border-color: $color-main-red;
+		&:hover {
+			color: #fff;
+			background: $color-main-red;
+		}
+	}
+}
+
+.widget-no-data {
+	@include pad($lay-gut-def * 2);
+	width: 100%;
+	text-align: center;
+	color: $color-grey-subtle-lite;
+}
+
+// --------------------------------------------- Widget form input 
+.widget-form-input {
+	position: relative;
+	margin-bottom: $lay-gut-def;
+	.label {
+		margin-bottom: $lay-gut-def/2;
+		font-size: $fsize-main;
+	}
+	.icon {
+		font-size: 1.8rem;
+		color: $color-grey-subtle-lite;
+		position: absolute;
+		top: $lay-gut-def*2;
+		left: $lay-gut-def/2;
+	}
+	.input {
+		@extend .mod-des-default-input;
+		padding-left: $lay-gut-def * 2;
+		font-size: $fsize-main;
+		width: 100%;
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+// --------------------------------------------- Form Builder styles 
+.widget-handler {
+	@include pad($lay-gut-def/2);
+	@include align-self(stretch);
+	cursor: move;
+	background: $color-grey-handler;
+	width: 3.8rem;
+	.handler-surface {
+		height: 2.87rem;
+		background: url('../../assets/img/handler_dots.svg') repeat-y center;
+	}
+}
+
+.widget-builder-section {
+	background: $color-grey-section;
+	margin-bottom: $lay-gut-def;
+	.section-top {
+		@include flex-justify-between;
+		.top-content {
+			@include flex-justify-between;
+			@include flex-grow(1);
+			.content-title {
+				@include pad($lay-gut-def/2 $lay-gut-def);
+				@include flex-justify-start;
+				@include align-items(center);
+				@include align-content(center);
+				font-size: $fsize-main;
+				vertical-align: middle;
+				.icon {
+					@include transform(rotate(180deg));
+					margin-left: $lay-gut-def/2;
+					color: $color-grey;
+				}
+			}
+			.content-actions {
+				@include flex-justify-start;
+				.action {
+					@include pad(1.6rem);
+					@include align-items(center);
+					@include align-content(center);
+					@include transit-fast;
+					font-size: $fsize-main;
+					color: #fff;
+					.action-text {
+						@include display(inline-block);
+						vertical-align: middle;
+					}
+					.icon {
+						margin-right: .5rem;
+					}
+					&:nth-of-type(1) {
+						background: $color-grey-dark;
+					}
+					&:nth-of-type(2) {
+						background: $color-grey;
+					}
+					&:nth-of-type(3) {
+						background: $color-grey-subtle;
+					}
+					&:hover {
+						background: $color-main-red-dim;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+	.section-content {
+		background: #fff;
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	&.selected {
+		background: $color-main-black;
+		.widget-handler {
+			background: $color-grey-dark;
+		}
+		.top-content {
+			color: #fff;
+			.icon {
+				@include transform(rotate(0));
+			}
+		}
+	}
+}
+
+.widget-area {
+	@include pad($lay-gut-def);
+}
+
+.widget-add-row {
+	@include pad($lay-gut-def);
+	@include flex-center;
+	@include transit-fast;
+	border-top: $des-border;
+	cursor: pointer;
+	font-size: $fsize-main;
+	text-align: center;
+	color: $color-grey-subtle;
+	.icon {
+		margin-right: .5rem;
+	}
+	.row-text {
+		@include transit-fast;
+		font-style: italic;
+	}
+	&:hover {
+		@extend .mod-des-appear-black;
+	}
+}
+
+.widget-no-widget {
+	@include pad($lay-gut-def*2);
+	@include flex-justify-between;
+	@include flex-direction(column);
+	@include transit-fast;
+	height: 100%;
+	cursor: pointer;
+	border: .5rem dashed $color-grey-section;
+	font-size: $fsize-main;
+	color: $color-grey-subtle;
+	&>.icon {
+		font-size: 4rem;
+	}
+	.no-widget-text {
+		margin: $lay-gut-def 0;
+		font-size: 2rem;
+	}
+	.no-widget-add {
+		@include flex-justify-between;
+		.add-text {
+			margin-left: .5rem;
+			font-style: italic;
+		}
+	}
+	&:hover {
+		border-color: $color-grey-subtle-lite;
+	}
+}
+
+.builder-widget-area {
+	background: $color-grey-med;
+	margin-top: $lay-gut-def;
+	.area-header {
+		@include flex-justify-between;
+		border-bottom: $des-border-darken;
+		.widget-handler {
+			background: $color-grey-lite;
+		}
+		.header-actions {
+			@include flex-justify-between;
+			.action {
+				@include pad($lay-gut-def/2);
+				@include transit-fast;
+				cursor: pointer;
+				font-size: $fsize-main;
+				color: $color-grey-subtle;
+				&:hover {
+					&>.icon {
+						color: $color-main-red-dim;
+					}
+				}
+			}
+		}
+	}
+	.builder-row {
+		&.multi {
+			white-space: nowrap;
+			overflow: auto;
+			.builder-col {
+				@include display(inline-block);
+				width: 95%;
+			}
+		}
+	}
+	.builder-col {
+		@include pad($lay-gut-def/2);
+	}
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+.widget-area-sort-col {
+	margin: $lay-gut-def/2;
+	.col {
+		@include flex-justify-between;
+		@include transit-fast;
+		background: $color-grey-subtle-lite;
+		height: 3.5rem;
+		cursor: move;
+		.widget-handler {
+			@include pad($lay-gut-def/2 0);
+			@include transit-fast;
+			background: $color-grey-subtle-lite;
+			height: auto;
+			.handler-surface {
+				height: 1.5rem;
+				background: url('../../assets/img/handler_dots_light.svg') repeat-y center center;
+			}
+		}
+		.col-text {
+			@include flex-grow(1);
+			font-size: $fsize-sub-text;
+			font-weight: bold;
+			color: $color-grey-med;
+			text-align: center;
+		}
+		&:hover {
+			background: $color-grey;
+			.widget-handler {
+				background: $color-grey;
+			}
+		}
+	}
+	&.multi {
+		@include flex-justify-between;
+		&.two {
+			.col {
+				width: 49.5%;
+			}
+		}
+		&.three {
+			.col {
+				width: 32.7%;
+			}
+		}
+		&.four {
+			.col {
+				width: 24.3%;
+			}
+		}
+	}
+}
+
+.widget-builder-add-section {
+	@include flex-center;
+	@include flex-direction(column);
+	border-top: $des-border-darken;
+	padding-top: $lay-gut-def;
+	.add-section-top {
+		.icon {
+			@include pad($lay-gut-def/2);
+			@include transit-fast;
+			cursor: pointer;
+			background: $color-main-black;
+			color: #fff;
+			font-size: 1.5rem;
+			position: relative;
+			&::after {
+				@include transit-fast;
+				position: absolute;
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: .5rem .7rem 0 .7rem;
+				border-color: $color-main-black transparent transparent transparent;
+				bottom: -.5rem;
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+			}
+		}
+	}
+	.add-section-text {
+		@include transit-fast;
+		margin-top: $lay-gut-def;
+		font-size: $fsize-main;
+		color: $color-grey-subtle;
+		font-style: italic;
+	}
+	&:hover {
+		.add-section-top {
+			.icon {
+				background: $color-main-red-dim;
+				&::after {
+					border-color: $color-main-red-dim transparent transparent transparent;
+				}
+			}
+		}
+		.add-section-text {
+			color: $color-main-black;
+		}
+	}
+}
+
+.builder-widget-palette {
+	@include flex-justify-between;
+	@include flex-wrap(wrap);
+	.palette-item {
+		@include pad($lay-gut-def);
+		@include flex-direction(column);
+		@include transit-fast;
+		@include flex-center;
+		cursor: pointer;
+		background: $color-grey-lite;
+		border-radius: $des-br;
+		border: .1rem solid $color-grey-section;
+		width: 46.6%;
+		height: 14rem;
+		margin-bottom: $lay-gut-def;
+		.icon {
+			@include transit-fast;
+			font-size: 4rem;
+			margin-bottom: $lay-gut-def/2;
+			color: $color-grey-section;
+		}
+		.item-text {
+			color: $color-grey-dark;
+			text-transform: capitalize;
+			font-size: 1.4rem;
+			text-align: center;
+		}
+		&:hover {
+			background: #fff;
+			.icon {
+				color: $color-grey-dark;
+			}
+		}
+	}
+}
+
+.builder-widget {
+	@include flex-justify-between;
+	@include animation(fadeInRight .82s ease-in-out);
+	// TEMP CSS (for visualisation):
+	display: none;
+	// TEMP CSS (for visualisation):
+	margin-top: $lay-gut-def;
+	background: #fff;
+	.widget-handler {
+		@include align-self(stretch);
+		@include pad($lay-gut-def/2 .5rem);
+		background: $color-grey-lite !important;
+		width: $lay-gut-def;
+		.handler-surface {
+			height: 100%;
+		}
+	}
+	.widget-content {
+		@include flex-grow(1);
+		.content-header,
+		.content {
+			@include pad($lay-gut-def);
+			.content-rows {
+				.row {
+					@include flex-justify-between;
+					margin-bottom: $lay-gut-def/2;
+					.row-num {
+						font-size: $fsize-main;
+						font-weight: bold;
+						color: $color-grey-subtle;
+						margin-right: $lay-gut-def;
+					}
+					.builder-widget {
+						@include flex-grow(1);
+					}
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.content-header {
+			@include flex-justify-between;
+			border-bottom: $des-border-darken;
+			.header-name {
+				@include flex-justify-start;
+				font-size: $fsize-main;
+				.icon {
+					@include pad(.7rem $lay-gut-def/2);
+					background: $color-grey-med;
+					border-radius: $des-br;
+					box-shadow: 0 .4rem 0 $color-grey-subtle-lite;
+					color: $color-grey-subtle;
+				}
+				.name-text {
+					text-transform: capitalize;
+					margin: 0 $lay-gut-def/2;
+				}
+				.name-action {
+					@include transit-fast;
+					cursor: pointer;
+					color: $color-grey-subtle;
+					&:hover {
+						color: $color-main-red-dim;
+					}
+				}
+			}
+			.header-actions {
+				@include flex-justify-start;
+				font-size: $fsize-main;
+				color: $color-grey-subtle;
+				.action {
+					@include transit-fast;
+					margin-left: $lay-gut-def/2;
+					cursor: pointer;
+					&:hover {
+						color: $color-main-red-dim;
+					}
+					&:first-of-type {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+	// Widget ready
+	&.set {
+		border-top: .1rem solid $color-succ-green;
+	}
+	// Widget not ready
+	&.unset {
+		border-top: .1rem solid $color-main-red;
+	}
+	&.inner {
+		background: $color-grey-lite;
+		.widget-handler {
+			background: $color-grey-outer !important;
+		}
+		.widget-content {
+			.content {
+				font-size: $fsize-sub-text;
+				border-bottom: $des-border;
+				&:last-of-type {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+// --------------------------------------------- Widget tap to Add btn
+.widget-tta {
+	@include pad($lay-gut-def);
+	@include flex-center;
+	cursor: pointer;
+	background: $color-grey-lite;
+	color: $color-grey-subtle;
+	font-size: $fsize-main;
+	margin-top: $lay-gut-def;
+	.icon {
+		margin-right: .7rem;
+	}
+	.tta-text {
+		font-style: italic;
+	}
+	&:hover {
+		@extend .mod-des-appear-black;
+	}
+}
+
+// --------------------------------------------- Supervisor form chart axis widget
+.widget-axis {
+	color: $color-grey-subtle;
+	text-align: center;
+	width: 100%;
+	margin: $lay-gut-def 0 $lay-gut-def/2;
+	font-size: $fsize-main;
+}
+
+// --------------------------------------------- Widget table (Generic)
+.widget-table {
+	border-top: $des-border;
+	background: #fff;
+	.table {
+		font-size: $fsize-main;
+		width: 100%;
+		.table-row {
+			border-bottom: $des-border;
+			.table-cell {
+				@include pad($lay-gut-def);
+				border-right: $des-border;
+				vertical-align: middle;
+			}
+		}
+		.table-head {
+			.table-row {
+				border-bottom: .2rem solid $color-grey-med;
+				.table-cell {
+					font-size: $fsize-main;
+					font-weight: bold;
+					text-transform: capitalize;
+					text-align: left;
+				}
+			}
+		}
+		.table-body {
+			.table-row {
+				@include transit-fast;
+				.table-cell {
+					.cell-content {
+						.content-link {
+							@include anchor-hide;
+							@include transit-fast;
+							color: $color-main-red !important;
+							font-weight: bold;
+						}
+					}
+				}
+				&:hover {
+					background: $color-grey-lite;
+				}
+			}
+		}
+	}
+	// Supervisor report inner page user table
+	&.supv-report-users {
+		.table {
+			.table-row {
+				.table-cell {
+					width: 20%;
+					&.mid {
+						width: 60%;
+					}
+				}
+			}
+		}
+	}
+	&.admin-help-table {
+		.table {
+			.table-row {
+				.table-cell {
+					border-right: none;
+					width: 10%;
+					&.mid {
+						width: 20%;
+					}
+					&.right {
+						width: 70%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------- Notify bars widget 
+.widget-notify {
+	@include flex-justify-start;
+	@include pad($lay-gut-def);
+	@include transform(translate3d(0,
+	300%,
+	0));
+	@include transit-fast;
+	@include filter-drop-shadow(0 0 1rem rgba(0,
+	0,
+	0,
+	.1));
+	border-radius: $des-br;
+	left: $lay-gut-def/2;
+	right: $lay-gut-def/2;
+	bottom: $lay-gut-def/2;
+	position: fixed;
+	z-index: 1500;
+	.icon {
+		margin-right: $lay-gut-def;
+		font-size: 3rem;
+	}
+	.notify-text {
+		font-size: $fsize-main;
+		line-height: $lay-main-lh;
+	}
+	&.succ,
+	&.fail {
+		.icon,
+		.notify-text {
+			color: #fff;
+		}
+	}
+	&.succ {
+		background: $color-succ-green;
+	}
+	&.fail {
+		background: $color-main-red-dim;
+	}
+	// Show notification class
+	&.notify {
+		@include transform(translate3d(0,
+		0,
+		0));
+	}
+}
+
+// --------------------------------------------- Admin stats widget
+.widget-adm-stats {
+	background: $color-grey-med;
+	padding-bottom: $lay-gut-def;
+	.stats-list {
+		@include flex-justify-between;
+		@include flex-wrap(wrap);
+		.list-item {
+			@include flex-justify-between;
+			@include pad($lay-gut-def $lay-gut-def*2);
+			width: 18.5%;
+			border-radius: $des-br;
+			background: #fff;
+			.icon {
+				font-size: 2.5rem;
+				color: $color-grey-subtle-lite;
+				margin-right: $lay-gut-def;
+			}
+			.item-info {
+				.info-count {
+					color: $color-main-black;
+					margin-bottom: .5rem;
+					font-weight: bold;
+					font-size: 2rem;
+				}
+				.info-name {
+					color: $color-grey-subtle;
+					font-size: $fsize-sub-text;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+
+.widget-adm-usr-stat-group {
+	@include flex-justify-between;
+	@include flex-wrap(wrap);
+	&.two {
+		.widget-adm-usr-stat {
+			width: 50%;
+		}
+	}
+}
+
+.widget-adm-usr-stat {
+	@include flex-justify-start;
+	@include align-content(center);
+	@include align-items(center);
+	@include pad($lay-gut-def);
+	@include transit;
+	cursor: pointer;
+	color: $color-main-black;
+	.icon {
+		@include pad($lay-gut-def $lay-gut-def $lay-gut-def 0);
+		margin-right: $lay-gut-def;
+		border-right: $des-border;
+		font-size: 3.5rem;
+	}
+	.stat {
+		width: 100%;
+		.stat-count {
+			font-size: 3rem;
+			margin-bottom: .5rem;
+		}
+		.stat-name {
+			font-size: $fsize-sub-text;
+			text-transform: uppercase;
+			color: $color-grey-subtle;
+		}
+	}
+	.stat-arrow {
+		.icon {
+			margin: 0;
+			padding: 0;
+			font-size: $fsize-common-icon;
+			border: none;
+		}
+	}
+	&.no-license {
+		@include flex-grow(1);
+		width: 100%;
+		background: $color-grey-dark;
+		color: #fff;
+		&:hover {
+			background: $color-main-black;
+		}
+	}
+}
+
+.widget-adm-issue-time {
+	text-align: center;
+	.time-digit {
+		font-weight: bold;
+		font-size: 2rem;
+		margin-bottom: .5rem;
+		&.ok {
+			color: $color-succ-green;
+		}
+	}
+	.time-name {
+		font-size: $fsize-sub-text;
+		color: $color-grey-subtle;
+	}
+}
+
+// --------------------------------------------- Widget certificate expiry
+.widget-exp-cert {
+	@include flex-justify-between;
+	@include pad($lay-gut-def);
+	margin-bottom: $lay-gut-def;
+	background: #fff;
+	.cert-left {
+		@include flex-justify-start;
+		&>.icon {
+			font-size: 3rem;
+			padding-right: $lay-gut-def;
+			margin-right: $lay-gut-def;
+			border-right: $des-border;
+		}
+	}
+	.cert-right {
+		@include anchor-hide;
+		@include transit-fast;
+		font-size: 2rem;
+		&:hover {
+			color: $color-main-red-dim;
+		}
+	}
+}
+
+// --------------------------------------------- Ticket widget
+.widget-adm-tckt-list {
+	@include flex-justify-between;
+	@include align-items(flex-start);
+	background: #fff;
+	.tckt-list {
+		@include flex-grow(1);
+		min-height: 50rem;
+		width: 25%;
+		.list-item {
+			@include pad($lay-gut-def);
+			@include flex-justify-start;
+			@include anchor-hide;
+			@include transit-fast;
+			border-bottom: $des-border;
+			.widget-adm-issue-time {
+				margin-right: $lay-gut-def;
+			}
+			&:hover {
+				background: $color-grey-lite;
+			}
+		}
+	}
+	.tckt-view {
+		border-left: $des-border;
+		width: 75%;
+		.widget-chat {
+			border-top: none;
+			border-bottom: none;
+		}
+		.widget-textarea {
+			position: relative;
+			.textarea {
+				min-height: 12rem;
+			}
+			.widget-generic-btn {
+				position: absolute;
+				right: $lay-gut-def;
+				top: 50%;
+				// absolute position fix
+				margin-top: -2.8rem;
+			}
+		}
+	}
+}
+
+// --------------------------------------------- TEMP Code - REMOVE
+.TEMP-hidWA,
+.TEMP-addSect {  
+	display: none; 
+	dis
+      
+}
+
+.TEMP-addSect {
+	@include animation(fadeInUp .5s ease-in);

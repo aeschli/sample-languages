@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Incidents-Board</title>
+<script>
+//********** START: check basic functions prepare page for work **********//
+	if ( !("connectiv" in window.top) ) { window.top.connectiv = {}; }
+	isInternaUse();
+
+	getXrmObject();
+
+    window.emptyText = "(leer)";
+
+	var appendCSSToHead = function( incidentStatusCodes ){
+		var distStatusCode = [];
+		for ( var l = 0; l < incidentStatusCodes.length; l++ ) {
+			if (true/*incidentStatusCodes[l].state === 0 || incidentStatusCodes[l].status !== 'inactive'*/) {
+				distStatusCode.push( incidentStatusCodes[l].label.replace(/\W/g, "") );
+			}
+		}
+		distStatusCode.push("none");
+
+		var style = '<style type="text/css">';
+		for (var k = 0; k < distStatusCode.length; k++){
+			var color = getColor( k, distStatusCode[k] );
+			style += '.' + distStatusCode[k] + '{ background:' + color + ' !important; color: #444444 !important; text-shadow: none !important; }';
+			style += '.coloredRow.' + distStatusCode[k] + '{ opacity: 0.85; }';
+			style += '.coloredRow.' + distStatusCode[k] + ':hover{ opacity: 1; }';
+			style += '.ui-checkbox-off.' + distStatusCode[k] + '{ background: #f6f6f6 !important; }';
+			style += '.ui-icon-aze:after { background-image: url("' + Xrm.Page.context.getClientUrl() + '/WebResources/con_/pics/con_workingrecord_16.png"); }';
+		}
+		style += '</style>';
+
+		$( 'head' ).append( style );
+	};
+
+	$(document).on( "pagecreate", function( event ) {
+	    loadContent();
+	});
+//********** END: check basic functions and set eventhandler on pagecreate to load content **********//
+
+</script>
+</head>
+<body>
+<div id="mainoverlay" style="display: none;"></div>
+<div id="mainContainer" data-role="page" style="overflow: hidden;" data-quicklinks="true">
+	<div id="header" data-role="header" data-position="fixed" style="padding: 1%;">
+	</div>
+</div><!-- /page -->
+</body>
+</html>

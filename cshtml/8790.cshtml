@@ -1,0 +1,30 @@
+@model CloudQR.ViewModels.LoginViewModel
+@inject IViewLocalizer Localizer;
+@{
+    ViewData["Title"] = "Cloud QR";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+
+            <h1>@Localizer["PageTitle"]</h1>
+
+            <form asp-controller="Account" asp-action="LoginWebForm" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <input type="hidden" name="redirectUrl" value="/"/>
+
+                @Html.EditorFor(x => x.Email)
+                @Html.EditorFor(x => x.Password)
+                @Html.EditorFor(x => x.RememberMe)
+
+                <button type="submit" class="btn btn-lg btn-primary">@Localizer["LoginButton"]</button>
+            </form>
+
+            <hr>
+
+            <a asp-controller="Account" asp-action="Signup">@Localizer["SignupButton"]</a><br>
+            <a asp-controller="Account" asp-action="ResetPassword">@Localizer["ResetPasswordButton"]</a>
+        </div>
+    </div>
+</div>

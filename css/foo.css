@@ -124,6 +124,7 @@ header h2 {
     text-indent: 0x9;
     white-space: nowrap;
     overflow: hidden;
+    
 }
 
 header {
@@ -162,14 +163,14 @@ footer a:visited {
     margin-right: 20px;
 }
 
-.sidebar {
+.sidebar1 {
     margin-left: 600px;
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.sidebar .wrapper {
+.sidebar1 .wrapper {
     font: 10px verdana, sans-serif;
     background: transparent url(paper-bg.jpg) top left repeat-y;
     padding: 10px;
@@ -177,7 +178,7 @@ footer a:visited {
     width: 130px;
 }
 
-.sidebar h3.select {
+.sidebar1 h3.select {
     background: transparent url(h3.gif) no-repeat top left;
     margin: 10px 0 5px 0;
     width: 97px;
@@ -187,7 +188,7 @@ footer a:visited {
     overflow: hidden;
 }
 
-.sidebar h3.archives {
+.sidebar1 h3.archives {
     background: transparent url(h5.gif) no-repeat top left;
     margin: 25px 0 5px 0;
     width: 57px;
@@ -197,7 +198,7 @@ footer a:visited {
     overflow: hidden;
 }
 
-.sidebar h3.resources {
+.sidebar1 h3.resources {
     background: transparent url(h6.gif) no-repeat top left;
     margin: 25px 0 5px 0;
     width: 63px;
@@ -207,12 +208,15 @@ footer a:visited {
     overflow: hidden;
 }
 
-.sidebar ul {
+.sidebar1 ul {
     margin: 0;
     padding: 0;
+    display: block;
+    color: #fff
+    
 }
 
-.sidebar li {
+.sidebar1 li {
     background: transparent url(cr1.gif) no-repeat top center;
     display: block;
     padding-top: 5px;
@@ -220,11 +224,11 @@ footer a:visited {
     list-style-type: none;
 }
 
-.sidebar li a:link {
+.sidebar1 li a:link {
     color: #988F5E;
 }
 
-.sidebar li a:visited {
+.sidebar1 li a:visited {
     color: '#B3AE94';
 }
 

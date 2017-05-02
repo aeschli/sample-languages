@@ -1,0 +1,27 @@
+<html>
+
+    <body>
+        <input id="key"
+            placeholder="key"
+            value="key1" />
+        <input id="value"
+            placeholder="value"
+            value="value1" />
+        <button id="submitBtn">Add/Update</button>
+
+        <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-XXXX",
+                authDomain: "XXXXXXXXX-XXXXX.XXXXXXXXXXX.XXX",
+                databaseURL: "https://XXXXXXXXX-XXXXX.XXXXXXXXXXX.XXX",
+                storageBucket: "XXXXXXXXX-XXXXX.XXXXXXXXXXX.XXX",
+                messagingSenderId: "XXXXXXXXXXXX"
+            };
+            firebase.initializeApp(config);
+
+        </script>
+    </body>
+
+</html>

@@ -8,9 +8,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/app.js",
-            "cwd": "${workspaceRoot}",
-            "outDir": "{workspaceRoot}/bin"
+            "program": "${workspaceRoot}/js/mongo.js",
+            "cwd": "${workspaceRoot}"
         }
     ]
 }

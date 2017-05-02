@@ -17,3 +17,9 @@ foo {
     display: inline-block;
 	
   }
+  
+  @mixin bp-small {
+
+    @error 'Error';
+
+}

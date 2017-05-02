@@ -1,0 +1,53 @@
+@mixin title($color: $medium-light-gray) {
+  @extend %title;
+  color: $color;
+}
+
+@mixin button($properties: ()) {
+  @if (map-get($properties, extend)) == true {
+    @extend %button;
+  }
+
+  @if map-get($properties, fill) == null {
+    $properties: map-merge($properties, (fill: $dark-gray));
+  }
+
+  @if map-get($properties, text) == null {
+    $properties: map-merge($properties, (text: $white));
+  }
+
+  @if map-get($properties, style) == null {
+    background: map-get($properties, fill);
+
+    >.text {
+      color: map-get($properties, text);
+    }
+  }
+
+  @if map-get($properties, style) == "outlined" {
+    background: transparent;
+    border: (2 / $rootRatio + rem) solid map-get($properties, fill);
+
+    >.text {
+      font-size: (10 / $rootRatio + rem);
+      letter-spacing: (0.5 / $rootRatio + rem);
+      color: map-get($properties, fill);
+      padding: 0;
+    }
+  }
+
+  @if map-get($properties, position) == "offset-top-right" {
+    position: absolute;
+    margin-top: - (13 / $rootRatio + rem);
+    right: 5%;
+    padding: 0 (50 / $rootRatio + rem);
+  }
+}
+
+@mixin icon($name, $color: $dark-gray) {
+  $color: str-slice(inspect($color), 2, str-length(inspect($color)));
+
+  @if $name == "videocam-off" {
+    content: url('data:image/svg+xml;utf8,%3Csvg%20fill%3D%22%23' + $color + '%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%200h24v24H0zm0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M21%206.5l-4%204V7c0-.55-.45-1-1-1H9.82L21%2017.18V6.5zM3.27%202L2%203.27%204.73%206H4c-.55%200-1%20.45-1%201v10c0%20.55.45%201%201%201h12c.21%200%20.39-.08.54-.18L19.73%2021%2021%2019.73%203.27%202z%22%2F%3E%3C%2Fsvg%3E');
+  }
+}

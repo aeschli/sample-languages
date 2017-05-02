@@ -5,21 +5,22 @@ import org.junit.runners.*;
 
 /**
  * Multi line comment
- <p>Note: </p> asddasd
+ <p>Note</p> asddasd
+ @return
  */
 public class TestClass {
-
-	private String aString; 
-
+tab
+	private String aString;
+equals
 	/**
 	 * @param args
 	 */
 	public void doSomething(int a) {
 		double b = 0.0;
-		double c = 10e3;
+		double c = 10e3; 
 		long l = 134l;
 	}
-new String
+new Stringhe
     ("(A)" + "B");
 new String("Following line");
 	/*

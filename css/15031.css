@@ -1,0 +1,6 @@
+.foo {
+    user-select: none;
+    
+    background-color: red;
+    -webkit-app-region: drag;
+}

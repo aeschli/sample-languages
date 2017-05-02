@@ -1,0 +1,3 @@
+double fn(double (*f)(double), double a, int b, char c) {
+...
+}

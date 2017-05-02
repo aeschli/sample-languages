@@ -1,21 +1,50 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "JSON schema for component.json files",
-    "additionalProperties": true,
-    "properties": {
-        "foo": {
-            "description": "Hello http://myserver:9090/loo dsdsd",
-            "oneOf" : [{
-                "enum": ["1"],
-                "description": "It's 1"
-            },{
-                "enum": ["2"],
-                "description": "It's 2"
-            },{
-                "enum": ["23"],
-                "description": "It's 23"
-            }]
+    "title": "JSON schema for component.json files",    
+    "anyOf": [
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "bar": {
+                    "description": "**Hello** http://myserver:9090/loo\n\nHello"
+                },
+                "foo": {
+                    "description": "Hello http://myserver:9090/loo\nHello",
+                    "oneOf": [
+                        {
+                            "enum": [
+                                "1"
+                            ],
+                            "description": "It's 1"
+                        },
+                        {
+                            "enum": [
+                                "2"
+                            ],
+                            "description": "It's 2"
+                        },
+                        {
+                            "enum": [
+                                "23"
+                            ],
+                            "description": "It's 23"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "xoo": {
+                    "type": "string",
+                    "description": "This is xoosss"
+                }
+            }
         }
-    }  
+
+    ]
 }

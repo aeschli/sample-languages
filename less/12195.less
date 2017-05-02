@@ -1,0 +1,6 @@
+.desktop-and-old-ie(@rules) {
+  @media screen and (min-width: 1200px) { @rules(); }
+  html.lt-ie9 &                         { @rules(); }
+}
+
+.tablet-and-larger(@rules){ @media (min-width: @screen-sm) { @rules(); } }

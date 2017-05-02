@@ -1,0 +1,12 @@
+$default-margin: 20px;
+
+.mar{
+	/* Margin classes */
+	&-0{
+		margin-top: $default-margin;
+
+		&-0{
+			margin-top: 0;
+		}
+	}
+}
