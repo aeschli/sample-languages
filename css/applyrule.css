@@ -8,6 +8,8 @@
     color: green;
   };
   display: none;
+
   --foo: 1;
+
   s: var()
 }

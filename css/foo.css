@@ -16,6 +16,8 @@
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
 
+.pb-font::before
+
 /* basic elements */
 
 .html::before {
@@ -26,6 +28,7 @@
     display:d;
     left:0;
     display: none;
+    wid
 }
 :host /deep/ rect.d3chart-background {
   fill: rgba(250,250,250,0.8);

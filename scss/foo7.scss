@@ -25,3 +25,14 @@ body {
     background-image: -moz-linear-gradient(top, start-color, end-color);
     background-image: linear-gradient(to bottom, start-color, end-color);
 }
+@each $animal, $color, $cursor in ((s, b), black, default),
+                                  (sea-slug, blue, pointer),
+                                  (egret, white, move) {
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+    border: 2px solid $color;
+    cursor: $cursor;
+  }
+}
+
+$map: ( "prop": "val", -prop2: -val2 )

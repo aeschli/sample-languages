@@ -11,7 +11,7 @@ class Whatever {
 
 interface DispatchProps {
     dispatch: Dispatch<any>;
-    
+
 }
 
 class TaskList extends React.Component {
@@ -29,6 +29,6 @@ const TaskList = () => (
 
 function test() {
     for (var i=0 ; i<l ; ++i) {
-        //asdsd 
+        //asdsd
     }
 }r

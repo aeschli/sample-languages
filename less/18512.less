@@ -1,0 +1,23 @@
+.media-switch(@styles) {
+@styles: {
+  diplay: none;
+};
+
+.media-switch(@styles) {
+    @media(orientation:landscape){
+        @styles();
+        @foo: 23;
+    }
+}
+
+.media-switch({
+    flex-direction: row;
+});
+
+// declare detached ruleset
+@detached-ruleset: { background: red; };
+
+// use detached ruleset
+.top {
+    @detached-ruleset();
+}

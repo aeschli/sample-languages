@@ -8,7 +8,6 @@ declare module s {
 
 export module Conway {
     export interface Foo {
-		consol
     }
     export class Bar {
     } 
@@ -23,10 +22,6 @@ export module Conway {
 	}
     
 	export class GameOfLife {
-		
-		yield;
-		ret
-		
 		private gridSize: number;
 		private canvasSize: number;
 		private lineColor: string;

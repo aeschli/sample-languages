@@ -1,0 +1,8 @@
+$bar: 12px;
+
+.foo {
+  margin: ($bar * .8) 0 ($bar * .8) ($bar * 2);
+  padding: (10px * 1.2) (10px * 1.2) 0;
+  border: ($bar * 3) solid black;
+  box-shadow: 0 0 (10px) #000;
+}

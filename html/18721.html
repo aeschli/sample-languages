@@ -1,0 +1,40 @@
+<div class="custom-container"
+    id="report-container">
+    <div class="">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span data-bind="text: __('Vendas por funcionário')"></span></h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-inline">
+                    <global-filters params="value: {
+            stores: true,
+            year: true,
+            months: true,
+            dates: true,
+            reportBtn: 'getReportData',
+          }"></global-filters>
+
+
+                        <div class="form-group pull-right"
+                            data-bind="visible: reportData().length > 0">
+                            <label>&nbsp;</label><br>
+                            <export-to-excel></export-to-excel>
+                            <export-to-pdf></export-to-pdf>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="form-group">
+                <label for=""
+                    data-bind="text: __('Funcionário')"></label><br>
+                    <select class="form-control"
+                        data-bind="value: userIdField">
+                        <option value="headers"
+                            data-bind="text: __('Usar funcionário de abertura')"></option>
+                            <option value="details"
+                                data-bind="text: __('Usar funcionário dos detalhes')"></option>
+                                </select>
+            </div>
+        </div>

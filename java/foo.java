@@ -9,7 +9,7 @@ import org.junit.runners.*;
  */
 public class TestClass {
 
-	private String aString;
+	private String aString; 
 
 	/**
 	 * @param args

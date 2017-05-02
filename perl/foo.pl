@@ -1,39 +1,69 @@
-die("[$sheet->{label}] Unexpected sheet format.") unless (
-        $sheet->{"$date_col$row"} =~ /CALL_DATE/i &&
-        $sheet->{"$phone_col$row"} =~ /ANI_VAL/i  &&
-        $sheet->{"$pixel_cols[1]$row"} =~ /Auto_Quote_Count/i &&
-        $sheet->{"$pixel_cols[2]$row"} =~ /Auto_Bind_Count/i &&
-        $sheet->{"$pixel_cols[3]$row"} =~ /Home_Quote_Count/i &&
-        $sheet->{"$pixel_cols[4]$row"} =~ /Home_Bind_Count/i 
-    );
+#
+# This script scans a list of C programs and
+# tries to find if statements which do assignments.
+# Specifically, it looks for any line which contains
+# text of the form if(....), where if is the first
+# non-blank thing on the line, and the (....) contains
+# an = which is not part of ==, !=, <=, or >=.
+# Each such line is listed with the file name and the
+# line number.  This is not a perfect check, but it
+# will do a decent job.
+#
 
-    $row++;
-    while ($row < $sheet->{maxrow}) {
-        $row++;
-        $total_lines++;
+#
+# This function analyzes one line to see if it it
+# is suspicious.  If so, it prints it.  It also updates
+# the global flag $badfound, and prints an extra message
+# the first time a bad line is found.  It should be 
+# called as
+#    check_line (filename, line)
+# where the filename is used only when a message is
+# generated.  The $. line number is used also.
+#
 
-        my $date = $sheet->{"$date_col$row"};
-        next unless $date;
-        (warning "Unexpected date format: '$date'"), next unless ($date =~ /^2\d\d\d-\d\d-\d\d$/);
+use strict;
 
-        my $phone = trim($sheet->{"$phone_col$row"});
-        (warning "Unexpected phone format: '$phone'."), next unless ($phone =~ /^\d{10}$/);
+my $badfound = 0;
+sub check_line {
+    my($fn, $line) = @_;
 
-        info $phone;
-        next if ($date gt $date_to || $date lt $date_from);
+    # Check for that =.
+    if($line =~ /^\s*if\s*\(.*[^!<>=]=([^=].*\)|\))/) {
+        if(!$badfound) {
+            print("The following suspicious lines were found:\n");
+            $badfound = 1;
+        }
+        print "$fn:$.: $line\n";
+    }
+}
 
-        my @pixels = (0) x 5;
-        for (1..4) {
-            $pixels[$_] = trim($sheet->{"$pixel_cols[4]$row"});
-            (warning "Pixel $_ is not a number in the row # $row."), next unless looks_like_number($pixels[$_]);
-        };
+#
+# This function opens and reads one file, and calls
+# check_line to analyze each line.  Call it with the
+# file name.
+#
+sub check_file {
+    my($fn) = @_;
 
-        for (1..4) {
-            add_phone_activity($date, $phone, "pixel-$_", $pixels[$_]) if $pixels[$_];
-        };
-        $parsed_lines++;
+    if(!open(IN, $fn)) {
+        print "Cannot read $fn.\n";
+        return;
+    }
 
-        $x =~
-        my @p = grep /^./, split /[^[:alpha:]'\-']/i, $x;
-    };
+    my($line);
+    while($line = <IN>)
+    {
+        chomp $line;
+        check_line($fn,$line);
+    }
 
+    close IN;
+}
+
+#
+# Go through the argument list and check each file
+#
+while(my $fn = shift @ARGV) {
+    check_file($fn);
+}
+if(!$badfound) { print "No suspicious lines were found.\n"; }

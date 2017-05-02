@@ -22,7 +22,7 @@ var app = React.createElement(
   React.createElement(Profile, null, "click")
 );
 
-return 
+return
     <View>
         <Text> {JSON.stringify(this.state.connectionInfoHistory)} </Text>
     </View>;
