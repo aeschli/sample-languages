@@ -7,5 +7,11 @@
     "other": true,
     "comments": false,
     "strings": true
-  }
+  },
+  "workbench.colorCustomizations": {
+    "dropdown.background": "#00FF00",
+    "inputValidation.warningBackground": "#FFF000"
+  },
+  "editor.showFoldingControls": "always",
+  html
  }

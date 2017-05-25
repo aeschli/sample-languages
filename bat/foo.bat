@@ -3,7 +3,7 @@
 IF "%OS%"=="Windows_NT" SETLOCAL DISABLEDELAYEDEXPANSION
 
 rem asdasd
-
+call echo %%a%%
 
 :: Version number for this batch file
 SET MyVer=2.10

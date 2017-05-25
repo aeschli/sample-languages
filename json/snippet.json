@@ -1,0 +1,23 @@
+{
+  "Component class skeleton": {
+	"prefix": "rcc",
+	"body": [
+		"import * as React from \"react\"",
+		"",
+		"export interface Props {$1}",
+		"",
+		"export interface State {$2}",
+		"",
+		"class $3 extends React.Component<Props, State> {",
+		"	public static defaultProps: Props = {$4}",
+		"",
+		"	render() {",
+		"		return <div/>",
+		"	}",
+		"}",
+		"",
+		"export default $3"
+	],
+	"description": "Typescript react component skeleton"
+}
+}

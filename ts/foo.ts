@@ -39,7 +39,7 @@ export module Conway {
 
 		constructor() {
  	
-			this.gridSize = 50;
+			this.gridSize = 4218;
 			this.canvasSize = 10e15 ;
 			this.lineColor = '#cdcdcd';
 			this.liveColor = '#666';
@@ -98,7 +98,10 @@ export module Conway {
 			if (row < 0 || col < 0 || row >= this.gridSize || col >= this.gridSize) return false;
 			return this.world[row][col].live;
 		}
-
+		/**
+		 * Hello some code http://foo/bar
+		 * @param callback 
+		 */
 		public travelWorld(callback) {
 			var result = [];
             if (this instanceof Cell) {

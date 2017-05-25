@@ -45,7 +45,9 @@
 	],
 
     "dependencies": {
-			"jquery": ""
+			"jquery": "",
+			"socket.io": "2.0.1"
+			"@types/socket.io": ""
     }
 		,
 		

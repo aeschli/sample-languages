@@ -5,7 +5,7 @@
     "anyOf": [
         {
             "type": "object",
-            "additionalProperties": false,
+
             "properties": {
                 "bar": {
                     "description": "**Hello** http://myserver:9090/loo\n\nHello"
@@ -37,11 +37,11 @@
         },
         {
             "type": "object",
-            "additionalProperties": false,
             "properties": {
                 "xoo": {
                     "type": "string",
-                    "description": "This is xoosss"
+                    "description": "This is xoosss",
+                    "deprecationMessage": "Depreceated"
                 }
             }
         }

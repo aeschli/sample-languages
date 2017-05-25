@@ -5,7 +5,7 @@ $unitid = UNITID;
 $userid = USERID;
 $termtype = TERMTYPE;
 
-
+function foo bar(){}
 class Queries
 {
     public static function RegisterQuery($tel, $Firstname, $Lastname)

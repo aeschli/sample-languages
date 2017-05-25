@@ -1,0 +1,17 @@
+$map: (
+  a: (63px, 70px),
+  b: (100px, 69px),
+  c: (70px, 70px),
+  d: (79px, 70px),
+);
+
+
+@each $prop, $sizes in $map {
+  .c--#{$prop} {
+    width: nth($sizes, 1);
+    height: nth($sizes, 2);
+    background-image: url('./media/' + $prop + '.png');
+    background-image: url('./media/' + $prop + '@2x.png');
+    background-image: url('./media/' + $prop + '@3x.png');
+  }
+}
